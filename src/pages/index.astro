@@ -1,0 +1,84 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const [blogPosts, journalEntries] = await Promise.all([
+  getCollection('blog'),
+  getCollection('journal'),
+]);
+
+const latestWriting = [...blogPosts, ...journalEntries]
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
+  .slice(0, 4);
+---
+
+<BaseLayout
+  title="Mariana Ordonez | Portfolio, Blog, and Journal"
+  description="The portfolio, blog, and journal of Mariana Ordonez: selected work, technical writing, and field notes."
+>
+  <section class="hero" aria-labelledby="intro-heading">
+    <div class="hero__content">
+      <p class="eyebrow">Portfolio / Blog / Journal</p>
+      <h1 id="intro-heading">Mariana Ordonez</h1>
+      <p class="lede">
+        A search-friendly home for selected work, technical notes, essays, and the kind of
+        in-progress thinking that deserves a permanent URL.
+      </p>
+      <div class="hero__actions" aria-label="Primary sections">
+        <a href="/blog/">Read the blog</a>
+        <a href="/journal/">Open the journal</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section-grid" aria-labelledby="site-sections-heading">
+      <div>
+        <p class="eyebrow">Structure</p>
+        <h2 id="site-sections-heading">Built for discoverable writing and durable work.</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Portfolio</h3>
+          <p>Case studies, launches, and project notes can live alongside the writing that explains the thinking behind them.</p>
+        </article>
+        <article>
+          <h3>Blog</h3>
+          <p>Longer posts use typed frontmatter, canonical URLs, Open Graph metadata, and RSS-ready content collections.</p>
+        </article>
+        <article>
+          <h3>Journal</h3>
+          <p>Shorter reflections get their own archive so casual notes do not have to pretend to be polished essays.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="writing-list" aria-labelledby="latest-heading">
+      <div class="section-heading">
+        <p class="eyebrow">Latest</p>
+        <h2 id="latest-heading">Recent writing</h2>
+      </div>
+      <div class="post-list">
+        {
+          latestWriting.map((entry) => (
+            <article>
+              <a href={`/${entry.collection}/${entry.id}/`}>
+                <span>{entry.collection}</span>
+                <h3>{entry.data.title}</h3>
+                <p>{entry.data.description}</p>
+                <time datetime={entry.data.pubDate.toISOString()}>
+                  {entry.data.pubDate.toLocaleDateString('en-US', {
+                    month: 'long',
+                    day: 'numeric',
+                    year: 'numeric',
+                    timeZone: 'UTC',
+                  })}
+                </time>
+              </a>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+  </main>
+</BaseLayout>

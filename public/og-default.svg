@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Mariana Ordonez</title>
+  <desc id="desc">Portfolio, blog, and journal social preview image.</desc>
+  <rect width="1200" height="630" fill="#f7f4ef"/>
+  <rect x="64" y="64" width="1072" height="502" rx="8" fill="#fffdf8" stroke="#ddd5ca" stroke-width="2"/>
+  <text x="104" y="188" fill="#a74725" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">PORTFOLIO / BLOG / JOURNAL</text>
+  <text x="104" y="340" fill="#191715" font-family="Georgia, serif" font-size="116" font-weight="700">Mariana</text>
+  <text x="104" y="458" fill="#191715" font-family="Georgia, serif" font-size="116" font-weight="700">Ordonez</text>
+  <circle cx="1010" cy="166" r="48" fill="#0d6b5f"/>
+  <text x="970" y="181" fill="#ffffff" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="800">MO</text>
+</svg>
