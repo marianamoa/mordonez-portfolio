@@ -129,7 +129,7 @@ you can show. -->
 - **Metrics:** N/A — trades numbers for visible AI-product design judgment.
 - **Assets:** flows, annotated frames, optional clickable prototype.
 - **Priority:** 4 — the one thing to *build*; proves the direction your real work doesn't fully show yet. Could slip to early Phase 2 if time is tight.
-- **Built 2026-06-10.** Realized from Mariana's existing IBM *Generative AI for UI/UX* course project — a SaaS **conversational checkout assistant** (coupon assistance, payment recovery, subscription tracking, context-preserving escalation) plus 7 hi-fi screens and a reliability/trust states screen. Lives at `/work/ai-checkout-assistant/`; images in `public/work/ai-checkout/`. Doubles as proof of an AI-assisted *process*. Note: screens were produced in Visily (watermarked) — optional later polish: redraw key screens in Figma in her own visual style.
+- **Built 2026-06-10.** Realized from Mariana's existing IBM *Generative AI for UI/UX* course project — a SaaS **conversational checkout assistant** (coupon assistance, payment recovery, subscription tracking, context-preserving escalation) plus 7 hi-fi screens and a reliability/trust states screen. Lives at `/work/ai-checkout-assistant/`; images in `public/work/ai-checkout/`. Doubles as proof of an AI-assisted *process*. **Decision (2026-06-10): keep the Visily-made screens and the AI-toolchain framing as a deliberate strength — fluency with AI design tools is a credential for these roles, nothing to hide.** Figma redraw is optional, not needed.
 
 ## 6. Editorial plan — journal & blog
 

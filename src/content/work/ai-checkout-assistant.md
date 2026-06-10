@@ -92,5 +92,6 @@ The throughline is trust: explain clearly, reassure, recover without losing prog
 - I design for **trust**: transparency at payment, progress preservation, reassurance and recovery states.
 - I run an **AI-assisted process** end to end — and keep judgment in charge of where AI should and shouldn't lead.
 - It's **self-initiated** — I build to prove a direction, not only when a brief tells me to.
+- I'm **fluent with an AI design toolchain** — Visily for rapid hi-fi screens, AI assistants for research, IA, and copy — and I treat that fluency as part of the craft, not a shortcut to hide.
 
-*A concept project from my Generative AI for UX specialization. The screens were produced in Visily as part of an AI-assisted workflow.*
+*Built during my IBM Generative AI for UI/UX specialization, designed end to end with an AI-assisted workflow — research and personas with AI assistants, screens in Visily, all directed and refined by me.*
