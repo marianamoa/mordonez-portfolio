@@ -20,4 +20,21 @@ const journal = defineCollection({
   schema: writingSchema,
 });
 
-export const collections = { blog, journal };
+const work = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/work' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    summary: z.string().optional(),
+    client: z.string().optional(),
+    role: z.string().optional(),
+    tools: z.array(z.string()).default([]),
+    cover: z.string().optional(),
+    pubDate: z.date(),
+    updatedDate: z.date().optional(),
+    draft: z.boolean().default(false),
+    tags: z.array(z.string()).default([]),
+  }),
+});
+
+export const collections = { blog, journal, work };

@@ -1,0 +1,31 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const projects = (await getCollection('work', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<BaseLayout
+  title="Work | Mariana Ordonez"
+  description="Selected e-commerce and AI experience design work by Mariana Ordonez."
+>
+  <main class="archive">
+    <p class="eyebrow">Work</p>
+    <h1>Selected work</h1>
+    <div class="post-list">
+      {
+        projects.map((project) => (
+          <article>
+            <a href={`/work/${project.id}/`}>
+              {project.data.role && <span>{project.data.role}</span>}
+              <h3>{project.data.title}</h3>
+              <p>{project.data.summary ?? project.data.description}</p>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </main>
+</BaseLayout>
