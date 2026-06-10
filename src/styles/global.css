@@ -266,6 +266,27 @@ main {
   color: var(--muted);
 }
 
+.screen-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1.5rem 1.25rem;
+  margin: 1.75rem 0 2.5rem;
+}
+
+.screen-grid figure {
+  margin: 0;
+}
+
+.screen-grid img {
+  margin: 0 0 0.6rem;
+  border: 1px solid var(--line);
+}
+
+.screen-grid figcaption {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
 .project-meta {
   display: flex;
   flex-wrap: wrap;

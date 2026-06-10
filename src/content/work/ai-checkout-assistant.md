@@ -51,6 +51,8 @@ The throughline is trust: explain clearly, reassure, recover without losing prog
 
 ## The screens
 
+<div class="screen-grid">
+
 <figure>
   <img src="/work/ai-checkout/visily-plan-selection.png" alt="Plan selection screen with Free, Pro, and Student tiers" />
   <figcaption>Plan selection — the "Pro" plan is made visually dominant; the trial CTA is pinned within thumb reach, no pressure tactics.</figcaption>
@@ -85,6 +87,8 @@ The throughline is trust: explain clearly, reassure, recover without losing prog
   <img src="/work/ai-checkout/visily-dashboard.png" alt="Post-purchase dashboard" />
   <figcaption>Dashboard — the payoff: a calm, scannable home with a persistent sync-status reassurance bar.</figcaption>
 </figure>
+
+</div>
 
 ## What I'd want you to notice
 
