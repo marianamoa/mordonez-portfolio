@@ -268,8 +268,8 @@ main {
 
 .screen-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 1.5rem 1.25rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem 1.25rem;
   margin: 1.75rem 0 2.5rem;
 }
 
@@ -277,14 +277,39 @@ main {
   margin: 0;
 }
 
+.screen-grid a {
+  display: block;
+}
+
 .screen-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 17;
+  object-fit: cover;
+  object-position: top;
   margin: 0 0 0.6rem;
   border: 1px solid var(--line);
+  border-radius: 14px;
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.screen-grid a:hover img,
+.screen-grid a:focus-visible img {
+  box-shadow: 0 10px 26px rgba(25, 23, 21, 0.14);
+  transform: translateY(-2px);
 }
 
 .screen-grid figcaption {
   font-size: 0.85rem;
   line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .screen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .project-meta {

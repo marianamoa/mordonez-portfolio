@@ -51,40 +51,42 @@ The throughline is trust: explain clearly, reassure, recover without losing prog
 
 ## The screens
 
+*Seven key screens from the flow. Tap any screen to open it full size.*
+
 <div class="screen-grid">
 
 <figure>
-  <img src="/work/ai-checkout/visily-plan-selection.png" alt="Plan selection screen with Free, Pro, and Student tiers" />
+  <a href="/work/ai-checkout/visily-plan-selection.png" target="_blank" rel="noopener"><img src="/work/ai-checkout/visily-plan-selection.png" alt="Plan selection screen with Free, Pro, and Student tiers" /></a>
   <figcaption>Plan selection — the "Pro" plan is made visually dominant; the trial CTA is pinned within thumb reach, no pressure tactics.</figcaption>
 </figure>
 
 <figure>
-  <img src="/work/ai-checkout/visily-checkout.png" alt="Create-account checkout screen with real-time email validation" />
+  <a href="/work/ai-checkout/visily-checkout.png" target="_blank" rel="noopener"><img src="/work/ai-checkout/visily-checkout.png" alt="Create-account checkout screen with real-time email validation" /></a>
   <figcaption>Checkout — promo code hidden behind a trigger to protect focus; real-time validation with descriptive microcopy instead of a post-submit error.</figcaption>
 </figure>
 
 <figure>
-  <img src="/work/ai-checkout/visily-payment.png" alt="Secure payment screen with express pay, trial transparency, and trust badges" />
+  <a href="/work/ai-checkout/visily-payment.png" target="_blank" rel="noopener"><img src="/work/ai-checkout/visily-payment.png" alt="Secure payment screen with express pay, trial transparency, and trust badges" /></a>
   <figcaption>Payment — the most anxious moment. Express pay up top, explicit trial transparency ("won't be charged until Oct 24… reminder 2 days before"), and trust badges right next to the CTA.</figcaption>
 </figure>
 
 <figure>
-  <img src="/work/ai-checkout/visily-confirmation.png" alt="Confirmation screen with success state and next steps" />
+  <a href="/work/ai-checkout/visily-confirmation.png" target="_blank" rel="noopener"><img src="/work/ai-checkout/visily-confirmation.png" alt="Confirmation screen with success state and next steps" /></a>
   <figcaption>Confirmation — a genuine "you're in" moment that immediately routes into personalized next steps.</figcaption>
 </figure>
 
 <figure>
-  <img src="/work/ai-checkout/visily-onboarding.png" alt="Personalized onboarding with role selection" />
+  <a href="/work/ai-checkout/visily-onboarding.png" target="_blank" rel="noopener"><img src="/work/ai-checkout/visily-onboarding.png" alt="Personalized onboarding with role selection" /></a>
   <figcaption>Onboarding — role selection (Professional / Student / Agency) drives adaptive setup, cutting post-onboarding friction; 48px touch targets for mobile.</figcaption>
 </figure>
 
 <figure>
-  <img src="/work/ai-checkout/visily-system-feedback.png" alt="System states screen with sync, offline, error, and reassurance states" />
+  <a href="/work/ai-checkout/visily-system-feedback.png" target="_blank" rel="noopener"><img src="/work/ai-checkout/visily-system-feedback.png" alt="System states screen with sync, offline, error, and reassurance states" /></a>
   <figcaption>Reliability states — the trust layer: offline + sync recovery ("Restored your latest draft"), inline error recovery, and success reassurance. This is "design for trust in system output" made concrete.</figcaption>
 </figure>
 
 <figure>
-  <img src="/work/ai-checkout/visily-dashboard.png" alt="Post-purchase dashboard" />
+  <a href="/work/ai-checkout/visily-dashboard.png" target="_blank" rel="noopener"><img src="/work/ai-checkout/visily-dashboard.png" alt="Post-purchase dashboard" /></a>
   <figcaption>Dashboard — the payoff: a calm, scannable home with a persistent sync-status reassurance bar.</figcaption>
 </figure>
 
