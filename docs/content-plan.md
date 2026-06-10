@@ -180,9 +180,9 @@ you can show. -->
   metrics as you recover numbers.
 - **Build tasks (for Claude Code / a developer):**
   1. ~~Create a `work` content collection + Work index + case-study detail template.~~ **Done 2026-06-10** — `work` collection added, `/work/` index + `/work/[...id]` pages, nav link, image/figure styling. Lead case study live in dev: Ferrero digital shelf.
-  2. Build the **About** page.
-  3. Rewrite the **Home** hero + add "What I do", "Selected work", and a contact strip.
-  4. Add a lightweight **Contact** section/block (email + LinkedIn + CV link).
+  2. ~~Build the **About** page.~~ **Done 2026-06-10** — `/about/` with the gastronomy → design → e-commerce → AI story + nav link.
+  3. ~~Rewrite the **Home** hero + "What I do" + "Selected work" + contact strip.~~ **Done 2026-06-10** — positioning-led hero, capabilities, Ferrero case-study card, contact (email + LinkedIn).
+  4. ~~Add a lightweight **Contact** section/block.~~ **Done 2026-06-10** — contact strip on Home + Get in touch on About (marianaordonez04@gmail.com + LinkedIn). *Outstanding: CV link.*
 
 ## 10. Assumptions & open questions
 
