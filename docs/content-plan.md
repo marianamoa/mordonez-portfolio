@@ -129,6 +129,7 @@ you can show. -->
 - **Metrics:** N/A — trades numbers for visible AI-product design judgment.
 - **Assets:** flows, annotated frames, optional clickable prototype.
 - **Priority:** 4 — the one thing to *build*; proves the direction your real work doesn't fully show yet. Could slip to early Phase 2 if time is tight.
+- **Built 2026-06-10.** Realized from Mariana's existing IBM *Generative AI for UI/UX* course project — a SaaS **conversational checkout assistant** (coupon assistance, payment recovery, subscription tracking, context-preserving escalation) plus 7 hi-fi screens and a reliability/trust states screen. Lives at `/work/ai-checkout-assistant/`; images in `public/work/ai-checkout/`. Doubles as proof of an AI-assisted *process*. Note: screens were produced in Visily (watermarked) — optional later polish: redraw key screens in Figma in her own visual style.
 
 ## 6. Editorial plan — journal & blog
 
@@ -204,6 +205,11 @@ you can show. -->
   the Vapes, +25% at Casabianca. Reframed positioning around 6+ years + Ferrero + 2026 AI certs. Kept
   one self-initiated AI concept as the bridge to AI-product roles. Resolved the "real background" open
   question; new open questions are about publishable assets/metrics.
+- 2026-06-10 — **Second case study built: conversational AI checkout assistant** (`/work/ai-checkout-assistant/`).
+  Sourced from Mariana's IBM Generative AI for UX course project (Drive). Pulled 7 hi-fi Visily screens into
+  `public/work/ai-checkout/`, wrote the case study around the conversational/trust design + the AI-assisted
+  process. Directly fills the "can she design AI products?" gap. Work section now has 2 case studies; both
+  surface on Home. Open: decide whether to redraw screens in Figma (remove Visily watermark) for final polish.
 - 2026-06-10 — **Work section built + Ferrero case study live (dev).** Added `work` collection, `/work/`
   index + detail pages, nav link, figure/image styling; copied 16 curated images to `public/work/ferrero/`;
   published the approved case study to `src/content/work/ferrero-digital-shelf.md`. Build passes, pages
