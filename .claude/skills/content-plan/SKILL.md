@@ -1,9 +1,11 @@
 ---
 name: content-plan
-description: Plan the content for Mariana Ordoñez's portfolio/about/journal site (this repo). Interviews Mariana in her own language about goals, audience, projects, and art; audits what already exists in the repo; then writes a prioritized content plan — positioning, site map, page outlines, case studies, journal/blog topics, SEO metadata, asset checklist, phased roadmap — to docs/content-plan.md. Use whenever Mariana wants to plan, organize, decide, or rethink what to show on her site, e.g. "what should I put on my site", "plan my portfolio content", "help me with my case studies", "what should I write about", "qué contenido pongo en mi portafolio", "organicemos el contenido del sitio" — even if she never says the word "plan".
+description: Plan the content for Mariana Ordoñez's portfolio/about/journal site (this repo). Interviews Mariana in her own language about goals, audience, projects, and art; audits what already exists in the repo; then writes a prioritized content plan — positioning, site map, page outlines, case studies, journal/blog topics, SEO metadata, asset checklist, phased roadmap — as Markdown planning documents under docs/ (e.g. docs/content-plan.md). Planning only: this skill writes Markdown plans, never pages, site content, or code. Use whenever Mariana wants to plan, organize, decide, or rethink what to show on her site, e.g. "what should I put on my site", "plan my portfolio content", "help me with my case studies", "what should I write about", "qué contenido pongo en mi portafolio", "organicemos el contenido del sitio" — even if she never says the word "plan".
 ---
 
 # Content plan for Mariana's portfolio
+
+> **This skill produces only Markdown planning documents under `docs/` — it plans what the site should say, it never builds the site.** Do not create or edit pages, components, content-collection entries, styles, config, or any file outside `docs/`, and do not write finished posts or case-study copy. Turning the plan into real pages or content is a separate job Mariana must request on its own, after the plan exists.
 
 ## Context: why this site exists
 
@@ -31,7 +33,7 @@ Read these first so your questions show you did the homework:
 - `src/pages/` — which pages exist today
 - `docs/content-plan.md` — if it exists, you are **updating**, not starting over: read it, keep decisions she already made, and ask what has changed since.
 
-The plan must map to reality: content that fits existing collections is ready to write; everything else (e.g. a case-study section or about page that doesn't exist yet) goes in the plan as a build task, clearly marked as something to ask Claude Code or a developer for. Don't pretend a page exists when it doesn't.
+The plan must map to reality. In the plan, note which proposed content would fit an existing collection (ready to write later) and which needs a section or page that doesn't exist yet (a build task to request separately, from Claude Code or a developer). Don't pretend a page exists when it doesn't — and don't build or write either kind here. The skill only records them in the plan.
 
 ### 2. Interview Mariana
 
@@ -39,7 +41,7 @@ Read `references/interview-guide.md` for the question bank and the reasoning beh
 
 ### 3. Write the plan
 
-Read `references/plan-template.md` and fill it in. Save to `docs/content-plan.md` (create the folder if needed). Write the plan in her language, translating the template headings. When updating an existing plan, preserve her past decisions unless she changed her mind, and add a dated line to the changelog at the bottom.
+Read `references/plan-template.md` and fill it in. Save to `docs/content-plan.md` (create the `docs/` folder if needed). If the plan grows large, or Mariana prefers it, you may split it into several Markdown files under `docs/` — for example one file per case study — linked from the main `docs/content-plan.md`; everything stays Markdown under `docs/` and nothing else is touched. Write the plan in her language, translating the template headings. When updating an existing plan, preserve her past decisions unless she changed her mind, and add a dated line to the changelog at the bottom.
 
 ### 4. Hand back
 
@@ -49,7 +51,7 @@ End the conversation with, in her language:
 2. The Phase 1 checklist — the minimum content to start applying for jobs
 3. What only she can gather: metrics, images, links, permissions
 
-Offer natural next steps (draft a case study, build the missing sections) but do not start them in this run.
+If she wants to go further, tell her that drafting a post or building the missing sections are separate jobs she can ask for in a fresh request — this skill ends with the plan written. Do not start them here.
 
 ## Principles for a job-hunting portfolio
 
@@ -65,4 +67,4 @@ Apply these while drafting; they are the difference between a pretty site and on
 
 ## Scope
 
-Planning only. Do not create pages, write posts, or restructure the repo in this run — capture that work as roadmap items and build tasks inside the plan instead.
+**Planning only — the sole output is Markdown under `docs/`.** Do not create or edit pages, components, content-collection entries, styles, or config; do not write the actual posts or case-study copy; do not restructure the repo. Everything the site needs is *described* inside the plan as a roadmap item or build task — never built here. If you're about to touch any file outside `docs/`, stop: that's a separate request, not part of making the plan.
