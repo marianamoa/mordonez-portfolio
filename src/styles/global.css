@@ -244,6 +244,98 @@ main {
   font-weight: 750;
 }
 
+.prose img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0 0.5rem;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.prose figure {
+  margin: 1.5rem 0 2rem;
+}
+
+.prose figure img {
+  margin-bottom: 0.6rem;
+}
+
+.prose figcaption {
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.screen-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem 1.25rem;
+  margin: 1.75rem 0 2.5rem;
+}
+
+.screen-grid figure {
+  margin: 0;
+}
+
+.screen-grid a {
+  display: block;
+}
+
+.screen-grid img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 17;
+  object-fit: cover;
+  object-position: top;
+  margin: 0 0 0.6rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.screen-grid a:hover img,
+.screen-grid a:focus-visible img {
+  box-shadow: 0 10px 26px rgba(25, 23, 21, 0.14);
+  transform: translateY(-2px);
+}
+
+.screen-grid figcaption {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 760px) {
+  .screen-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem 2.5rem;
+  margin: 1.5rem 0 2.5rem;
+  padding: 0;
+}
+
+.project-meta div {
+  margin: 0;
+}
+
+.project-meta dt {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+}
+
+.project-meta dd {
+  margin: 0.2rem 0 0;
+  font-weight: 650;
+}
+
 .archive {
   width: min(860px, calc(100% - 2rem));
   margin: 0 auto 5rem;
