@@ -158,7 +158,9 @@ you can show. -->
 
 ## 8. Asset checklist
 
-- [ ] Portrait photo for About + Home
+- [ ] Portrait photo for About + Home (still needed)
+- [x] **CV** written (`public/Mariana-Ordonez-CV.pdf`) and linked from Home + About "Get in touch".
+- [x] **3 journal entries** published (grounded in the real case studies; review/edit to voice before deploy).
 - [x] **Ferrero work gathered** — Nutella everyday (hero/basic/enhanced), Kinder Bueno Super Bowl, + World Cup brand store / Ferrero Rocher / Kinder Joy thumbnails received (`~/Documents/portfolio/`). Draft written: `docs/case-study-ferrero.md`.
 - [ ] **Confirm publishing rights** — double-check you're allowed to show these Ferrero visuals publicly before they go on the live site.
 - [ ] **Build task:** copy the chosen images into `public/work/ferrero/` when the Work section is built.
@@ -172,9 +174,10 @@ you can show. -->
 
 ## 9. Roadmap
 
-- **Phase 1 — apply-ready (~July 2026):** rewrite Home for AI positioning · build About · build Work
-  section + **case studies 1 (Ferrero) and 2 (AI workflow)** · publish 3 journal entries · add a
-  contact strip. *Minimum to start applying — and it's mostly writing up real work, so it's fast.*
+- **Phase 1 — apply-ready (~July 2026): COMPLETE (2026-06-12).** ✅ Home rewritten · ✅ About built ·
+  ✅ Work section + case studies 1 (Ferrero) and 2 (AI checkout assistant) · ✅ 3 journal entries
+  (designing-for-the-thumbnail, where-i-let-ai-in, designing-for-trust) · ✅ contact strip · ✅ CV
+  written and linked from Home + About. *Remaining before public deploy: Ferrero rights check, portrait photo, final domain.*
 - **Phase 2 — depth:** the **AI shopping-assistant concept** (case study 4) · the Casabianca case study ·
   the two blog deep-dives + the niche-thesis post.
 - **Phase 3 — ongoing:** sustain journal a few times/week · add the AI concept work · refresh CV and
