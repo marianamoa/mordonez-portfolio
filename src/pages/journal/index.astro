@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { site } from "../../data/site";
+import { getJournalArticles } from "../../lib/journal.server";
+
+const articles = await getJournalArticles();
+---
+
+<Layout
+	title="Journal - Notes on AI, UX & Conversion Design"
+	description="AI and conversion design articles by Mariana Ordonez, covering AI UX patterns, CRO, eCommerce PDP design, Figma systems and design workflows."
+	path="/journal/"
+>
+	<main>
+		<section class="container page-hero">
+			<p class="eyebrow"><span class="dot" aria-hidden="true"></span>AI and conversion design articles</p>
+			<h1 class="page-title">Journal on AI, UX and conversion design.</h1>
+			<p class="page-lede">
+				Long-tail, recruiter-searchable notes that show how I think about AI products, CRO,
+				eCommerce UX, design systems and brand craft.
+			</p>
+		</section>
+
+		<section class="container section tight">
+			<div class="grid-3">
+				{
+					articles.map((article) => (
+						<a class="card" href={`/journal/${article.slug}/`}>
+							<p class="kicker">{article.category}</p>
+							<h2>{article.title}</h2>
+							<p>{article.excerpt}</p>
+							<div class="tags">
+								<span class="tag">{article.keyword}</span>
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="container cta-band">
+			<h2>Hiring for AI product, UX or CRO work?</h2>
+			<p>The fastest proof is still a conversation about the product and the constraints.</p>
+			<div class="actions" style="justify-content: center">
+				<a class="button" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="text-link" href="/work/">See case studies</a>
+			</div>
+		</section>
+	</main>
+</Layout>

@@ -1,0 +1,82 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { resources, site } from "../../data/site";
+import { getJournalArticles } from "../../lib/journal.server";
+
+export async function getStaticPaths() {
+	const articles = await getJournalArticles();
+	return articles.map((article) => ({
+		params: { slug: article.slug },
+		props: { article },
+	}));
+}
+
+const { article } = Astro.props;
+const articles = await getJournalArticles();
+const relatedResource = resources[articles.findIndex((item) => item.slug === article.slug) % resources.length];
+const bodyIntro = article.bodyMarkdown
+	?.replace(/^# .+\n+/, "")
+	.split("## Key points")[0]
+	.trim();
+---
+
+<Layout
+	title={`${article.title} - Journal`}
+	description={article.metaDescription ?? article.excerpt}
+	path={`/journal/${article.slug}/`}
+	type="article"
+>
+	<main>
+		<section class="container page-hero">
+			<p class="eyebrow"><span class="dot" aria-hidden="true"></span>{article.keyword}</p>
+			<h1 class="page-title">{article.title}</h1>
+			<p class="page-lede">{article.excerpt}</p>
+			<div class="pill-row">
+				<span class="pill">{article.category}</span>
+				<span class="pill">Portfolio note</span>
+			</div>
+		</section>
+
+		<section class="container section tight detail-grid">
+			<article class="prose">
+				<h2>Angle</h2>
+				<p>
+					{
+						bodyIntro ??
+							`This article targets ${article.keyword} and connects the search intent to practical product, UX and conversion decisions.`
+					}
+				</p>
+
+				<h2>Outline</h2>
+				<ul>
+					{article.outline.map((item) => <li>{item}</li>)}
+				</ul>
+
+				<h2>Recruiter signal</h2>
+				<p>
+					The goal is to make the thinking visible: how research becomes a design hypothesis,
+					how AI can speed production, and how conversion decisions stay grounded in craft.
+				</p>
+
+				<h2>Call to action</h2>
+				<p>
+					<a class="text-link" href="/work/">See this thinking in the work</a> or email me for
+					remote product, UX and eCommerce roles.
+				</p>
+			</article>
+
+			<aside class="aside" aria-label="Article details">
+				<dl>
+					<dt>Category</dt>
+					<dd>{article.category}</dd>
+					<dt>Primary keyword</dt>
+					<dd>{article.keyword}</dd>
+					<dt>Related resource</dt>
+					<dd>{relatedResource.title}</dd>
+					<dt>Contact</dt>
+					<dd><a class="text-link" href={`mailto:${site.email}`}>Talk about a role</a></dd>
+				</dl>
+			</aside>
+		</section>
+	</main>
+</Layout>
