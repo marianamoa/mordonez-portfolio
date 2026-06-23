@@ -42,18 +42,15 @@ const featuredArticles = journalOrder
 				<div class="portrait-backdrop" aria-hidden="true"></div>
 				<div class="portrait-frame">
 					<div class="portrait-inner">
-						<img src="/brand/avatar-512-wine.png" alt="Mariana Ordonez MOA personal brand mark" width="512" height="512" />
+						<img class="portrait-photo" src="/brand/mariana-portrait.webp" alt="Portrait of Mariana Ordonez, AI Product and eCommerce Designer" width="900" height="1125" loading="eager" />
 					</div>
 				</div>
-				<div class="hero-arrow" aria-hidden="true">
-					<svg viewBox="0 0 60 60" width="58" height="58">
+				<div class="hero-arrow">
+					<span class="hero-arrow-label">your next designer</span>
+					<svg viewBox="0 0 60 60" width="58" height="58" aria-hidden="true">
 						<path d="M6 50 C 8 18, 30 8, 52 14" />
 						<path d="M44 9 L 54 14 L 46 22" />
 					</svg>
-				</div>
-				<div class="hero-stat">
-					<strong>+25%</strong>
-					<span>apparel sales</span>
 				</div>
 				<div class="identity-card">
 					<img src="/brand/avatar-512-wine.png" alt="" width="38" height="38" />
@@ -68,10 +65,6 @@ const featuredArticles = journalOrder
 		<section class="container proof-band" aria-label="Brands and teams">
 			<div class="proof-top">
 				<p class="kicker">Brands and teams I have designed conversion for</p>
-				<div class="proof-stat">
-					<strong>+25%</strong>
-					<span>apparel sales from a conversion-focused redesign</span>
-				</div>
 			</div>
 			<div class="marquee" aria-hidden="true">
 				<div class="marquee-track">
@@ -166,7 +159,7 @@ const featuredArticles = journalOrder
 									<span>Checkout conversion</span>
 									<strong>3.9%</strong>
 								</div>
-								<em>+25% vs. A</em>
+								<em>+18% vs. A</em>
 							</div>
 							<div class="demo-row mini"><span>A</span><div class="bar"><span style="width: 58%"></span></div></div>
 							<div class="demo-row mini"><span>B</span><div class="bar"><span style="width: 74%"></span></div></div>
@@ -178,7 +171,7 @@ const featuredArticles = journalOrder
 					<h3>Pages that move the number.</h3>
 					<p>
 						Landing pages, PDPs and checkouts shaped by real A/B tests, so the redesign is not a
-						guess. This is the work that lifted Casabianca apparel sales 25%.
+						guess. This is the work I did on Casabianca's apparel commerce experience.
 					</p>
 					<div class="bullet-tags">
 						<span>PDPs and landing pages</span>
@@ -240,10 +233,6 @@ const featuredArticles = journalOrder
 					<p class="kicker">Featured - {primaryWork.client} - Apparel eCommerce</p>
 					<h3>{primaryWork.outcome}</h3>
 					<p>{primaryWork.summary}</p>
-					<div class="impact-badge">
-						<strong>+25%</strong>
-						<span>apparel sales</span>
-					</div>
 					<div class="work-card-foot">
 						<div class="tags">
 							{primaryWork.tags.slice(0, 3).map((tag) => <span class="tag">{tag}</span>)}

@@ -63,7 +63,7 @@ export const caseStudies = [
 		slug: "casabianca-apparel-cro",
 		client: "Casabianca",
 		title: "Casabianca apparel CRO redesign",
-		outcome: "A checkout and UX redesign that lifted apparel sales 25%.",
+		outcome: "A checkout and UX redesign that made an apparel brand feel as premium as its product.",
 		summary:
 			"Restructured information architecture, product-page hierarchy and digital-to-physical brand consistency for an apparel commerce experience.",
 		problem:
@@ -76,7 +76,7 @@ export const caseStudies = [
 		],
 		solution:
 			"A calmer apparel experience with stronger product storytelling, cleaner CTAs, clearer checkout flow and a visual language that made the brand feel more premium.",
-		impact: "+25% apparel sales from a conversion-focused redesign.",
+		impact: "A calmer, more premium apparel experience with cleaner CTAs and a clearer checkout flow.",
 		role: "UI/UX, CRO, visual system",
 		timeline: "Commerce redesign",
 		tools: "Figma, analytics review, brand system",
@@ -328,5 +328,5 @@ export const experience = [
 	"Estore Labs - CRO and A/B testing across Amazon, Walmart and Target storefronts.",
 	"Planet of the Vapes - eCommerce and lifecycle design for a remote EST team.",
 	"trades.org - product design, design system and custom CMS/ATS workflows.",
-	"Casabianca - conversion-focused apparel UX redesign with +25% sales lift.",
+	"Casabianca - conversion-focused apparel UX redesign.",
 ];
