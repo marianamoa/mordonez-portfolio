@@ -1,0 +1,143 @@
+---
+import "../styles/global.css";
+import { navItems, site, socialLinks } from "../data/site";
+
+interface Props {
+	title: string;
+	description: string;
+	path?: string;
+	image?: string;
+	type?: "website" | "article" | "profile";
+}
+
+const {
+	title,
+	description,
+	path = Astro.url.pathname,
+	image = "/brand/avatar-512-wine.png",
+	type = "website",
+} = Astro.props;
+
+const canonicalPath = path === "/" ? "/" : path.endsWith("/") ? path : `${path}/`;
+const canonical = new URL(canonicalPath, site.url).toString();
+const fullTitle = title.includes(site.name) ? title : `${title} | ${site.name}`;
+const sameAs = socialLinks
+	.map((link) => link.url)
+	.filter((url) => url.startsWith("http"));
+
+const websiteSchema = {
+	"@context": "https://schema.org",
+	"@type": "WebSite",
+	name: site.name,
+	url: site.url,
+	description,
+};
+
+const personSchema = {
+	"@context": "https://schema.org",
+	"@type": "Person",
+	name: site.name,
+	jobTitle: site.role,
+	url: site.url,
+	email: site.email,
+	worksFor: {
+		"@type": "Organization",
+		name: "Independent",
+	},
+	address: {
+		"@type": "PostalAddress",
+		addressCountry: "Colombia",
+	},
+	sameAs,
+};
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{fullTitle}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/brand/favicon-16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-180.png" />
+		<meta property="og:title" content={fullTitle} />
+		<meta property="og:description" content={description} />
+		<meta property="og:type" content={type === "article" ? "article" : "website"} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:image" content={new URL(image, site.url).toString()} />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={fullTitle} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={new URL(image, site.url).toString()} />
+		<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+		<script type="application/ld+json" set:html={JSON.stringify(personSchema)} />
+	</head>
+	<body>
+		<header class="site-header">
+			<nav class="container nav" aria-label="Primary navigation">
+				<a class="brand" href="/" aria-label={`${site.name} home`}>
+					<span class="brand-mark" aria-hidden="true">
+						<img src="/brand/moa-mark-wine.svg" alt="" width="21" height="17" />
+					</span>
+					<span>{site.shortName}</span>
+				</a>
+				<div class="nav-links">
+					{
+						navItems.map((item) => (
+							<a
+								href={item.href}
+								aria-current={canonicalPath === item.href ? "page" : undefined}
+							>
+								{item.label}
+							</a>
+						))
+					}
+				</div>
+				<a class="availability" href={`mailto:${site.email}`}>
+					<span class="dot" aria-hidden="true"></span>
+					<span>Available for work</span>
+				</a>
+			</nav>
+		</header>
+
+		<slot />
+
+		<footer class="site-footer">
+			<div class="container footer-inner">
+				<a class="brand" href="/" aria-label={`${site.name} home`}>
+					<span class="brand-mark" aria-hidden="true">
+						<img src="/brand/moa-mark-wine.svg" alt="" width="21" height="17" />
+					</span>
+					<span>{site.shortName}</span>
+				</a>
+				<div class="footer-socials" aria-label="Social links">
+					{
+						socialLinks.map((link) =>
+							link.url ? (
+								<a
+									href={link.url}
+									rel={link.url.startsWith("http") ? "me noopener" : undefined}
+									target={link.url.startsWith("http") ? "_blank" : undefined}
+								>
+									{link.label}
+								</a>
+							) : (
+								<span>{link.label}</span>
+							),
+						)
+					}
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

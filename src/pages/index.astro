@@ -1,0 +1,340 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { caseStudies, proofBrands, site } from "../data/site";
+import { getJournalArticles } from "../lib/journal.server";
+
+const featuredWork = caseStudies.filter((item) => item.featured).slice(0, 3);
+const [primaryWork, ...secondaryWork] = featuredWork;
+const articles = await getJournalArticles();
+const journalOrder = [
+	"ai-ab-tests-faster-design-craft",
+	"trustworthy-ai-interfaces",
+	"high-converting-product-detail-page",
+];
+const featuredArticles = journalOrder
+	.map((slug) => articles.find((article) => article.slug === slug))
+	.filter(Boolean);
+---
+
+<Layout
+	title="Mariana Ordonez - AI Product & eCommerce Designer"
+	description="AI Product & eCommerce designer with 6+ years lifting conversion for Amazon, Walmart and Target. Remote, US hours. Figma, CRO and AI-assisted design."
+	path="/"
+>
+	<main id="top">
+		<section class="container hero home-hero">
+			<div class="hero-copy">
+				<p class="eyebrow"><span class="dot" aria-hidden="true"></span>Open to work - US hours - Colombia</p>
+				<p class="script">Hi, I'm Mariana -</p>
+				<h1>I design commerce people <span class="ink-swoop">actually</span> buy from.</h1>
+				<p class="hero-lede">
+					I am an <strong>AI Product & eCommerce Designer</strong> building conversion-driven
+					product experiences, with AI woven into how I research, prototype and ship. 6+ years,
+					remote, working live in US hours.
+				</p>
+				<div class="actions">
+					<a class="button" href="#work">See selected work <span aria-hidden="true">-></span></a>
+					<a class="text-link" href="/about/">Read my story</a>
+				</div>
+			</div>
+
+			<div class="hero-visual hero-visual-source" aria-label="Mariana Ordonez portfolio mark">
+				<div class="portrait-backdrop" aria-hidden="true"></div>
+				<div class="portrait-frame">
+					<div class="portrait-inner">
+						<img src="/brand/avatar-512-wine.png" alt="Mariana Ordonez MOA personal brand mark" width="512" height="512" />
+					</div>
+				</div>
+				<div class="hero-arrow" aria-hidden="true">
+					<svg viewBox="0 0 60 60" width="58" height="58">
+						<path d="M6 50 C 8 18, 30 8, 52 14" />
+						<path d="M44 9 L 54 14 L 46 22" />
+					</svg>
+				</div>
+				<div class="hero-stat">
+					<strong>+25%</strong>
+					<span>apparel sales</span>
+				</div>
+				<div class="identity-card">
+					<img src="/brand/avatar-512-wine.png" alt="" width="38" height="38" />
+					<div>
+						<strong>Mariana Ordonez</strong>
+						<span>Bogota, Colombia - UTC-5 - open to remote roles</span>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container proof-band" aria-label="Brands and teams">
+			<div class="proof-top">
+				<p class="kicker">Brands and teams I have designed conversion for</p>
+				<div class="proof-stat">
+					<strong>+25%</strong>
+					<span>apparel sales from a conversion-focused redesign</span>
+				</div>
+			</div>
+			<div class="marquee" aria-hidden="true">
+				<div class="marquee-track">
+					{
+						[0, 1].map(() => (
+							<div class="marquee-group">
+								{proofBrands.map((brand) => (
+									<>
+										<span>{brand}</span>
+										<i></i>
+									</>
+								))}
+							</div>
+						))
+					}
+				</div>
+			</div>
+		</section>
+
+		<section class="container section home-capabilities" id="capabilities">
+			<div class="section-head compact-head">
+				<div>
+					<p class="kicker">What I do</p>
+					<h2 class="section-title">Three things I am genuinely good at.</h2>
+					<p class="section-copy">
+						AI is my method, conversion is the outcome. Here is what that looks like in practice.
+					</p>
+				</div>
+			</div>
+
+			<div class="capability-row">
+				<div class="capability-copy">
+					<p class="kicker">01 - AI Product & UX</p>
+					<h3>AI products people actually trust.</h3>
+					<p>
+						I design the AI features and the flow behind them: confidence, explainability and
+						graceful failure, with a human approving every important call.
+					</p>
+					<div class="bullet-tags">
+						<span>Conversational UI</span>
+						<span>Trust and explainability</span>
+						<span>Human-in-the-loop</span>
+					</div>
+				</div>
+				<div class="mock-panel">
+					<div class="mock-window">
+						<div class="mock-head">
+							<span class="mock-icon">AI</span>
+							<strong>AI assist</strong>
+							<small>hero headline</small>
+						</div>
+						<div class="mock-body">
+							<p class="muted-note">Analyzed 1,240 sessions - 3 variants drafted</p>
+							<div class="suggestion-card">
+								<small>Suggested headline</small>
+								<strong>Free returns. Try it risk-free.</strong>
+							</div>
+							<div class="confidence-row">
+								<span>Confidence</span>
+								<div class="bar wide"><span style="width: 92%"></span></div>
+								<strong>92%</strong>
+							</div>
+							<p class="mock-note">Why: top PDPs lead with risk reversal, not features.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="capability-row flip">
+				<div class="mock-panel">
+					<div class="mock-window">
+						<div class="mock-head">
+							<span class="dot" aria-hidden="true"></span>
+							<strong>A/B test - PDP hero</strong>
+							<small>last 14 days</small>
+						</div>
+						<div class="mock-body">
+							<div class="segmented">
+								<span>Variant A</span>
+								<strong>Variant B</strong>
+							</div>
+							<div class="pdp-mini">
+								<div></div>
+								<div>
+									<i></i>
+									<i class="short"></i>
+									<strong>Add to cart</strong>
+								</div>
+							</div>
+							<div class="metric-row">
+								<div>
+									<span>Checkout conversion</span>
+									<strong>3.9%</strong>
+								</div>
+								<em>+25% vs. A</em>
+							</div>
+							<div class="demo-row mini"><span>A</span><div class="bar"><span style="width: 58%"></span></div></div>
+							<div class="demo-row mini"><span>B</span><div class="bar"><span style="width: 74%"></span></div></div>
+						</div>
+					</div>
+				</div>
+				<div class="capability-copy">
+					<p class="kicker">02 - eCommerce & CRO</p>
+					<h3>Pages that move the number.</h3>
+					<p>
+						Landing pages, PDPs and checkouts shaped by real A/B tests, so the redesign is not a
+						guess. This is the work that lifted Casabianca apparel sales 25%.
+					</p>
+					<div class="bullet-tags">
+						<span>PDPs and landing pages</span>
+						<span>A/B testing</span>
+						<span>AOV and funnels</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="capability-row">
+				<div class="capability-copy">
+					<p class="kicker">03 - Design systems & brand</p>
+					<h3>One system, every screen on-brand.</h3>
+					<p>
+						Scalable Figma systems and tokens keep brand and components consistent through a
+						hundred experiments, and keep engineers shipping fast.
+					</p>
+					<div class="bullet-tags">
+						<span>Figma systems</span>
+						<span>Design tokens</span>
+						<span>Visual identity</span>
+					</div>
+				</div>
+				<div class="mock-panel">
+					<div class="mock-window">
+						<div class="mock-head">
+							<span class="mock-icon">DS</span>
+							<strong>Design system</strong>
+							<small>tokens</small>
+						</div>
+						<div class="token-grid" aria-label="Design system token examples">
+							<div><button type="button">Add to cart</button></div>
+							<div><span class="toggle"></span></div>
+							<div><span class="pill-chip">New</span></div>
+							<div class="tiny-chart"><i></i><i></i><i></i></div>
+						</div>
+						<p class="mock-note center">One token. Every component updates.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="container section selected-work-source" id="work">
+			<div class="section-head">
+				<div>
+					<p class="kicker">Selected work</p>
+					<h2 class="section-title">Selected work</h2>
+					<p class="section-copy">
+						Each one is a real case study with the messy middle left in: variants, tradeoffs and
+						metrics after launch.
+					</p>
+				</div>
+				<a class="text-link" href="/work/">All work -></a>
+			</div>
+
+			<a class="card work-feature-card" href={`/work/${primaryWork.slug}/`}>
+				<div class="work-cover" aria-hidden="true"></div>
+				<div class="work-copy">
+					<p class="kicker">Featured - {primaryWork.client} - Apparel eCommerce</p>
+					<h3>{primaryWork.outcome}</h3>
+					<p>{primaryWork.summary}</p>
+					<div class="impact-badge">
+						<strong>+25%</strong>
+						<span>apparel sales</span>
+					</div>
+					<div class="work-card-foot">
+						<div class="tags">
+							{primaryWork.tags.slice(0, 3).map((tag) => <span class="tag">{tag}</span>)}
+						</div>
+						<span class="metric">View case study -></span>
+					</div>
+				</div>
+			</a>
+
+			<div class="grid-2 work-pair">
+				{
+					secondaryWork.map((study) => (
+						<a class="card work-mini-card" href={`/work/${study.slug}/`}>
+							<div class="work-cover compact" aria-hidden="true"></div>
+							<div class="work-copy">
+								<p class="kicker">{study.client}</p>
+								<h3>{study.outcome}</h3>
+								<p>{study.summary}</p>
+								<div class="impact-badge small">
+									<span>{study.impact}</span>
+								</div>
+								<div class="work-card-foot">
+									<div class="tags">
+										{study.tags.slice(0, 2).map((tag) => <span class="tag">{tag}</span>)}
+									</div>
+									<span class="metric">View -></span>
+								</div>
+							</div>
+						</a>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="container section now-section">
+			<div>
+				<p class="kicker">Right now</p>
+				<h2 class="section-title">This season, I am...</h2>
+				<div class="now-list">
+					<p><strong>Designing</strong><span>AI-powered commerce features and the flows behind them.</span></p>
+					<p><strong>Testing</strong><span>CRO experiments and A/B variants, accelerated with AI.</span></p>
+					<p><strong>Learning</strong><span>Sharper ways to pair AI speed with design taste.</span></p>
+				</div>
+			</div>
+			<div class="stats-grid">
+				<div><strong>6+</strong><span>Years shipping conversion</span></div>
+				<div><strong>4</strong><span>Retail giants designed for</span></div>
+				<div><strong>EN / ES</strong><span>Bilingual - live US hours</span></div>
+				<div><strong>IBM</strong><span>Gen AI for UX cert</span></div>
+			</div>
+		</section>
+
+		<section class="container section tight">
+			<div class="section-head">
+				<div>
+					<p class="kicker">From the journal</p>
+					<h2 class="section-title">From the journal</h2>
+					<p class="section-copy">
+						A working notebook: mostly product design, conversion and AI, written down before I
+						lose it.
+					</p>
+				</div>
+				<a class="text-link" href="/journal/">Read all -></a>
+			</div>
+			<div class="grid-3">
+				{
+					featuredArticles.map((article) => (
+						<a class="card" href={`/journal/${article.slug}/`}>
+							<p class="kicker">{article.category}</p>
+							<h3>{article.title}</h3>
+							<p>{article.excerpt}</p>
+							<span class="metric">Read -></span>
+						</a>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="container cta-band home-cta" id="contact">
+			<p class="kicker">Let's work together</p>
+			<h2>Looking for a designer who ships conversion and speaks AI?</h2>
+			<p>I am open to remote product, UX and eCommerce roles, working US hours from Colombia.</p>
+			<div class="actions" style="justify-content: center">
+				<a class="button" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="text-link" href={site.resumeUrl}>Download resume</a>
+			</div>
+			<div class="cta-meta">
+				<div><strong>Where</strong><span>Bogota, Colombia - remote, US hours</span></div>
+				<div><strong>Response</strong><span>Usually within 24 hours</span></div>
+				<div><strong>Find me</strong><span>@mordonez - everywhere</span></div>
+			</div>
+		</section>
+	</main>
+</Layout>

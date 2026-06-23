@@ -1,0 +1,45 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { playItems, site } from "../data/site";
+---
+
+<Layout
+	title="Play - Illustration & Visual Experiments"
+	description="Illustration, motion, type, AI art experiments and visual side projects by Mariana Ordonez."
+	path="/play/"
+>
+	<main>
+		<section class="container page-hero">
+			<p class="eyebrow"><span class="dot" aria-hidden="true"></span>Illustration and visual experiments</p>
+			<h1 class="page-title">Where I keep my hands warm.</h1>
+			<p class="page-lede">
+				Illustration, motion, type studies, AI art experiments and side projects. The human
+				craft behind the product and commerce work.
+			</p>
+		</section>
+
+		<section class="container section tight">
+			<div class="play-grid">
+				{
+					playItems.map((item) => (
+						<article class="card play-card">
+							<div class="play-visual" aria-hidden="true"></div>
+							<p class="kicker">{item.type}</p>
+							<h2>{item.title}</h2>
+							<p>{item.description}</p>
+						</article>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="container cta-band">
+			<h2>More of this belongs on Dribbble, Behance and Instagram.</h2>
+			<p>A curated visual trail for illustration, motion and brand experiments beyond case-study work.</p>
+			<div class="actions" style="justify-content: center">
+				<a class="button" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="text-link" href="/work/">See conversion work</a>
+			</div>
+		</section>
+	</main>
+</Layout>
