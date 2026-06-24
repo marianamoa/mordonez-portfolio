@@ -871,6 +871,10 @@ a.card:hover {
 	transform: rotate(-3deg);
 }
 
+.hero-arrow svg {
+	transform: scaleX(-1);
+}
+
 .hero-arrow path {
 	fill: none;
 	stroke: currentColor;
