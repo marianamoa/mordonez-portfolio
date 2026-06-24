@@ -38,20 +38,35 @@ const featuredArticles = journalOrder
 				</div>
 			</div>
 
-			<div class="hero-visual hero-visual-source" aria-label="Mariana Ordonez portfolio mark">
-				<div class="portrait-backdrop" aria-hidden="true"></div>
-				<div class="portrait-frame">
-					<div class="portrait-inner">
-						<img class="portrait-photo" src="/brand/mariana-portrait.webp" alt="Portrait of Mariana Ordonez, AI Product and eCommerce Designer" width="900" height="1125" loading="eager" />
-					</div>
-				</div>
-				<div class="identity-card">
-					<img src="/brand/avatar-512-wine.png" alt="" width="38" height="38" />
-					<div>
-						<strong>Mariana Ordonez</strong>
-						<span>Bogota, Colombia - UTC-5 - open to remote roles</span>
-					</div>
-				</div>
+			<div class="hero-visual hero-visual-source">
+				<svg
+					class="hero-card"
+					viewBox="0 0 440 589"
+					xmlns="http://www.w3.org/2000/svg"
+					role="img"
+					aria-label="Portrait of Mariana Ordonez with a handwritten note reading: your next designer"
+				>
+					<defs>
+						<clipPath id="heroPhotoClip">
+							<rect x="67" y="60" width="306" height="383" rx="28" />
+						</clipPath>
+					</defs>
+					<!-- layered shadow card -->
+					<rect x="10.8" y="23.7" width="418.7" height="573.2" rx="20" fill="#e7d3d4" transform="rotate(-2.18 220.1 310.3)" />
+					<!-- pink mount -->
+					<rect x="25" y="25" width="389" height="454" rx="20" fill="#ffeaeb" />
+					<!-- dashed border -->
+					<rect x="41" y="42" width="357" height="419" rx="20" fill="none" stroke="#ca9ba1" stroke-width="1" stroke-dasharray="4 4" />
+					<!-- portrait -->
+					<image href="/brand/mariana-portrait.webp" x="67" y="60" width="306" height="383" preserveAspectRatio="xMidYMin slice" clip-path="url(#heroPhotoClip)" />
+					<!-- caption -->
+					<text x="220" y="533" text-anchor="middle" fill="#832131" font-family="Newsreader, Georgia, serif" font-style="italic" font-weight="500" font-size="25.42">your next designer!</text>
+					<!-- arrow (moa-arrow-wine, rotated to point at the caption) -->
+					<g transform="translate(372 488) rotate(146.57 29 29) scale(0.97)" fill="none" stroke="#832131" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M6 50 C 8 18, 30 8, 52 14" />
+						<path d="M44 9 L 54 14 L 46 22" />
+					</g>
+				</svg>
 			</div>
 		</section>
 
