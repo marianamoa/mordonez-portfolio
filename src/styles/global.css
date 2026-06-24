@@ -180,6 +180,10 @@ textarea {
 
 main {
 	min-height: 60vh;
+	/* Contain horizontal bleed (e.g. the rotated hero portrait backdrop)
+	   at the viewport edge instead of the hero container edge, so hero
+	   content shadows aren't clipped. clip never creates scroll. */
+	overflow-x: clip;
 }
 
 .hero {
@@ -814,10 +818,6 @@ a.card:hover {
 	max-width: 760px;
 	font-size: 64px;
 	line-height: 1.04;
-}
-
-.home-hero {
-	overflow-x: clip;
 }
 
 .ink-swoop {
