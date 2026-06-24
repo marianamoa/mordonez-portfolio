@@ -303,58 +303,41 @@ h1 {
 	width: min(100%, 430px);
 }
 
-.portrait-card {
+.portrait-frame {
 	position: relative;
-	padding: 22px 22px 14px;
-	border-radius: 20px;
-	background: #ffeaeb;
+	aspect-ratio: 0.86;
+	border-radius: 26px;
+	background: var(--wine-soft);
 	box-shadow: var(--shadow);
 }
 
-.portrait-card-shadow {
+.portrait-frame::before {
+	content: "";
 	position: absolute;
-	inset: 0;
-	z-index: -1;
-	border-radius: 20px;
-	background: #e7d3d4;
-	transform: rotate(-2.18deg) translate(10px, 14px);
+	inset: 18px;
+	border: 1px dashed rgba(131, 33, 49, 0.35);
+	border-radius: 22px;
 }
 
-.portrait-card-mount {
-	padding: 17px;
-	border: 1px dashed #ca9ba1;
-	border-radius: 16px;
+.portrait-inner {
+	position: absolute;
+	inset: 42px;
+	display: grid;
+	place-items: center;
+	text-align: center;
 }
 
-.portrait-card-mount .portrait-photo {
-	display: block;
-	width: 100%;
-	aspect-ratio: 0.8;
+.portrait-inner img {
+	width: min(58%, 230px);
 	height: auto;
+}
+
+.portrait-inner img.portrait-photo {
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
 	object-position: center top;
-	border-radius: 12px;
-}
-
-.portrait-card-caption {
-	margin: 13px 0 0;
-	text-align: center;
-	color: var(--wine);
-	font-family: "Newsreader", Georgia, serif;
-	font-style: italic;
-	font-weight: 500;
-	font-size: 25px;
-	line-height: 1;
-	text-transform: lowercase;
-}
-
-.portrait-card-arrow {
-	position: absolute;
-	right: 6px;
-	bottom: 4px;
-	width: 54px;
-	height: 54px;
-	transform: rotate(146.57deg);
+	border-radius: 16px;
 }
 
 .identity-card {
@@ -859,6 +842,14 @@ a.card:hover {
 
 .hero-visual-source {
 	width: min(100%, 392px);
+}
+
+.portrait-backdrop {
+	position: absolute;
+	inset: -16px;
+	border-radius: 28px;
+	background: var(--wine-soft);
+	transform: rotate(-2.5deg);
 }
 
 .home-capabilities {
