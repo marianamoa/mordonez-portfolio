@@ -858,7 +858,10 @@ a.card:hover {
 
 .compact-head {
 	display: block;
-	max-width: 640px;
+	/* Wide enough to keep the "Three things..." title on one line
+	   (its natural width is ~648px); the copy below stays constrained
+	   by .section-copy's own max-width. */
+	max-width: 720px;
 }
 
 .capability-row {
