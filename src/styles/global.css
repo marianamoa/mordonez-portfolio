@@ -852,37 +852,6 @@ a.card:hover {
 	transform: rotate(-2.5deg);
 }
 
-.hero-arrow {
-	position: absolute;
-	top: -42px;
-	right: 6px;
-	display: flex;
-	align-items: center;
-	gap: 4px;
-	color: var(--wine);
-}
-
-.hero-arrow-label {
-	font-family: "Newsreader", Georgia, serif;
-	font-style: italic;
-	font-size: 19px;
-	line-height: 1.1;
-	white-space: nowrap;
-	transform: rotate(-3deg);
-}
-
-.hero-arrow svg {
-	transform: scaleX(-1);
-}
-
-.hero-arrow path {
-	fill: none;
-	stroke: currentColor;
-	stroke-linecap: round;
-	stroke-linejoin: round;
-	stroke-width: 2.4;
-}
-
 .home-capabilities {
 	padding-top: 4px;
 }
