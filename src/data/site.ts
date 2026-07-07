@@ -32,6 +32,11 @@ export const proofBrands = [
 	"Ferrero",
 	"Kinder",
 	"Nutella",
+	"Tic Tac",
+	"Butterfinger",
+	"Crunch",
+	"Keebler",
+	"Royal Dansk",
 ];
 
 export const capabilities = [
