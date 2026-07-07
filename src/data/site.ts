@@ -26,7 +26,7 @@ export const socialLinks = [
 
 export const proofBrands = [
 	"Estore Labs",
-	"Casabianca",
+	"Casabianca Cycling",
 	"Planet of the Vapes",
 	"trades.org",
 	"Ferrero",
