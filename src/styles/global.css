@@ -983,6 +983,33 @@ a.card:hover {
 	color: var(--muted);
 }
 
+.review-actions {
+	display: flex;
+	gap: 10px;
+	margin-top: 16px;
+}
+
+.review-actions button {
+	flex: 1;
+	padding: 9px 12px;
+	border-radius: 9px;
+	font-size: 12px;
+	font-weight: 700;
+	cursor: default;
+}
+
+.review-approve {
+	border: none;
+	background: var(--wine);
+	color: #fff;
+}
+
+.review-edit {
+	border: 1px solid var(--line);
+	background: var(--paper);
+	color: var(--ink);
+}
+
 .segmented {
 	display: flex;
 	gap: 6px;
