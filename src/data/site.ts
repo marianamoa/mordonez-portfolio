@@ -8,10 +8,15 @@ export const site = {
 	resumeUrl: "/downloads/Mariana-Ordonez-CV.pdf",
 };
 
-// Pre-filled "Get in touch" email link used by the primary CTAs.
+// Pre-filled "Get in touch" email link (direct-email fallback).
 export const contactHref = `mailto:${site.email}?subject=${encodeURIComponent(
 	"Design project or role inquiry",
 )}`;
+
+// Web3Forms access key for the /contact form. Create one free at
+// https://web3forms.com (enter your email, copy the key here). It is public
+// by design — it only routes submissions to your inbox.
+export const web3formsAccessKey = "YOUR_WEB3FORMS_ACCESS_KEY";
 
 export const navItems = [
 	{ label: "Work", href: "/work/" },

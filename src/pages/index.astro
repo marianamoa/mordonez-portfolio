@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { caseStudies, proofBrands, site, contactHref } from "../data/site";
+import { caseStudies, proofBrands, site } from "../data/site";
 import { getJournalArticles } from "../lib/journal.server";
 
 const featuredWork = caseStudies.filter((item) => item.featured).slice(0, 3);
@@ -324,7 +324,7 @@ const featuredArticles = journalOrder
 			<h2>Looking for a designer who ships conversion and speaks AI?</h2>
 			<p>I am open to remote product, UX and eCommerce roles, working US hours from Colombia.</p>
 			<div class="actions" style="justify-content: center">
-				<a class="button" href={contactHref}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="button" href="/contact/">Get in touch <span aria-hidden="true">-></span></a>
 				<a class="text-link" href={site.resumeUrl}>Download resume</a>
 			</div>
 			<div class="cta-meta">
