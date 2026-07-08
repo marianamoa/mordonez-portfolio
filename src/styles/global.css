@@ -1010,74 +1010,58 @@ a.card:hover {
 	color: var(--ink);
 }
 
-.segmented {
-	display: flex;
-	gap: 6px;
-	margin-bottom: 16px;
-	padding: 4px;
-	border-radius: 11px;
-	background: var(--panel);
-}
-
-.segmented span,
-.segmented strong {
-	flex: 1;
-	padding: 8px 10px;
-	border-radius: 8px;
-	text-align: center;
-	font-size: 12px;
-}
-
-.segmented span {
-	color: var(--muted);
-}
-
-.segmented strong {
-	background: var(--wine);
-	color: #fff;
-}
-
-.pdp-mini {
-	display: flex;
+.ab-variants {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	gap: 12px;
-	margin-bottom: 18px;
-	padding: 14px;
+	margin-bottom: 16px;
+}
+
+.ab-variant {
+	position: relative;
+	margin: 0;
+	padding: 10px;
+	border: 1px solid var(--line);
 	border-radius: 12px;
-	background: var(--panel);
+	background: var(--paper);
 }
 
-.pdp-mini > div:first-child {
-	width: 54px;
-	height: 54px;
+.ab-variant.is-winner {
+	border-color: var(--wine);
+	box-shadow: 0 0 0 1px var(--wine);
+}
+
+.ab-variant img {
+	width: 100%;
+	height: auto;
 	border-radius: 8px;
-	background: rgba(131, 33, 49, 0.16);
-	flex: none;
+	background: #fff;
 }
 
-.pdp-mini i {
-	display: block;
-	width: 72%;
-	height: 9px;
-	margin-bottom: 7px;
-	border-radius: 4px;
-	background: rgba(0, 0, 0, 0.13);
+.ab-variant figcaption {
+	margin-top: 8px;
+	text-align: center;
+	color: var(--muted);
+	font-size: 11.5px;
+	font-weight: 700;
 }
 
-.pdp-mini i.short {
-	width: 42%;
-	margin-bottom: 11px;
-	background: rgba(0, 0, 0, 0.09);
+.ab-variant.is-winner figcaption {
+	color: var(--wine);
 }
 
-.pdp-mini strong {
-	display: flex;
-	min-height: 30px;
-	align-items: center;
-	justify-content: center;
-	border-radius: 8px;
+.ab-tag {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	padding: 3px 8px;
+	border-radius: 999px;
 	background: var(--wine);
 	color: #fff;
-	font-size: 12px;
+	font-size: 9.5px;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.03em;
 }
 
 .metric-row {
