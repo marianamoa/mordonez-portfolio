@@ -3,10 +3,15 @@ export const site = {
 	shortName: "M. Ordonez",
 	role: "AI Product & eCommerce Designer",
 	url: "https://mordonez.com",
-	email: "hello@mordonez.com",
+	email: "marianaordonez04@gmail.com",
 	location: "Colombia, UTC-5",
 	resumeUrl: "/downloads/Mariana-Ordonez-CV.pdf",
 };
+
+// Pre-filled "Get in touch" email link used by the primary CTAs.
+export const contactHref = `mailto:${site.email}?subject=${encodeURIComponent(
+	"Design project or role inquiry",
+)}`;
 
 export const navItems = [
 	{ label: "Work", href: "/work/" },

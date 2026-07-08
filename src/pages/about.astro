@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { capabilities, experience, site, socialLinks } from "../data/site";
+import { capabilities, experience, site, socialLinks, contactHref } from "../data/site";
 
 const profileSchema = {
 	"@context": "https://schema.org",
@@ -32,7 +32,7 @@ const profileSchema = {
 				worth shipping.
 			</p>
 			<div class="actions">
-				<a class="button" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="button" href={contactHref}>Get in touch <span aria-hidden="true">-></span></a>
 				<a class="text-link" href={site.resumeUrl}>Download resume</a>
 			</div>
 		</section>
@@ -120,7 +120,7 @@ const profileSchema = {
 			<h2>Let's build something that performs.</h2>
 			<p>I am open to remote product, UX and eCommerce design roles.</p>
 			<div class="actions" style="justify-content: center">
-				<a class="button" href={`mailto:${site.email}`}>Email Mariana <span aria-hidden="true">-></span></a>
+				<a class="button" href={contactHref}>Email Mariana <span aria-hidden="true">-></span></a>
 				<a class="text-link" href={site.resumeUrl}>Download resume</a>
 			</div>
 		</section>

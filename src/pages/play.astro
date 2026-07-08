@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { playItems, site } from "../data/site";
+import { playItems, site, contactHref } from "../data/site";
 ---
 
 <Layout
@@ -37,7 +37,7 @@ import { playItems, site } from "../data/site";
 			<h2>More of this belongs on Dribbble, Behance and Instagram.</h2>
 			<p>A curated visual trail for illustration, motion and brand experiments beyond case-study work.</p>
 			<div class="actions" style="justify-content: center">
-				<a class="button" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="button" href={contactHref}>Get in touch <span aria-hidden="true">-></span></a>
 				<a class="text-link" href="/work/">See conversion work</a>
 			</div>
 		</section>
