@@ -54,7 +54,7 @@ export const capabilities = [
 	{
 		title: "Agentic & AI-native UX",
 		description:
-			"Fluent in agentic and AI-native product patterns and human-AI interaction: trust, explainability, graceful failure and a human on the important calls. I design and build the AI-native way, in Figma and Cursor.",
+			"Fluent in agentic and AI-native product patterns and human-AI interaction: trust, explainability, graceful failure and a human on the important calls. I design and build the AI-native way, in Figma and Claude Code.",
 		tags: ["Agentic UX patterns", "Human-AI interaction", "AI-native workflow"],
 	},
 	{
@@ -266,9 +266,9 @@ export const toolStack = [
 	},
 	{
 		category: "AI-native tooling",
-		items: ["Cursor", "AI-assisted prototyping", "research synthesis", "prompt libraries", "asset variants"],
+		items: ["Claude Code", "AI-assisted prototyping", "research synthesis", "prompt libraries", "asset variants"],
 		description:
-			"AI-assisted environments like Cursor to accelerate design, prototyping and iteration, with human judgment kept at the center.",
+			"AI-assisted environments like Claude Code to accelerate design, prototyping and iteration, with human judgment kept at the center.",
 	},
 	{
 		category: "Visual & motion",
