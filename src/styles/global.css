@@ -847,11 +847,6 @@ a.card:hover {
 	color: var(--ink);
 }
 
-.muted-note {
-	color: var(--muted);
-	font-size: 14px;
-}
-
 .home-hero h1 {
 	max-width: 760px;
 	font-size: 64px;
@@ -996,86 +991,79 @@ a.card:hover {
 	padding: 20px;
 }
 
-.suggestion-card {
-	margin: 14px 0 16px;
-	padding: 14px 16px;
-	border-radius: 12px;
-	background: var(--panel);
+.trust-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: grid;
+	gap: 14px;
 }
 
-.suggestion-card small {
-	display: block;
-	margin-bottom: 8px;
-	color: var(--muted);
-	font-size: 10.5px;
-	font-weight: 800;
-	text-transform: uppercase;
+.trust-list li {
+	padding-bottom: 14px;
+	border-bottom: 1px solid var(--line);
 }
 
-.suggestion-card strong {
-	font-family: "Newsreader", Georgia, serif;
-	font-size: 21px;
-	font-weight: 400;
+.trust-list li:last-child {
+	padding-bottom: 0;
+	border-bottom: 0;
 }
 
-.confidence-row {
+.trust-row {
 	display: flex;
 	align-items: center;
-	gap: 11px;
-	margin-bottom: 14px;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 5px;
 }
 
-.confidence-row span {
+.trust-row strong {
+	font-size: 13.5px;
+}
+
+.trust-list p {
+	margin: 0;
 	color: var(--muted);
-	font-size: 12px;
-}
-
-.confidence-row strong {
-	color: var(--wine);
-	font-size: 12px;
-}
-
-.bar.wide {
-	flex: 1;
-	width: auto;
-}
-
-.mock-note {
-	margin: 16px 0 0;
-	color: var(--soft-ink);
 	font-size: 12.5px;
 }
 
-.mock-note.center {
-	text-align: center;
+.trust-meter {
+	width: 84px;
+	height: 7px;
+	border-radius: 999px;
+	background: var(--panel);
+	overflow: hidden;
+}
+
+.trust-meter i {
+	display: block;
+	height: 100%;
+	border-radius: 999px;
+	background: var(--wine);
+}
+
+.trust-chip {
+	padding: 4px 10px;
+	border-radius: 999px;
+	background: rgba(131, 33, 49, 0.12);
+	color: var(--wine);
+	font-size: 11px;
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.trust-chip.is-muted {
+	background: var(--panel);
 	color: var(--muted);
 }
 
-.review-actions {
-	display: flex;
-	gap: 10px;
-	margin-top: 16px;
-}
-
-.review-actions button {
-	flex: 1;
-	padding: 9px 12px;
-	border-radius: 9px;
-	font-size: 12px;
-	font-weight: 700;
-	cursor: default;
-}
-
-.review-approve {
-	border: none;
+.trust-approve {
+	padding: 5px 12px;
+	border-radius: 8px;
 	background: var(--wine);
 	color: #fff;
-}
-
-.review-edit {
-	border: 1px solid var(--line);
-	background: var(--paper);
-	color: var(--ink);
+	font-size: 11px;
+	font-weight: 700;
 }
 
 .ab-variants {
