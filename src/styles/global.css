@@ -991,79 +991,37 @@ a.card:hover {
 	padding: 20px;
 }
 
-.trust-list {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.pattern-grid {
 	display: grid;
-	gap: 14px;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
 }
 
-.trust-list li {
-	padding-bottom: 14px;
-	border-bottom: 1px solid var(--line);
+.pattern-tile {
+	padding: 12px 13px;
+	border-radius: 11px;
+	background: var(--panel);
 }
 
-.trust-list li:last-child {
-	padding-bottom: 0;
-	border-bottom: 0;
-}
-
-.trust-row {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 12px;
-	margin-bottom: 5px;
-}
-
-.trust-row strong {
-	font-size: 13.5px;
-}
-
-.trust-list p {
-	margin: 0;
-	color: var(--muted);
+.pattern-tile strong {
+	display: block;
+	margin-bottom: 4px;
+	color: var(--wine);
 	font-size: 12.5px;
 }
 
-.trust-meter {
-	width: 84px;
-	height: 7px;
-	border-radius: 999px;
-	background: var(--panel);
-	overflow: hidden;
-}
-
-.trust-meter i {
+.pattern-tile span {
 	display: block;
-	height: 100%;
-	border-radius: 999px;
-	background: var(--wine);
-}
-
-.trust-chip {
-	padding: 4px 10px;
-	border-radius: 999px;
-	background: rgba(131, 33, 49, 0.12);
-	color: var(--wine);
-	font-size: 11px;
-	font-weight: 700;
-	white-space: nowrap;
-}
-
-.trust-chip.is-muted {
-	background: var(--panel);
 	color: var(--muted);
+	font-size: 11.5px;
+	line-height: 1.35;
 }
 
-.trust-approve {
-	padding: 5px 12px;
-	border-radius: 8px;
-	background: var(--wine);
-	color: #fff;
+.pattern-credit {
+	margin: 14px 0 0;
+	color: var(--muted);
 	font-size: 11px;
-	font-weight: 700;
+	text-align: right;
 }
 
 .ab-variants {
