@@ -1,7 +1,7 @@
 export const site = {
 	name: "Mariana Ordonez",
 	shortName: "M. Ordonez",
-	role: "AI Product & eCommerce Designer",
+	role: "Agentic Product & AI UX Designer",
 	url: "https://mordonez.com",
 	email: "marianaordonez04@gmail.com",
 	location: "Colombia, UTC-5",
@@ -52,10 +52,10 @@ export const proofBrands = [
 
 export const capabilities = [
 	{
-		title: "AI Product & UX Design",
+		title: "Agentic & AI-native UX",
 		description:
-			"AI-powered features, assistant workflows, trust states, explainability and human-in-the-loop moments that make product decisions feel clear.",
-		tags: ["Conversational UI", "AI UX patterns", "Research synthesis"],
+			"Fluent in agentic and AI-native product patterns and human-AI interaction: trust, explainability, graceful failure and a human on the important calls. I design and build the AI-native way, in Figma and Cursor.",
+		tags: ["Agentic UX patterns", "Human-AI interaction", "AI-native workflow"],
 	},
 	{
 		title: "eCommerce & CRO",
@@ -66,8 +66,8 @@ export const capabilities = [
 	{
 		title: "Design Systems & Brand",
 		description:
-			"Scalable Figma libraries, visual systems, email modules and handoff docs that survive constant experimentation.",
-		tags: ["Figma systems", "Brand craft", "Developer handoff"],
+			"Reusable Figma design systems - components, auto layout, variables and clean developer handoff - built to scale end-to-end across a product and survive constant iteration.",
+		tags: ["Design systems", "Figma variables", "Dev handoff"],
 	},
 ];
 
@@ -260,15 +260,15 @@ export const articles = [
 export const toolStack = [
 	{
 		category: "Design & prototyping",
-		items: ["Figma", "FigJam", "component libraries", "interactive prototypes"],
+		items: ["Figma", "auto layout", "variables", "component libraries", "interactive prototypes", "dev handoff"],
 		description:
-			"Systems, prototyping, documentation and developer handoff for product and commerce teams.",
+			"End-to-end product design in Figma - systems, prototyping, documentation and clean developer handoff for product and commerce teams.",
 	},
 	{
-		category: "AI & generative",
-		items: ["research synthesis", "prompt libraries", "asset variants", "copy exploration"],
+		category: "AI-native tooling",
+		items: ["Cursor", "AI-assisted prototyping", "research synthesis", "prompt libraries", "asset variants"],
 		description:
-			"Generative AI for faster ideation and production, with human judgment kept at the center.",
+			"AI-assisted environments like Cursor to accelerate design, prototyping and iteration, with human judgment kept at the center.",
 	},
 	{
 		category: "Visual & motion",
