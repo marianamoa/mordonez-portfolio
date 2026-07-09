@@ -24,6 +24,7 @@ export const navItems = [
 	{ label: "Tools", href: "/tools/" },
 	{ label: "Play", href: "/play/" },
 	{ label: "About", href: "/about/" },
+	{ label: "Contact", href: "/contact/" },
 ];
 
 export const socialLinks = [
