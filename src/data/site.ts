@@ -28,10 +28,8 @@ export const navItems = [
 ];
 
 export const socialLinks = [
-	{ label: "LinkedIn", url: "" },
-	{ label: "Dribbble", url: "" },
-	{ label: "Behance", url: "" },
-	{ label: "Instagram", url: "" },
+	{ label: "LinkedIn", url: "https://www.linkedin.com/in/mariana-ordo%C3%B1ez-alarc%C3%B3n-ux-designer/" },
+	{ label: "Behance", url: "https://www.behance.net/marianaordoez1" },
 	{ label: "Email", url: `mailto:${site.email}` },
 ];
 
