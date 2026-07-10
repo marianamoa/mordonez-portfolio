@@ -11,6 +11,13 @@ export function getStaticPaths() {
 
 const { study } = Astro.props;
 const nextStudy = caseStudies[(caseStudies.findIndex((item) => item.slug === study.slug) + 1) % caseStudies.length];
+
+const media = study as {
+	cover?: string;
+	gallery?: { src: string; caption: string }[];
+};
+const cover = media.cover;
+const gallery = media.gallery;
 ---
 
 <Layout
@@ -27,6 +34,14 @@ const nextStudy = caseStudies[(caseStudies.findIndex((item) => item.slug === stu
 				{study.tags.map((tag) => <span class="pill">{tag}</span>)}
 			</div>
 		</section>
+
+		{
+			cover && (
+				<section class="container cs-cover">
+					<img src={cover} alt={`${study.client} - ${study.outcome}`} width="1600" loading="eager" />
+				</section>
+			)
+		}
 
 		<section class="container section tight detail-grid">
 			<article class="prose">
@@ -65,5 +80,26 @@ const nextStudy = caseStudies[(caseStudies.findIndex((item) => item.slug === stu
 				</dl>
 			</aside>
 		</section>
+
+		{
+			gallery && (
+				<section class="container section cs-gallery">
+					<div class="section-head">
+						<div>
+							<p class="kicker">Selected screens</p>
+							<h2 class="section-title">Inside the work.</h2>
+						</div>
+					</div>
+					<div class="cs-gallery-grid">
+						{gallery.map((shot) => (
+							<figure class="cs-shot">
+								<img src={shot.src} alt={shot.caption} loading="lazy" />
+								<figcaption>{shot.caption}</figcaption>
+							</figure>
+						))}
+					</div>
+				</section>
+			)
+		}
 	</main>
 </Layout>

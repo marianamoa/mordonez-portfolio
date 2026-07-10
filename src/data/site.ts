@@ -119,6 +119,15 @@ export const caseStudies = [
 		period: "Jul 2023 - Present",
 		tools: "Figma, email/SMS modules, AI-assisted production",
 		tags: ["eCommerce", "UI/UX", "Lifecycle", "Brand"],
+		cover: "/case-studies/planet-of-the-vapes/cover.webp",
+		gallery: [
+			{ src: "/case-studies/planet-of-the-vapes/pdp.webp", caption: "Product detail page: variant and add-on selectors, trust states and a frictionless Add to Cart, tuned to lift conversion and AOV." },
+			{ src: "/case-studies/planet-of-the-vapes/content.webp", caption: "Benefit-led content hierarchy that makes the value scannable - not a wall of specs." },
+			{ src: "/case-studies/planet-of-the-vapes/reviews.webp", caption: "Reviews and Q&A placed where hesitation happens - social proof that de-risks the buy." },
+			{ src: "/case-studies/planet-of-the-vapes/related.webp", caption: "Cross-sell and bundles that raise average order value without cluttering the decision." },
+			{ src: "/case-studies/planet-of-the-vapes/infographic.webp", caption: "Education and A+ content that answers questions before they become objections." },
+			{ src: "/case-studies/planet-of-the-vapes/campaign.webp", caption: "Campaign and lifecycle assets kept on-brand across web, email and social." },
+		],
 		featured: false,
 	},
 	{

@@ -696,6 +696,48 @@ a.card:hover {
 	align-items: start;
 }
 
+.cs-cover {
+	margin-bottom: 4px;
+}
+
+.cs-cover img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: var(--radius);
+	border: 1px solid var(--line);
+	box-shadow: var(--shadow);
+}
+
+.cs-gallery-grid {
+	display: grid;
+	gap: 44px;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.cs-shot {
+	margin: 0;
+}
+
+.cs-shot img {
+	display: block;
+	width: 100%;
+	height: auto;
+	border-radius: 16px;
+	border: 1px solid var(--line);
+	background: var(--paper);
+	box-shadow: 0 18px 40px rgba(44, 31, 22, 0.1);
+}
+
+.cs-shot figcaption {
+	margin-top: 14px;
+	max-width: 640px;
+	color: var(--muted);
+	font-size: 14.5px;
+	line-height: 1.55;
+}
+
 .prose {
 	max-width: 780px;
 }
