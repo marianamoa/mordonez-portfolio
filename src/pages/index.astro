@@ -233,7 +233,7 @@ const featuredArticles = journalOrder
 			<a class="card work-feature-card" href={`/work/${primaryWork.slug}/`}>
 				<div class="work-cover" aria-hidden="true"></div>
 				<div class="work-copy">
-					<p class="kicker">Featured - {primaryWork.client} - Apparel eCommerce</p>
+					<p class="kicker">Featured - {primaryWork.client} - {primaryWork.period}</p>
 					<h3>{primaryWork.outcome}</h3>
 					<p>{primaryWork.summary}</p>
 					<div class="work-card-foot">
@@ -251,7 +251,7 @@ const featuredArticles = journalOrder
 						<a class="card work-mini-card" href={`/work/${study.slug}/`}>
 							<div class="work-cover compact" aria-hidden="true"></div>
 							<div class="work-copy">
-								<p class="kicker">{study.client}</p>
+								<p class="kicker">{study.client} - {study.period}</p>
 								<h3>{study.outcome}</h3>
 								<p>{study.summary}</p>
 								<div class="impact-badge small">

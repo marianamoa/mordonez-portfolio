@@ -31,7 +31,7 @@ import { caseStudies, site } from "../../data/site";
 					caseStudies.map((study) => (
 						<a class="card work-card" href={`/work/${study.slug}/`}>
 							<div class="work-copy">
-								<p class="kicker">{study.client}</p>
+								<p class="kicker">{study.client} - {study.period}</p>
 								<h2>{study.outcome}</h2>
 								<p>{study.summary}</p>
 								<div class="tags">

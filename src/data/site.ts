@@ -71,30 +71,6 @@ export const capabilities = [
 
 export const caseStudies = [
 	{
-		slug: "casabianca-apparel-cro",
-		client: "Casabianca Cycling",
-		title: "Casabianca Cycling apparel CRO redesign",
-		outcome: "A checkout and UX redesign that made a cycling apparel brand feel as premium as its product.",
-		summary:
-			"Restructured information architecture, product-page hierarchy and digital-to-physical brand consistency for a cycling apparel commerce experience.",
-		problem:
-			"The shopping flow had visual clutter, weak purchase hierarchy and checkout friction that made the brand feel less trustworthy than the product.",
-		process: [
-			"Audited the funnel from homepage to checkout and mapped the moments where shoppers lost confidence.",
-			"Reworked product-page hierarchy around fit, material, shipping, returns and clear purchase actions.",
-			"Built a cohesive visual system across digital commerce and physical touchpoints.",
-			"Iterated layouts around conversion behavior instead of decorative preference.",
-		],
-		solution:
-			"A calmer cycling apparel experience with stronger product storytelling, cleaner CTAs, clearer checkout flow and a visual language that made the brand feel more premium.",
-		impact: "A calmer, more premium cycling apparel experience with cleaner CTAs and a clearer checkout flow.",
-		role: "UI/UX, CRO, visual system",
-		timeline: "Commerce redesign",
-		tools: "Figma, analytics review, brand system",
-		tags: ["CRO", "UI/UX", "Web", "Brand"],
-		featured: true,
-	},
-	{
 		slug: "estore-labs-marketplace-cro",
 		client: "Estore Labs",
 		title: "Marketplace CRO for Amazon, Walmart and Target",
@@ -114,6 +90,7 @@ export const caseStudies = [
 		impact: "Measurable test wins and scaled output without losing brand consistency.",
 		role: "CRO, marketplace UX, AI-assisted workflow",
 		timeline: "Ongoing retail optimization",
+		period: "Sep 2024 - Present",
 		tools: "Figma, Photoshop, AI-assisted variants",
 		tags: ["CRO", "AI workflow", "Web"],
 		featured: true,
@@ -138,8 +115,34 @@ export const caseStudies = [
 		impact: "Faster iteration and reduced funnel drop-off risk through consistent product patterns.",
 		role: "Product design, UI/UX, design systems",
 		timeline: "Product foundation",
+		period: "Jul 2022 - Dec 2023",
 		tools: "Figma, prototyping, documentation",
 		tags: ["Product", "UI/UX", "Design systems"],
+		featured: true,
+	},
+	{
+		slug: "casabianca-apparel-cro",
+		client: "Casabianca Cycling",
+		title: "Casabianca Cycling apparel CRO redesign",
+		outcome: "A checkout and UX redesign that made a cycling apparel brand feel as premium as its product.",
+		summary:
+			"Restructured information architecture, product-page hierarchy and digital-to-physical brand consistency for a cycling apparel commerce experience.",
+		problem:
+			"The shopping flow had visual clutter, weak purchase hierarchy and checkout friction that made the brand feel less trustworthy than the product.",
+		process: [
+			"Audited the funnel from homepage to checkout and mapped the moments where shoppers lost confidence.",
+			"Reworked product-page hierarchy around fit, material, shipping, returns and clear purchase actions.",
+			"Built a cohesive visual system across digital commerce and physical touchpoints.",
+			"Iterated layouts around conversion behavior instead of decorative preference.",
+		],
+		solution:
+			"A calmer cycling apparel experience with stronger product storytelling, cleaner CTAs, clearer checkout flow and a visual language that made the brand feel more premium.",
+		impact: "A calmer, more premium cycling apparel experience with cleaner CTAs and a clearer checkout flow.",
+		role: "UI/UX, CRO, visual system",
+		timeline: "Commerce redesign",
+		period: "Sep 2018 - Jun 2022",
+		tools: "Figma, analytics review, brand system",
+		tags: ["CRO", "UI/UX", "Web", "Brand"],
 		featured: true,
 	},
 	{
@@ -162,6 +165,7 @@ export const caseStudies = [
 		impact: "Faster variant production with clearer rationale for every design decision.",
 		role: "AI Product, AI UX, CRO",
 		timeline: "Working method",
+		period: "Ongoing method",
 		tools: "Figma, generative AI, research synthesis",
 		tags: ["AI Product", "AI UX", "CRO"],
 		featured: false,
