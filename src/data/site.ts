@@ -96,6 +96,31 @@ export const caseStudies = [
 		featured: true,
 	},
 	{
+		slug: "planet-of-the-vapes-ecommerce",
+		client: "Planet of the Vapes",
+		title: "DTC landing pages and lifecycle design for Planet of the Vapes",
+		outcome: "Conversion-focused landing pages, campaigns and lifecycle design for a DTC eCommerce brand.",
+		summary:
+			"Landing pages, promotional campaigns and email/SMS assets supporting product launches and seasonal pushes, kept consistent across every brand touchpoint.",
+		problem:
+			"A DTC brand shipping frequent launches and seasonal campaigns needed conversion-focused pages and lifecycle assets that stayed on-brand without slowing production.",
+		process: [
+			"Designed landing pages and promotional campaigns for new product launches and seasonal pushes.",
+			"Applied UX/UI principles to improve navigation, product discovery and the overall shopping experience.",
+			"Built modular components across eCommerce, email and SMS to keep production fast and on-brand.",
+			"Integrated AI tools to speed design, improve content quality and scale production workflows.",
+		],
+		solution:
+			"A modular design system across web, email and SMS that kept launches and seasonal campaigns consistent and quick to produce, with clearer product discovery and shopping flows.",
+		impact: "Faster, on-brand launch and lifecycle production with clearer navigation and product discovery.",
+		role: "Web & marketing design, UX/UI, lifecycle",
+		timeline: "Ongoing DTC design",
+		period: "Jul 2023 - Present",
+		tools: "Figma, email/SMS modules, AI-assisted production",
+		tags: ["eCommerce", "UI/UX", "Lifecycle", "Brand"],
+		featured: false,
+	},
+	{
 		slug: "trades-design-system-cms",
 		client: "trades.org",
 		title: "Design system and custom CMS from scratch",
