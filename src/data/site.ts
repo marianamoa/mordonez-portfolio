@@ -80,10 +80,11 @@ export const caseStudies = [
 		problem:
 			"Marketplace teams needed stronger conversion and AOV across PDPs, bundles and retail content while preserving strict brand consistency.",
 		process: [
-			"Turned product and shopper insight into PDP and A+ content hypotheses.",
-			"Designed variant, bundle and content-system improvements for large marketplace catalogs.",
-			"Used AI-assisted production to expand variant exploration while keeping human judgment over quality.",
-			"Prepared assets and specs for high-volume delivery across Amazon, Walmart and Target.",
+			"Designed high-converting landing pages and product detail pages for Amazon, Walmart and Target, applying CRO principles to maximize conversion rate and AOV.",
+			"Created and iterated on A/B test variants for A+ content, homepage banners and promotional funnels, driving measurable performance improvements.",
+			"Optimized product quantity and variant selectors (bundles, size options) and purchase flows for clarity and reduced drop-off.",
+			"Collaborated with cross-functional growth teams - strategists, e-retail analysts and developers - to translate test hypotheses into design concepts.",
+			"Supported Ferrero-portfolio brands (Kinder, Nutella, Rocher, Butterfinger) with consistent, conversion-optimized visuals for launches and seasonal campaigns.",
 		],
 		solution:
 			"A repeatable commerce-design workflow for faster marketplace testing, clearer shopper decisions and consistent brand expression across channels.",
@@ -105,10 +106,10 @@ export const caseStudies = [
 		problem:
 			"A DTC brand shipping frequent launches and seasonal campaigns needed conversion-focused pages and lifecycle assets that stayed on-brand without slowing production.",
 		process: [
-			"Designed landing pages and promotional campaigns for new product launches and seasonal pushes.",
-			"Applied UX/UI principles to improve navigation, product discovery and the overall shopping experience.",
-			"Built modular components across eCommerce, email and SMS to keep production fast and on-brand.",
-			"Integrated AI tools to speed design, improve content quality and scale production workflows.",
+			"Designed landing pages, promotional campaigns and marketing assets supporting new product launches and seasonal pushes.",
+			"Applied UX/UI principles to improve navigation, product discovery and the overall shopping experience, increasing engagement and sales.",
+			"Integrated AI tools to improve design efficiency, enhance content quality and scale production workflows.",
+			"Ensured brand and design consistency across eCommerce, email and SMS touchpoints through modular components and clear visual hierarchy.",
 		],
 		solution:
 			"A modular design system across web, email and SMS that kept launches and seasonal campaigns consistent and quick to produce, with clearer product discovery and shopping flows.",
@@ -130,10 +131,10 @@ export const caseStudies = [
 		problem:
 			"The team needed to ship multiple product surfaces quickly without re-solving components, templates and handoff patterns on every release.",
 		process: [
-			"Mapped core user flows, content needs and product surfaces.",
-			"Built wireframes, prototypes and a scalable Figma component library.",
-			"Documented responsive templates and accessible interaction patterns for handoff.",
-			"Reduced repeat design work by turning repeated decisions into system rules.",
+			"Led end-to-end design for multiple web products, from user research and wireframes to high-fidelity prototypes and developer handoff.",
+			"Built scalable design systems and reusable component libraries in Figma, accelerating iteration speed for rapid experimentation.",
+			"Designed responsive templates and custom CMS/ATS platforms from scratch, focused on usability, accessibility and conversion.",
+			"Conducted UX research to identify friction points and optimize user flows, reducing drop-off across key funnels.",
 		],
 		solution:
 			"A modular UX and visual system with reusable templates, clearer handoff and a CMS structure that supported faster iteration.",
@@ -155,10 +156,9 @@ export const caseStudies = [
 		problem:
 			"The shopping flow had visual clutter, weak purchase hierarchy and checkout friction that made the brand feel less trustworthy than the product.",
 		process: [
-			"Audited the funnel from homepage to checkout and mapped the moments where shoppers lost confidence.",
-			"Reworked product-page hierarchy around fit, material, shipping, returns and clear purchase actions.",
-			"Built a cohesive visual system across digital commerce and physical touchpoints.",
-			"Iterated layouts around conversion behavior instead of decorative preference.",
+			"Redesigned the eCommerce platform's UX, improving layout clarity, content structure and checkout-flow optimization.",
+			"Drove sales through data-informed design decisions and conversion-focused page iterations.",
+			"Created cohesive visual systems across digital and physical touchpoints, strengthening brand recognition and customer trust.",
 		],
 		solution:
 			"A calmer cycling apparel experience with stronger product storytelling, cleaner CTAs, clearer checkout flow and a visual language that made the brand feel more premium.",
