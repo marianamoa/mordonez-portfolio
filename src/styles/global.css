@@ -575,12 +575,22 @@ a.card:hover {
 }
 
 .work-card .work-copy {
-	padding: 30px;
+	padding: 24px;
+}
+
+.work-card .work-copy h2 {
+	font-size: 21px;
+	line-height: 1.2;
+}
+
+.work-card .work-copy p {
+	margin-top: 10px;
+	font-size: 14.5px;
 }
 
 .work-card .work-art {
 	position: relative;
-	min-height: 260px;
+	min-height: 188px;
 	background:
 		linear-gradient(135deg, rgba(131, 33, 49, 0.12), rgba(47, 157, 115, 0.08)),
 		var(--panel);
@@ -623,7 +633,7 @@ a.card:hover {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	object-position: 75% center;
+	object-position: 85% center;
 }
 
 .metric {
