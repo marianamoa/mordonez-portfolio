@@ -697,7 +697,7 @@ a.card:hover {
 }
 
 .cs-cover {
-	margin-bottom: 4px;
+	margin-bottom: 6px;
 }
 
 .cs-cover img {
@@ -709,18 +709,83 @@ a.card:hover {
 	box-shadow: var(--shadow);
 }
 
-.cs-gallery-grid {
-	display: grid;
-	gap: 44px;
-	max-width: 900px;
-	margin: 0 auto;
+/* Details bar at the top of a case study */
+.cs-meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px 44px;
+	max-width: 920px;
+	margin-top: 26px;
+	padding: 22px 26px;
+	border: 1px solid var(--line);
+	border-radius: var(--radius);
+	background: var(--paper);
 }
 
-.cs-shot {
+.cs-meta > div {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+}
+
+.cs-meta span {
+	color: var(--wine);
+	font-size: 11px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.cs-meta strong {
+	font-size: 14px;
+	font-weight: 600;
+}
+
+.cs-meta .text-link {
+	align-self: start;
+	font-size: 14px;
+}
+
+/* Case study body: narrow text, wide supporting visuals */
+.cs-body {
+	max-width: 920px;
+}
+
+.cs-body .prose {
+	max-width: 760px;
+}
+
+.cs-features {
+	display: grid;
+	gap: 52px;
+	margin: 44px 0;
+}
+
+.cs-feature {
 	margin: 0;
 }
 
-.cs-shot img {
+.cs-feature figcaption {
+	margin-bottom: 16px;
+}
+
+.cs-feature figcaption strong {
+	display: block;
+	margin-bottom: 6px;
+	font-family: "Newsreader", Georgia, serif;
+	font-size: 25px;
+	font-weight: 400;
+	line-height: 1.15;
+}
+
+.cs-feature figcaption span {
+	display: block;
+	max-width: 680px;
+	color: var(--muted);
+	font-size: 15px;
+	line-height: 1.55;
+}
+
+.cs-feature img {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -730,12 +795,8 @@ a.card:hover {
 	box-shadow: 0 18px 40px rgba(44, 31, 22, 0.1);
 }
 
-.cs-shot figcaption {
-	margin-top: 14px;
-	max-width: 640px;
-	color: var(--muted);
-	font-size: 14.5px;
-	line-height: 1.55;
+.cs-end {
+	margin-top: 8px;
 }
 
 .prose {
