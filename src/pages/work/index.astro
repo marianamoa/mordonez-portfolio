@@ -28,7 +28,9 @@ import { caseStudies, site } from "../../data/site";
 		<section class="container section tight">
 			<div class="grid-2">
 				{
-					caseStudies.map((study) => (
+					caseStudies.map((study) => {
+					const cover = (study as { cover?: string }).cover;
+					return (
 						<a class="card work-card" href={`/work/${study.slug}/`}>
 							<div class="work-copy">
 								<p class="kicker">{study.client} - {study.period}</p>
@@ -41,9 +43,12 @@ import { caseStudies, site } from "../../data/site";
 								</div>
 								<p class="metric">{study.impact}</p>
 							</div>
-							<div class="work-art" aria-label={`${study.title} visual summary`}></div>
+							<div class={`work-art${cover ? " has-cover" : ""}`} aria-label={`${study.title} visual summary`}>
+							{cover && <img src={cover} alt="" loading="lazy" />}
+						</div>
 						</a>
-					))
+					);
+					})
 				}
 			</div>
 		</section>

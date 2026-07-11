@@ -608,6 +608,24 @@ a.card:hover {
 	border-radius: 14px;
 }
 
+/* Card art panels that show a real cover image instead of the placeholder */
+.work-art.has-cover::before,
+.work-art.has-cover::after,
+.work-cover.has-cover::before,
+.work-cover.has-cover::after {
+	display: none;
+}
+
+.work-art.has-cover img,
+.work-cover.has-cover img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: 75% center;
+}
+
 .metric {
 	margin-top: auto;
 	padding-top: 24px;
