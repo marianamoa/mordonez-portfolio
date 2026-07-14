@@ -5,6 +5,7 @@ import { getJournalArticles } from "../lib/journal.server";
 
 const featuredWork = caseStudies.filter((item) => item.featured).slice(0, 3);
 const [primaryWork, ...secondaryWork] = featuredWork;
+const primaryMedia = primaryWork as { cover?: string; coverPosition?: string };
 const articles = await getJournalArticles();
 const journalOrder = [
 	"ai-ab-tests-faster-design-craft",
@@ -231,7 +232,9 @@ const featuredArticles = journalOrder
 			</div>
 
 			<a class="card work-feature-card" href={`/work/${primaryWork.slug}/`}>
-				<div class="work-cover" aria-hidden="true"></div>
+				<div class={`work-cover${primaryMedia.cover ? " has-cover" : ""}`} aria-hidden="true">
+					{primaryMedia.cover && <img src={primaryMedia.cover} alt="" loading="lazy" style={`object-position: ${primaryMedia.coverPosition ?? "center"}`} />}
+				</div>
 				<div class="work-copy">
 					<p class="kicker">Featured - {primaryWork.client} - {primaryWork.period}</p>
 					<h3>{primaryWork.outcome}</h3>
@@ -247,9 +250,13 @@ const featuredArticles = journalOrder
 
 			<div class="grid-2 work-pair">
 				{
-					secondaryWork.map((study) => (
+					secondaryWork.map((study) => {
+						const m = study as { cover?: string; coverPosition?: string };
+						return (
 						<a class="card work-mini-card" href={`/work/${study.slug}/`}>
-							<div class="work-cover compact" aria-hidden="true"></div>
+							<div class={`work-cover compact${m.cover ? " has-cover" : ""}`} aria-hidden="true">
+								{m.cover && <img src={m.cover} alt="" loading="lazy" style={`object-position: ${m.coverPosition ?? "center"}`} />}
+							</div>
 							<div class="work-copy">
 								<p class="kicker">{study.client} - {study.period}</p>
 								<h3>{study.outcome}</h3>
@@ -265,7 +272,8 @@ const featuredArticles = journalOrder
 								</div>
 							</div>
 						</a>
-					))
+						);
+					})
 				}
 			</div>
 		</section>

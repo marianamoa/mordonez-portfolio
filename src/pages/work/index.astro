@@ -29,7 +29,9 @@ import { caseStudies, site } from "../../data/site";
 			<div class="grid-2">
 				{
 					caseStudies.map((study) => {
-					const cover = (study as { cover?: string }).cover;
+					const media = study as { cover?: string; coverPosition?: string };
+					const cover = media.cover;
+					const coverPos = media.coverPosition ?? "center";
 					return (
 						<a class="card work-card" href={`/work/${study.slug}/`}>
 							<div class="work-copy">
@@ -44,7 +46,7 @@ import { caseStudies, site } from "../../data/site";
 								<p class="metric">{study.impact}</p>
 							</div>
 							<div class={`work-art${cover ? " has-cover" : ""}`} aria-label={`${study.title} visual summary`}>
-							{cover && <img src={cover} alt="" loading="lazy" />}
+							{cover && <img src={cover} alt="" loading="lazy" style={`object-position: ${coverPos}`} />}
 						</div>
 						</a>
 					);

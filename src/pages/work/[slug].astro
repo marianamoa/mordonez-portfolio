@@ -15,9 +15,11 @@ const nextStudy = caseStudies[(caseStudies.findIndex((item) => item.slug === stu
 const media = study as {
 	cover?: string;
 	gallery?: { src: string; title?: string; caption: string }[];
+	liveLinks?: { label: string; detail?: string; url: string }[];
 };
 const cover = media.cover;
 const gallery = media.gallery;
+const liveLinks = media.liveLinks;
 ---
 
 <Layout
@@ -80,6 +82,26 @@ const gallery = media.gallery;
 								<img src={shot.src} alt={shot.title ?? shot.caption} loading="lazy" />
 							</figure>
 						))}
+					</div>
+				)
+			}
+
+			{
+				liveLinks && (
+					<div class="cs-live">
+						<h2>See it live</h2>
+						<p class="cs-live-note">Public retailer listings I designed the conversion content for.</p>
+						<ul class="cs-live-list">
+							{liveLinks.map((link) => (
+								<li>
+									<a href={link.url} target="_blank" rel="noopener">
+										<strong>{link.label}</strong>
+										{link.detail && <span>{link.detail}</span>}
+										<span class="cs-live-arrow" aria-hidden="true">-></span>
+									</a>
+								</li>
+							))}
+						</ul>
 					</div>
 				)
 			}
