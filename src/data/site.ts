@@ -182,6 +182,15 @@ export const caseStudies = [
 		period: "Jul 2022 - Dec 2023",
 		tools: "Figma, prototyping, documentation",
 		tags: ["Product", "UI/UX", "Design systems"],
+		cover: "/case-studies/trades-org/cover.webp",
+		coverPosition: "center top",
+		gallery: [
+			{ src: "/case-studies/trades-org/ats.webp", title: "Complex admin, made usable", caption: "An applicant-tracking admin with configurable requirement templates - data tables, filters and inline editing that stay clear even as the data gets dense." },
+			{ src: "/case-studies/trades-org/contact.webp", title: "The whole record in one screen", caption: "A CRM contact profile that puts history, notes, details and linked companies exactly where they are needed - no hunting, no clutter." },
+			{ src: "/case-studies/trades-org/tokens.webp", title: "A documented token system", caption: "Content color tokens with clear names, roles and parents - the foundation that keeps every screen consistent and easy to hand off." },
+			{ src: "/case-studies/trades-org/buttons.webp", title: "Components with every state", caption: "A button component covering sizes, colors, icons and states - reusable parts that let the team ship fast without redrawing the basics." },
+			{ src: "/case-studies/trades-org/designsystem.webp", title: "One system behind it all", caption: "A design system built from scratch to keep a growing product consistent, faster to iterate and aligned across the team." },
+		],
 		featured: true,
 	},
 	{

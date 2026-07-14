@@ -732,6 +732,10 @@ a.card:hover {
 	display: block;
 	width: 100%;
 	height: auto;
+	/* Wide banners show in full; tall product screens crop to a banner */
+	max-height: 460px;
+	object-fit: cover;
+	object-position: center top;
 	border-radius: var(--radius);
 	border: 1px solid var(--line);
 	box-shadow: var(--shadow);
