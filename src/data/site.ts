@@ -94,6 +94,32 @@ export const caseStudies = [
 		period: "Sep 2024 - Present",
 		tools: "Figma, Photoshop, AI-assisted variants",
 		tags: ["CRO", "AI workflow", "Web"],
+		liveLinks: [
+			{
+				title: "The image carousel that sells",
+				body: "On a marketplace the image carousel is the storefront. I design the sequence - hero, benefits, size, lifestyle and trust - so shoppers get the whole story before they scroll.",
+				linkLabel: "View a live PDP",
+				url: "",
+			},
+			{
+				title: "A+ content, engineered to convert",
+				body: "Beyond the basics, I plan Amazon A+ content and brand-story modules as a system - each block with a job: trigger craving, resolve doubt, build trust and lift perceived quality.",
+				linkLabel: "View live A+ content",
+				url: "",
+			},
+			{
+				title: "Brand stores that scale a portfolio",
+				body: "Multi-page Amazon Brand Stores that give a whole catalog a consistent, shoppable home - navigation, category pages and seasonal features across the brand family.",
+				linkLabel: "Visit a live brand store",
+				url: "",
+			},
+			{
+				title: "Variants, bundles and the path to cart",
+				body: "Conversion is more than content. I design the quantity, bundle and size selectors and the purchase flow so shoppers pick the right pack fast - lifting AOV and cutting drop-off.",
+				linkLabel: "View a live listing",
+				url: "",
+			},
+		],
 		featured: true,
 	},
 	{

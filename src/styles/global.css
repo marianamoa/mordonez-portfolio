@@ -849,47 +849,52 @@ a.card:hover {
 
 .cs-live-list {
 	display: grid;
-	gap: 12px;
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	max-width: 640px;
+	gap: 14px;
+	max-width: 720px;
 }
 
-.cs-live-list a {
-	display: flex;
-	align-items: center;
-	gap: 6px 14px;
-	flex-wrap: wrap;
-	padding: 16px 20px;
+.cs-live-item {
+	padding: 20px 22px;
 	border: 1px solid var(--line);
-	border-radius: 14px;
+	border-radius: 16px;
 	background: var(--paper);
-	color: var(--ink);
-	text-decoration: none;
-	transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.cs-live-list a:hover {
-	transform: translateY(-2px);
-	border-color: rgba(131, 33, 49, 0.38);
-	box-shadow: var(--shadow);
+.cs-live-item strong {
+	display: block;
+	margin-bottom: 6px;
+	font-family: "Newsreader", Georgia, serif;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.2;
 }
 
-.cs-live-list strong {
-	font-size: 15px;
-	font-weight: 700;
-}
-
-.cs-live-list a > span:not(.cs-live-arrow) {
+.cs-live-item p {
+	margin: 0 0 12px;
 	color: var(--muted);
-	font-size: 14px;
+	font-size: 14.5px;
+	line-height: 1.55;
 }
 
-.cs-live-arrow {
-	margin-left: auto;
+.cs-live-item a {
+	display: inline-flex;
+	align-items: center;
+	gap: 7px;
 	color: var(--wine);
+	font-size: 14px;
 	font-weight: 700;
+	text-decoration: none;
+	border-bottom: 2px solid rgba(131, 33, 49, 0.25);
+	padding-bottom: 1px;
+	transition: border-color 0.2s ease;
+}
+
+.cs-live-item a:hover {
+	border-color: var(--wine);
+}
+
+.cs-live-item:last-child p:last-child {
+	margin-bottom: 0;
 }
 
 .prose {
