@@ -94,6 +94,8 @@ export const caseStudies = [
 		period: "Sep 2024 - Present",
 		tools: "Figma, Photoshop, AI-assisted variants",
 		tags: ["CRO", "AI workflow", "Web"],
+		cover: "/case-studies/estore-labs/cover.webp",
+		coverPosition: "center",
 		liveLinks: [
 			{
 				title: "The image carousel that sells",
