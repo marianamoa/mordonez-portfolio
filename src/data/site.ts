@@ -183,8 +183,9 @@ export const caseStudies = [
 		tools: "Figma, prototyping, documentation",
 		tags: ["Product", "UI/UX", "Design systems"],
 		cover: "/case-studies/trades-org/cover.webp",
-		coverPosition: "center top",
+		coverPosition: "center",
 		gallery: [
+			{ src: "/case-studies/trades-org/contacts.webp", title: "Data-dense views that stay scannable", caption: "A CRM contacts table with filters, search and multi-value fields, structured so a busy user finds the right record fast." },
 			{ src: "/case-studies/trades-org/ats.webp", title: "Complex admin, made usable", caption: "An applicant-tracking admin with configurable requirement templates - data tables, filters and inline editing that stay clear even as the data gets dense." },
 			{ src: "/case-studies/trades-org/contact.webp", title: "The whole record in one screen", caption: "A CRM contact profile that puts history, notes, details and linked companies exactly where they are needed - no hunting, no clutter." },
 			{ src: "/case-studies/trades-org/tokens.webp", title: "A documented token system", caption: "Content color tokens with clear names, roles and parents - the foundation that keeps every screen consistent and easy to hand off." },

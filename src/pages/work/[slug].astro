@@ -14,10 +14,12 @@ const nextStudy = caseStudies[(caseStudies.findIndex((item) => item.slug === stu
 
 const media = study as {
 	cover?: string;
+	coverPosition?: string;
 	gallery?: { src: string; title?: string; caption: string }[];
 	liveLinks?: { title: string; body: string; linkLabel?: string; url?: string }[];
 };
 const cover = media.cover;
+const coverPos = media.coverPosition ?? "center top";
 const gallery = media.gallery;
 const liveLinks = media.liveLinks;
 ---
@@ -40,7 +42,7 @@ const liveLinks = media.liveLinks;
 		{
 			cover && (
 				<section class="container cs-cover">
-					<img src={cover} alt={`${study.client} - ${study.outcome}`} width="1600" loading="eager" />
+					<img src={cover} alt={`${study.client} - ${study.outcome}`} width="1600" loading="eager" style={`object-position: ${coverPos}`} />
 				</section>
 			)
 		}
