@@ -219,7 +219,7 @@ export const caseStudies = [
 		cover: "/case-studies/casabianca-cycling/cover.webp",
 		coverPosition: "center 30%",
 		gallery: [
-			{ src: "/case-studies/casabianca-cycling/pdp.webp", title: "The product page, redesigned", caption: "A full PDP for a technical jersey - gallery, color and size selectors, fabric features, size help, reviews and cross-sell, on desktop and mobile." },
+			{ src: "/case-studies/casabianca-cycling/pdp.webp", title: "The product page, redesigned", caption: "A full PDP for a technical jersey - gallery, color and size selectors, fabric features, size help, reviews and cross-sell, on desktop and mobile.", maxWidth: 800 },
 			{ src: "/case-studies/casabianca-cycling/explainer.webp", title: "Designed around the buying decision", caption: "Fit confidence, shipping and returns, and cart clarity - the things that actually convert technical apparel, not just visual taste." },
 			{ src: "/case-studies/casabianca-cycling/brandboard.webp", title: "A brand board to design against", caption: "Wordmark, a restrained commercial palette and catalog photography - the visual system that kept the redesign unmistakably on-brand." },
 			{ src: "/case-studies/casabianca-cycling/forher.webp", title: "Campaign that speaks to the rider", caption: "Brand campaign imagery that gives the apparel a clear, confident identity across the store." },

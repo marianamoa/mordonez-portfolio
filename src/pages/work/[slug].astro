@@ -15,7 +15,7 @@ const nextStudy = caseStudies[(caseStudies.findIndex((item) => item.slug === stu
 const media = study as {
 	cover?: string;
 	coverPosition?: string;
-	gallery?: { src: string; title?: string; caption: string }[];
+	gallery?: { src: string; title?: string; caption: string; maxWidth?: number }[];
 	liveLinks?: { title: string; body: string; linkLabel?: string; url?: string }[];
 };
 const cover = media.cover;
@@ -81,7 +81,7 @@ const liveLinks = media.liveLinks;
 									{shot.title && <strong>{shot.title}</strong>}
 									<span>{shot.caption}</span>
 								</figcaption>
-								<img src={shot.src} alt={shot.title ?? shot.caption} loading="lazy" />
+								<img src={shot.src} alt={shot.title ?? shot.caption} loading="lazy" style={shot.maxWidth ? `max-width: ${shot.maxWidth}px` : undefined} />
 							</figure>
 						))}
 					</div>

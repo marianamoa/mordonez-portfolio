@@ -821,6 +821,7 @@ a.card:hover {
 	display: block;
 	width: 100%;
 	height: auto;
+	margin-inline: auto;
 	border-radius: 16px;
 	border: 1px solid var(--line);
 	background: var(--paper);
