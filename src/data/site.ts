@@ -405,31 +405,41 @@ export const resources = [
 	},
 ];
 
-export const playItems = [
-	{
-		title: "Illustration systems",
-		type: "Procreate / Illustrator",
-		description: "Character, editorial and commerce-supporting artwork that adds memory to brand systems.",
-	},
-	{
-		title: "Motion studies",
-		type: "After Effects",
-		description: "Micro-interactions and short loops for product surfaces, launches and social content.",
-	},
-	{
-		title: "Type and poster experiments",
-		type: "Visual design",
-		description: "Layout, rhythm and hierarchy studies that keep visual craft sharp.",
-	},
-	{
-		title: "AI art exploration",
-		type: "Generative tooling",
-		description: "Taste-led experiments with AI image workflows, clearly labeled and curated.",
-	},
-	{
-		title: "Side-product concepts",
-		type: "Product thinking",
-		description: "Self-initiated concepts where brand, UX and conversion can meet without a brief.",
-	},
+export const playGallery = [
+	{ slug: "shiitake-mushroom", alt: "Shiitake mushroom - typographic illustration", width: 700, height: 700 },
+	{ slug: "portobello-mushroom", alt: "Portobello mushroom - typographic illustration", width: 700, height: 700 },
+	{ slug: "oyster-mushroom", alt: "Oyster mushroom - illustrated label", width: 700, height: 700 },
+	{ slug: "shiitake-pizza", alt: "Shiitake mushroom pizza - holographic poster", width: 700, height: 875 },
+	{ slug: "oyster-tacos", alt: "Oyster mushroom tacos - animated type", width: 800, height: 1000 },
+	{ slug: "bbq-sauce", alt: "Homemade BBQ sauce - illustrated recipe", width: 700, height: 875 },
+	{ slug: "fried-chicken", alt: "Fried chicken - illustrated recipe", width: 700, height: 875 },
+	{ slug: "chili", alt: "Chili pepper - textured illustration", width: 700, height: 700 },
+	{ slug: "popsicle", alt: "Popsicle - animated illustration", width: 800, height: 800 },
+	{ slug: "chemex", alt: "The Chemex - brewing method poster", width: 700, height: 1050 },
+	{ slug: "brewing-methods", alt: "Coffee brewing methods - print", width: 700, height: 1050 },
+	{ slug: "calm-palm", alt: "Calm palm - botanical print", width: 700, height: 1050 },
+	{ slug: "sequoia", alt: "Sequoia - botanical print", width: 700, height: 1050 },
+	{ slug: "potted-plant", alt: "Potted plant - illustration", width: 700, height: 700 },
+	{ slug: "bogota", alt: "Bogota, Colombia - travel poster", width: 700, height: 1050 },
+	{ slug: "blossomed-heart", alt: "Blossomed heart - floral anatomical poster", width: 700, height: 1050 },
+	{ slug: "washing-dishes", alt: "Washing dishes - animated illustration", width: 800, height: 693 },
+	{ slug: "dog-portrait", alt: "Dog portrait - illustration", width: 700, height: 875 },
+	{ slug: "line-figure", alt: "Figure - single-line drawing", width: 700, height: 1089 },
+	{ slug: "la-raqueta", alt: "La raqueta - minimal sport poster", width: 700, height: 1050 },
+	{ slug: "nairo", alt: "Nairo - cycling portrait print", width: 700, height: 467 },
+	{ slug: "two-riders", alt: "Two riders - cycling illustration", width: 700, height: 560 },
+	{ slug: "potv", alt: "Planet of the Vapes - product illustration", width: 700, height: 875 },
+	{ slug: "casabianca-coral", alt: "Casabianca cycling apparel - coral jersey", width: 700, height: 700 },
+	{ slug: "casabianca-olive", alt: "Casabianca cycling apparel - olive jersey", width: 700, height: 700 },
+	{ slug: "pepairegui", alt: "pepairegui - brand identity", width: 700, height: 700 },
+];
+
+export const watercolors = [
+	{ slug: "orchid", title: "Orchid", alt: "Orchid - watercolour study on paper", width: 700, height: 700 },
+	{ slug: "four-leaf-clover", title: "Four-leaf clover", alt: "Four-leaf clover - watercolour study on paper", width: 700, height: 969 },
+	{ slug: "glass-sphere", title: "Pink glass sphere", alt: "Pink glass sphere - watercolour study on paper", width: 700, height: 969 },
+	{ slug: "blackberry", title: "Blackberry", alt: "Blackberry - watercolour study on paper", width: 700, height: 700 },
+	{ slug: "artichoke", title: "Artichoke", alt: "Artichoke - watercolour study on paper", width: 700, height: 700 },
+	{ slug: "strawberry", title: "Strawberry", alt: "Strawberry - watercolour study on paper", width: 700, height: 700 },
 ];
 
