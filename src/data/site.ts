@@ -74,21 +74,21 @@ export const caseStudies = [
 		slug: "estore-labs-marketplace-cro",
 		client: "Estore Labs",
 		title: "Marketplace CRO for Amazon, Walmart and Target",
-		outcome: "Scaled A/B testing and PDP optimization for global retail brands.",
+		outcome: "Conversion-focused PDP and A+ content design for global retail brands.",
 		summary:
 			"Designed conversion experiences for retail marketplaces, including Ferrero brands such as Kinder, Nutella and Rocher.",
 		problem:
 			"Marketplace teams needed stronger conversion and AOV across PDPs, bundles and retail content while preserving strict brand consistency.",
 		process: [
 			"Designed high-converting landing pages and product detail pages for Amazon, Walmart and Target, applying CRO principles to maximize conversion rate and AOV.",
-			"Created and iterated on A/B test variants for A+ content, homepage banners and promotional funnels, driving measurable performance improvements.",
+			"Created and iterated on A/B test variants for A+ content, homepage banners and promotional funnels, feeding what won back into the next round of design.",
 			"Optimized product quantity and variant selectors (bundles, size options) and purchase flows for clarity and reduced drop-off.",
 			"Collaborated with cross-functional growth teams - strategists, e-retail analysts and developers - to translate test hypotheses into design concepts.",
 			"Supported Ferrero-portfolio brands (Kinder, Nutella, Rocher, Butterfinger) with consistent, conversion-optimized visuals for launches and seasonal campaigns.",
 		],
 		solution:
 			"A repeatable commerce-design workflow for faster marketplace testing, clearer shopper decisions and consistent brand expression across channels.",
-		impact: "Measurable test wins and scaled output without losing brand consistency.",
+		impact: "Scaled output across a multi-brand portfolio, on deadline and without losing brand consistency.",
 		role: "CRO, marketplace UX, AI-assisted workflow",
 		timeline: "Ongoing retail optimization",
 		period: "Sep 2024 - Present",
@@ -117,7 +117,7 @@ export const caseStudies = [
 			},
 			{
 				title: "Variants, bundles and the path to cart",
-				body: "Conversion is more than content. I design the quantity, bundle and size selectors and the purchase flow so shoppers pick the right pack fast - lifting AOV and cutting drop-off.",
+				body: "Conversion is more than content. I design the quantity, bundle and size selectors and the purchase flow so shoppers pick the right pack fast, without second-guessing the size or the bundle.",
 				linkLabel: "Nutella on Amazon",
 				url: "https://www.amazon.com/Nutella-Peanut-Spread-Afternoon-Snacking/dp/B0GZLHY72G",
 			},
