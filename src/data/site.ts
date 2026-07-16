@@ -1,12 +1,22 @@
 export const site = {
 	name: "Mariana Ordonez",
 	shortName: "M. Ordonez",
-	role: "AI Product & eCommerce Designer",
+	role: "Agentic Product & AI UX Designer",
 	url: "https://mordonez.com",
-	email: "hello@mordonez.com",
+	email: "marianaordonez04@gmail.com",
 	location: "Colombia, UTC-5",
 	resumeUrl: "/downloads/Mariana-Ordonez-CV.pdf",
 };
+
+// Pre-filled "Get in touch" email link (direct-email fallback).
+export const contactHref = `mailto:${site.email}?subject=${encodeURIComponent(
+	"Design project or role inquiry",
+)}`;
+
+// Web3Forms access key for the /contact form. Create one free at
+// https://web3forms.com (enter your email, copy the key here). It is public
+// by design — it only routes submissions to your inbox.
+export const web3formsAccessKey = "570e5b57-c9c9-48c3-bf96-6561e21b95bc";
 
 export const navItems = [
 	{ label: "Work", href: "/work/" },
@@ -14,35 +24,36 @@ export const navItems = [
 	{ label: "Tools", href: "/tools/" },
 	{ label: "Play", href: "/play/" },
 	{ label: "About", href: "/about/" },
+	{ label: "Contact", href: "/contact/" },
 ];
 
 export const socialLinks = [
-	{ label: "LinkedIn", url: "" },
-	{ label: "Dribbble", url: "" },
-	{ label: "Behance", url: "" },
-	{ label: "Instagram", url: "" },
+	{ label: "LinkedIn", url: "https://www.linkedin.com/in/mariana-ordo%C3%B1ez-alarc%C3%B3n-ux-designer/" },
+	{ label: "Behance", url: "https://www.behance.net/marianaordoez1" },
 	{ label: "Email", url: `mailto:${site.email}` },
 ];
 
 export const proofBrands = [
 	"Estore Labs",
-	"Casabianca",
+	"Casabianca Cycling",
 	"Planet of the Vapes",
 	"trades.org",
-	"Amazon",
-	"Walmart",
-	"Target",
 	"Ferrero",
 	"Kinder",
 	"Nutella",
+	"Tic Tac",
+	"Butterfinger",
+	"Crunch",
+	"Keebler",
+	"Royal Dansk",
 ];
 
 export const capabilities = [
 	{
-		title: "AI Product & UX Design",
+		title: "Agentic & AI-native UX",
 		description:
-			"AI-powered features, assistant workflows, trust states, explainability and human-in-the-loop moments that make product decisions feel clear.",
-		tags: ["Conversational UI", "AI UX patterns", "Research synthesis"],
+			"Fluent in agentic and AI-native product patterns and human-AI interaction: trust, explainability, graceful failure and a human on the important calls. I design and build the AI-native way, in Figma and Claude Code.",
+		tags: ["Agentic UX patterns", "Human-AI interaction", "AI-native workflow"],
 	},
 	{
 		title: "eCommerce & CRO",
@@ -53,59 +64,100 @@ export const capabilities = [
 	{
 		title: "Design Systems & Brand",
 		description:
-			"Scalable Figma libraries, visual systems, email modules and handoff docs that survive constant experimentation.",
-		tags: ["Figma systems", "Brand craft", "Developer handoff"],
+			"Reusable Figma design systems - components, auto layout, variables and clean developer handoff - built to scale end-to-end across a product and survive constant iteration.",
+		tags: ["Design systems", "Figma variables", "Dev handoff"],
 	},
 ];
 
 export const caseStudies = [
 	{
-		slug: "casabianca-apparel-cro",
-		client: "Casabianca",
-		title: "Casabianca apparel CRO redesign",
-		outcome: "A checkout and UX redesign that lifted apparel sales 25%.",
-		summary:
-			"Restructured information architecture, product-page hierarchy and digital-to-physical brand consistency for an apparel commerce experience.",
-		problem:
-			"The shopping flow had visual clutter, weak purchase hierarchy and checkout friction that made the brand feel less trustworthy than the product.",
-		process: [
-			"Audited the funnel from homepage to checkout and mapped the moments where shoppers lost confidence.",
-			"Reworked product-page hierarchy around fit, material, shipping, returns and clear purchase actions.",
-			"Built a cohesive visual system across digital commerce and physical touchpoints.",
-			"Iterated layouts around conversion behavior instead of decorative preference.",
-		],
-		solution:
-			"A calmer apparel experience with stronger product storytelling, cleaner CTAs, clearer checkout flow and a visual language that made the brand feel more premium.",
-		impact: "+25% apparel sales from a conversion-focused redesign.",
-		role: "UI/UX, CRO, visual system",
-		timeline: "Commerce redesign",
-		tools: "Figma, analytics review, brand system",
-		tags: ["CRO", "UI/UX", "Web", "Brand"],
-		featured: true,
-	},
-	{
 		slug: "estore-labs-marketplace-cro",
 		client: "Estore Labs",
 		title: "Marketplace CRO for Amazon, Walmart and Target",
-		outcome: "Scaled A/B testing and PDP optimization for global retail brands.",
+		outcome: "Conversion-focused PDP and A+ content design for global retail brands.",
 		summary:
 			"Designed conversion experiences for retail marketplaces, including Ferrero brands such as Kinder, Nutella and Rocher.",
 		problem:
 			"Marketplace teams needed stronger conversion and AOV across PDPs, bundles and retail content while preserving strict brand consistency.",
 		process: [
-			"Turned product and shopper insight into PDP and A+ content hypotheses.",
-			"Designed variant, bundle and content-system improvements for large marketplace catalogs.",
-			"Used AI-assisted production to expand variant exploration while keeping human judgment over quality.",
-			"Prepared assets and specs for high-volume delivery across Amazon, Walmart and Target.",
+			"Designed high-converting landing pages and product detail pages for Amazon, Walmart and Target, applying CRO principles to maximize conversion rate and AOV.",
+			"Created and iterated on A/B test variants for A+ content, homepage banners and promotional funnels, feeding what won back into the next round of design.",
+			"Optimized product quantity and variant selectors (bundles, size options) and purchase flows for clarity and reduced drop-off.",
+			"Collaborated with cross-functional growth teams - strategists, e-retail analysts and developers - to translate test hypotheses into design concepts.",
+			"Supported Ferrero-portfolio brands (Kinder, Nutella, Rocher, Butterfinger) with consistent, conversion-optimized visuals for launches and seasonal campaigns.",
 		],
 		solution:
 			"A repeatable commerce-design workflow for faster marketplace testing, clearer shopper decisions and consistent brand expression across channels.",
-		impact: "Measurable test wins and scaled output without losing brand consistency.",
+		impact: "Scaled output across a multi-brand portfolio, on deadline and without losing brand consistency.",
 		role: "CRO, marketplace UX, AI-assisted workflow",
 		timeline: "Ongoing retail optimization",
+		period: "Sep 2024 - Present",
 		tools: "Figma, Photoshop, AI-assisted variants",
 		tags: ["CRO", "AI workflow", "Web"],
+		cover: "/case-studies/estore-labs/cover.webp",
+		coverPosition: "center",
+		liveLinks: [
+			{
+				title: "The image carousel that sells",
+				body: "On a marketplace the image carousel is the storefront. I design the sequence - hero, benefits, size, lifestyle and trust - so shoppers get the whole story before they scroll.",
+				linkLabel: "Kinder Joy on Walmart",
+				url: "https://www.walmart.com/ip/Kinder-Joy-Eggs-Treat-Plus-Toy-Great-for-Easter-Egg-Hunts-4-2-oz-6-Count/495343799",
+			},
+			{
+				title: "A+ content, engineered to convert",
+				body: "Beyond the basics, I plan Amazon A+ content and brand-story modules as a system - each block with a job: trigger craving, resolve doubt, build trust and lift perceived quality.",
+				linkLabel: "Ferrero Rocher on Amazon",
+				url: "https://www.amazon.com/Ferrero-Rocher-Hazelnut-Chocolate-Count/dp/B002Y1Z80U",
+			},
+			{
+				title: "Brand stores that scale a portfolio",
+				body: "Multi-page Amazon Brand Stores that give a whole catalog a consistent, shoppable home - navigation, category pages and seasonal features across the brand family.",
+				linkLabel: "Nutella store on Amazon",
+				url: "https://www.amazon.com/stores/Nutella/page/FF9AA69A-C4A0-4ED8-80A4-2F766D799C34",
+			},
+			{
+				title: "Variants, bundles and the path to cart",
+				body: "Conversion is more than content. I design the quantity, bundle and size selectors and the purchase flow so shoppers pick the right pack fast, without second-guessing the size or the bundle.",
+				linkLabel: "Nutella on Amazon",
+				url: "https://www.amazon.com/Nutella-Peanut-Spread-Afternoon-Snacking/dp/B0GZLHY72G",
+			},
+		],
 		featured: true,
+	},
+	{
+		slug: "planet-of-the-vapes-ecommerce",
+		client: "Planet of the Vapes",
+		title: "DTC landing pages and lifecycle design for Planet of the Vapes",
+		outcome: "Conversion-focused landing pages, campaigns and lifecycle design for a DTC eCommerce brand.",
+		summary:
+			"Landing pages, promotional campaigns and email/SMS assets supporting product launches and seasonal pushes, kept consistent across every brand touchpoint.",
+		problem:
+			"A DTC brand shipping frequent launches and seasonal campaigns needed conversion-focused pages and lifecycle assets that stayed on-brand without slowing production.",
+		process: [
+			"Designed landing pages, promotional campaigns and marketing assets supporting new product launches and seasonal pushes.",
+			"Applied UX/UI principles to improve navigation, product discovery and the overall shopping experience, increasing engagement and sales.",
+			"Integrated AI tools to improve design efficiency, enhance content quality and scale production workflows.",
+			"Ensured brand and design consistency across eCommerce, email and SMS touchpoints through modular components and clear visual hierarchy.",
+		],
+		solution:
+			"A modular design system across web, email and SMS that kept launches and seasonal campaigns consistent and quick to produce, with clearer product discovery and shopping flows.",
+		impact: "Faster, on-brand launch and lifecycle production with clearer navigation and product discovery.",
+		role: "Web & marketing design, UX/UI, lifecycle",
+		timeline: "Ongoing DTC design",
+		period: "Jul 2023 - Present",
+		tools: "Figma, email/SMS modules, AI-assisted production",
+		tags: ["eCommerce", "UI/UX", "Lifecycle", "Brand"],
+		cover: "/case-studies/planet-of-the-vapes/cover.webp",
+		coverPosition: "85% center",
+		gallery: [
+			{ src: "/case-studies/planet-of-the-vapes/pdp.webp", title: "The page that has to convert", caption: "A product detail page built around the decision: variant and add-on selectors, trust states and a frictionless Add to Cart, tuned for conversion and AOV." },
+			{ src: "/case-studies/planet-of-the-vapes/content.webp", title: "Content that earns the scroll", caption: "Benefit-led hierarchy that makes the value obvious and scannable, not a wall of specs." },
+			{ src: "/case-studies/planet-of-the-vapes/reviews.webp", title: "Trust where hesitation happens", caption: "Reviews and Q&A placed at the moment of doubt - social proof that de-risks the buy." },
+			{ src: "/case-studies/planet-of-the-vapes/related.webp", title: "More value per order", caption: "Cross-sell and bundles that lift average order value without cluttering the decision." },
+			{ src: "/case-studies/planet-of-the-vapes/infographic.webp", title: "Answers before objections", caption: "Education and A+ content that resolves questions before they cost a sale." },
+			{ src: "/case-studies/planet-of-the-vapes/campaign.webp", title: "On-brand at every touch", caption: "Campaign and lifecycle assets kept consistent across web, email and social." },
+		],
+		featured: false,
 	},
 	{
 		slug: "trades-design-system-cms",
@@ -117,18 +169,62 @@ export const caseStudies = [
 		problem:
 			"The team needed to ship multiple product surfaces quickly without re-solving components, templates and handoff patterns on every release.",
 		process: [
-			"Mapped core user flows, content needs and product surfaces.",
-			"Built wireframes, prototypes and a scalable Figma component library.",
-			"Documented responsive templates and accessible interaction patterns for handoff.",
-			"Reduced repeat design work by turning repeated decisions into system rules.",
+			"Led end-to-end design for multiple web products, from user research and wireframes to high-fidelity prototypes and developer handoff.",
+			"Built scalable design systems and reusable component libraries in Figma, accelerating iteration speed for rapid experimentation.",
+			"Designed responsive templates and custom CMS/ATS platforms from scratch, focused on usability, accessibility and conversion.",
+			"Conducted UX research to identify friction points and optimize user flows, reducing drop-off across key funnels.",
 		],
 		solution:
 			"A modular UX and visual system with reusable templates, clearer handoff and a CMS structure that supported faster iteration.",
 		impact: "Faster iteration and reduced funnel drop-off risk through consistent product patterns.",
 		role: "Product design, UI/UX, design systems",
 		timeline: "Product foundation",
+		period: "Jul 2022 - Dec 2023",
 		tools: "Figma, prototyping, documentation",
 		tags: ["Product", "UI/UX", "Design systems"],
+		cover: "/case-studies/trades-org/cover.webp",
+		coverPosition: "center",
+		gallery: [
+			{ src: "/case-studies/trades-org/contacts.webp", title: "Data-dense views that stay scannable", caption: "A CRM contacts table with filters, search and multi-value fields, structured so a busy user finds the right record fast." },
+			{ src: "/case-studies/trades-org/ats.webp", title: "Complex admin, made usable", caption: "An applicant-tracking admin with configurable requirement templates - data tables, filters and inline editing that stay clear even as the data gets dense." },
+			{ src: "/case-studies/trades-org/contact.webp", title: "The whole record in one screen", caption: "A CRM contact profile that puts history, notes, details and linked companies exactly where they are needed - no hunting, no clutter." },
+			{ src: "/case-studies/trades-org/tokens.webp", title: "A documented token system", caption: "Content color tokens with clear names, roles and parents - the foundation that keeps every screen consistent and easy to hand off." },
+			{ src: "/case-studies/trades-org/buttons.webp", title: "Components with every state", caption: "A button component covering sizes, colors, icons and states - reusable parts that let the team ship fast without redrawing the basics." },
+			{ src: "/case-studies/trades-org/designsystem.webp", title: "One system behind it all", caption: "A design system built from scratch to keep a growing product consistent, faster to iterate and aligned across the team." },
+		],
+		featured: true,
+	},
+	{
+		slug: "casabianca-apparel-cro",
+		client: "Casabianca Cycling",
+		title: "Casabianca Cycling apparel CRO redesign",
+		outcome: "A checkout and UX redesign that made a cycling apparel brand feel as premium as its product.",
+		summary:
+			"Restructured information architecture, product-page hierarchy and digital-to-physical brand consistency for a cycling apparel commerce experience.",
+		problem:
+			"The shopping flow had visual clutter, weak purchase hierarchy and checkout friction that made the brand feel less trustworthy than the product.",
+		process: [
+			"Redesigned the eCommerce platform's UX, improving layout clarity, content structure and checkout-flow optimization.",
+			"Drove sales through data-informed design decisions and conversion-focused page iterations.",
+			"Created cohesive visual systems across digital and physical touchpoints, strengthening brand recognition and customer trust.",
+		],
+		solution:
+			"A calmer cycling apparel experience with stronger product storytelling, cleaner CTAs, clearer checkout flow and a visual language that made the brand feel more premium.",
+		impact: "A calmer, more premium cycling apparel experience with cleaner CTAs and a clearer checkout flow.",
+		role: "UI/UX, CRO, visual system",
+		timeline: "Commerce redesign",
+		period: "Sep 2018 - Jun 2022",
+		tools: "Figma, analytics review, brand system",
+		tags: ["CRO", "UI/UX", "Web", "Brand"],
+		cover: "/case-studies/casabianca-cycling/cover.webp",
+		coverPosition: "center 30%",
+		gallery: [
+			{ src: "/case-studies/casabianca-cycling/pdp.webp", title: "The product page, redesigned", caption: "A full PDP for a technical jersey - gallery, color and size selectors, fabric features, size help, reviews and cross-sell, on desktop and mobile.", maxWidth: 800 },
+			{ src: "/case-studies/casabianca-cycling/explainer.webp", title: "Designed around the buying decision", caption: "Fit confidence, shipping and returns, and cart clarity - the things that actually convert technical apparel, not just visual taste." },
+			{ src: "/case-studies/casabianca-cycling/brandboard.webp", title: "A brand board to design against", caption: "Wordmark, a restrained commercial palette and catalog photography - the visual system that kept the redesign unmistakably on-brand." },
+			{ src: "/case-studies/casabianca-cycling/forher.webp", title: "Campaign that speaks to the rider", caption: "Brand campaign imagery that gives the apparel a clear, confident identity across the store." },
+			{ src: "/case-studies/casabianca-cycling/live.webp", title: "Live in the store", caption: "The shipped Casabianca storefront, from the product page to the ask-a-question flow." },
+		],
 		featured: true,
 	},
 	{
@@ -151,6 +247,7 @@ export const caseStudies = [
 		impact: "Faster variant production with clearer rationale for every design decision.",
 		role: "AI Product, AI UX, CRO",
 		timeline: "Working method",
+		period: "Ongoing method",
 		tools: "Figma, generative AI, research synthesis",
 		tags: ["AI Product", "AI UX", "CRO"],
 		featured: false,
@@ -247,15 +344,15 @@ export const articles = [
 export const toolStack = [
 	{
 		category: "Design & prototyping",
-		items: ["Figma", "FigJam", "component libraries", "interactive prototypes"],
+		items: ["Figma", "auto layout", "variables", "component libraries", "interactive prototypes", "dev handoff"],
 		description:
-			"Systems, prototyping, documentation and developer handoff for product and commerce teams.",
+			"End-to-end product design in Figma - systems, prototyping, documentation and clean developer handoff for product and commerce teams.",
 	},
 	{
-		category: "AI & generative",
-		items: ["research synthesis", "prompt libraries", "asset variants", "copy exploration"],
+		category: "AI-native tooling",
+		items: ["Claude Code", "ChatGPT", "Gemini", "Nano Banana", "Paper", "Lovable", "AI-assisted prototyping", "research synthesis", "prompt libraries", "asset variants"],
 		description:
-			"Generative AI for faster ideation and production, with human judgment kept at the center.",
+			"AI-assisted environments like Claude Code to accelerate design, prototyping and iteration, with human judgment kept at the center.",
 	},
 	{
 		category: "Visual & motion",
@@ -271,7 +368,7 @@ export const toolStack = [
 	},
 	{
 		category: "Process",
-		items: ["Notion", "analytics review", "handoff docs", "CRO decisions"],
+		items: ["Notion", "Asana", "analytics review", "handoff docs", "CRO decisions"],
 		description:
 			"Clear documentation and measurable decision-making for remote product teams.",
 	},
@@ -281,52 +378,68 @@ export const resources = [
 	{
 		title: "PDP and landing-page CRO checklist",
 		description: "A practical audit sheet for product pages, landing pages and mobile commerce funnels.",
+		file: "/downloads/PDP-Landing-CRO-Checklist.html",
+		kind: "Checklist",
+		cta: "Open the checklist",
 	},
 	{
 		title: "Figma design-system starter kit",
 		description: "A starter structure for tokens, components, variants and handoff documentation.",
+		file: "/downloads/Figma-Design-System-Starter-Kit.html",
+		kind: "Starter kit",
+		cta: "Open the starter kit",
 	},
 	{
 		title: "AI design prompt pack",
 		description: "Prompt patterns for research synthesis, moodboards, content variants and QA.",
+		file: "/downloads/AI-Design-Prompt-Pack.html",
+		kind: "Prompt pack",
+		cta: "Open the prompt pack",
 	},
 	{
 		title: "Email and SMS component template",
 		description: "Lifecycle-design modules for Klaviyo flows, retention emails and SMS moments.",
+		file: "/downloads/Email-SMS-Component-Template.html",
+		kind: "Template",
+		cta: "Open the template",
 	},
 ];
 
-export const playItems = [
-	{
-		title: "Illustration systems",
-		type: "Procreate / Illustrator",
-		description: "Character, editorial and commerce-supporting artwork that adds memory to brand systems.",
-	},
-	{
-		title: "Motion studies",
-		type: "After Effects",
-		description: "Micro-interactions and short loops for product surfaces, launches and social content.",
-	},
-	{
-		title: "Type and poster experiments",
-		type: "Visual design",
-		description: "Layout, rhythm and hierarchy studies that keep visual craft sharp.",
-	},
-	{
-		title: "AI art exploration",
-		type: "Generative tooling",
-		description: "Taste-led experiments with AI image workflows, clearly labeled and curated.",
-	},
-	{
-		title: "Side-product concepts",
-		type: "Product thinking",
-		description: "Self-initiated concepts where brand, UX and conversion can meet without a brief.",
-	},
+export const playGallery = [
+	{ slug: "shiitake-mushroom", alt: "Shiitake mushroom - typographic illustration", width: 700, height: 700 },
+	{ slug: "portobello-mushroom", alt: "Portobello mushroom - typographic illustration", width: 700, height: 700 },
+	{ slug: "oyster-mushroom", alt: "Oyster mushroom - illustrated label", width: 700, height: 700 },
+	{ slug: "shiitake-pizza", alt: "Shiitake mushroom pizza - holographic poster", width: 700, height: 875 },
+	{ slug: "oyster-tacos", alt: "Oyster mushroom tacos - animated type", width: 800, height: 1000 },
+	{ slug: "bbq-sauce", alt: "Homemade BBQ sauce - illustrated recipe", width: 700, height: 875 },
+	{ slug: "fried-chicken", alt: "Fried chicken - illustrated recipe", width: 700, height: 875 },
+	{ slug: "chili", alt: "Chili pepper - textured illustration", width: 700, height: 700 },
+	{ slug: "popsicle", alt: "Popsicle - animated illustration", width: 800, height: 800 },
+	{ slug: "chemex", alt: "The Chemex - brewing method poster", width: 700, height: 1050 },
+	{ slug: "brewing-methods", alt: "Coffee brewing methods - print", width: 700, height: 1050 },
+	{ slug: "calm-palm", alt: "Calm palm - botanical print", width: 700, height: 1050 },
+	{ slug: "sequoia", alt: "Sequoia - botanical print", width: 700, height: 1050 },
+	{ slug: "potted-plant", alt: "Potted plant - illustration", width: 700, height: 700 },
+	{ slug: "bogota", alt: "Bogota, Colombia - travel poster", width: 700, height: 1050 },
+	{ slug: "blossomed-heart", alt: "Blossomed heart - floral anatomical poster", width: 700, height: 1050 },
+	{ slug: "washing-dishes", alt: "Washing dishes - animated illustration", width: 800, height: 693 },
+	{ slug: "dog-portrait", alt: "Dog portrait - illustration", width: 700, height: 875 },
+	{ slug: "line-figure", alt: "Figure - single-line drawing", width: 700, height: 1089 },
+	{ slug: "la-raqueta", alt: "La raqueta - minimal sport poster", width: 700, height: 1050 },
+	{ slug: "nairo", alt: "Nairo - cycling portrait print", width: 700, height: 467 },
+	{ slug: "two-riders", alt: "Two riders - cycling illustration", width: 700, height: 560 },
+	{ slug: "potv", alt: "Planet of the Vapes - product illustration", width: 700, height: 875 },
+	{ slug: "casabianca-coral", alt: "Casabianca cycling apparel - coral jersey", width: 700, height: 700 },
+	{ slug: "casabianca-olive", alt: "Casabianca cycling apparel - olive jersey", width: 700, height: 700 },
+	{ slug: "pepairegui", alt: "pepairegui - brand identity", width: 700, height: 700 },
 ];
 
-export const experience = [
-	"Estore Labs - CRO and A/B testing across Amazon, Walmart and Target storefronts.",
-	"Planet of the Vapes - eCommerce and lifecycle design for a remote EST team.",
-	"trades.org - product design, design system and custom CMS/ATS workflows.",
-	"Casabianca - conversion-focused apparel UX redesign with +25% sales lift.",
+export const watercolors = [
+	{ slug: "orchid", title: "Orchid", alt: "Orchid - watercolour study on paper", width: 700, height: 700 },
+	{ slug: "four-leaf-clover", title: "Four-leaf clover", alt: "Four-leaf clover - watercolour study on paper", width: 700, height: 969 },
+	{ slug: "glass-sphere", title: "Pink glass sphere", alt: "Pink glass sphere - watercolour study on paper", width: 700, height: 969 },
+	{ slug: "blackberry", title: "Blackberry", alt: "Blackberry - watercolour study on paper", width: 700, height: 700 },
+	{ slug: "artichoke", title: "Artichoke", alt: "Artichoke - watercolour study on paper", width: 700, height: 700 },
+	{ slug: "strawberry", title: "Strawberry", alt: "Strawberry - watercolour study on paper", width: 700, height: 700 },
 ];
+

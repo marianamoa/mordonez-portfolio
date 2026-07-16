@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Email &amp; SMS Component Template — Mariana Ordonez</title>
+<style>
+	:root {
+		--wine: #832131;
+		--wine-soft: #ead6d6;
+		--paper: #fffdf8;
+		--panel: #f4efe6;
+		--ink: #241f1d;
+		--muted: #6d635c;
+		--line: #e2dacd;
+	}
+	* { box-sizing: border-box; }
+	html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+	body {
+		margin: 0;
+		font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+		color: var(--ink); background: var(--paper);
+		font-size: 10.5px; line-height: 1.5;
+	}
+	.page { width: 8.5in; min-height: 11in; margin: 0 auto; padding: 0.7in 0.72in 0.62in; background: var(--paper); }
+	h1, h2, h3 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 600; margin: 0; color: var(--ink); letter-spacing: -0.01em; }
+
+	.masthead { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--wine); padding-bottom: 14px; margin-bottom: 20px; }
+	.eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 8px; font-weight: 700; color: var(--wine); margin: 0 0 8px; }
+	h1 { font-size: 27px; line-height: 1.08; max-width: 6.2in; }
+	.lede { margin: 10px 0 0; color: var(--muted); font-size: 11px; max-width: 5.4in; }
+	.brandmark { text-align: right; flex: 0 0 auto; padding-left: 18px; }
+	.brandmark .logo { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 9px; background: var(--wine); color: #fff; font-family: "Newsreader", Georgia, serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+	.brandmark .name { font-family: "Newsreader", Georgia, serif; font-size: 12px; font-weight: 600; display: block; }
+	.brandmark .role { font-size: 8px; color: var(--muted); display: block; margin-top: 2px; max-width: 1.5in; }
+
+	.howto { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px; margin-bottom: 18px; font-size: 9.5px; color: var(--muted); }
+	.howto strong { color: var(--ink); }
+
+	.grid { column-count: 2; column-gap: 16px; }
+	.cat { break-inside: avoid; font-family: "Newsreader", Georgia, serif; font-size: 13px; font-weight: 600; color: var(--wine); margin: 4px 0 9px; padding-bottom: 4px; border-bottom: 1px solid var(--wine-soft); display: flex; align-items: baseline; gap: 6px; }
+	.cat span { font-size: 9px; color: var(--muted); font-family: inherit; }
+
+	.block { break-inside: avoid; -webkit-column-break-inside: avoid; border: 1px solid var(--line); border-radius: 9px; padding: 10px 11px 11px; margin-bottom: 11px; background: #fffefb; }
+	.block h3 { font-size: 11px; line-height: 1.2; margin-bottom: 6px; }
+
+	table { width: 100%; border-collapse: collapse; }
+	th, td { text-align: left; padding: 3px 5px; border-bottom: 1px solid var(--line); font-size: 8.4px; vertical-align: top; }
+	tr:last-child td { border-bottom: 0; }
+	th { color: var(--wine); text-transform: uppercase; letter-spacing: 0.07em; font-size: 7.3px; font-weight: 700; }
+
+	ul { list-style: none; margin: 0; padding: 0; }
+	li { position: relative; padding: 3px 0 3px 15px; font-size: 9px; border-bottom: 1px dotted var(--line); }
+	li:last-child { border-bottom: 0; }
+	li::before { content: ""; position: absolute; left: 0; top: 4px; width: 8px; height: 8px; border: 1.3px solid #b7ac9c; border-radius: 2.5px; background: #fff; }
+	li b { font-weight: 700; }
+
+	.mod { display: flex; gap: 8px; padding: 4px 0; border-bottom: 1px dotted var(--line); font-size: 9px; }
+	.mod:last-child { border-bottom: 0; }
+	.mod b { color: var(--ink); font-weight: 700; flex: 0 0 1.15in; }
+	.mod span { color: var(--muted); }
+
+	.footer { margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 8.5px; color: var(--muted); }
+	.footer .cta { color: var(--wine); font-weight: 700; }
+	.footer a { color: var(--wine); text-decoration: none; }
+
+	.download-fab { position: fixed; top: 20px; right: 20px; z-index: 10; display: inline-flex; align-items: center; gap: 7px; background: var(--wine); color: #fff; text-decoration: none; font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; padding: 11px 17px; border-radius: 999px; box-shadow: 0 4px 16px rgba(131, 33, 49, 0.28); }
+	.download-fab:hover { background: #6d1a28; }
+
+	@page { size: Letter; margin: 0; }
+	@media print { .download-fab { display: none !important; } }
+</style>
+</head>
+<body>
+	<a class="download-fab" href="Email-SMS-Component-Template.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+	<div class="page">
+		<header class="masthead">
+			<div>
+				<p class="eyebrow">Free resource · Lifecycle design</p>
+				<h1>Email &amp; SMS Component Template</h1>
+				<p class="lede">Lifecycle-design modules for Klaviyo flows, retention emails and SMS moments — a modular kit you assemble into any campaign, mobile-first.</p>
+			</div>
+			<div class="brandmark">
+				<span class="logo">M</span>
+				<span class="name">Mariana Ordonez</span>
+				<span class="role">Agentic Product &amp; AI UX Designer</span>
+			</div>
+		</header>
+
+		<div class="howto">
+			<strong>How to use it —</strong> Build each module once as a reusable block, then compose flows by stacking them. Design mobile-first at <b>600px</b>, write for the preview text, and test in dark mode before you send. Every message should earn the next open.
+		</div>
+
+		<div class="grid">
+			<div class="cat">01 · Email module library <span>stack to build any email</span></div>
+			<div class="block">
+				<div class="mod"><b>Header / nav</b><span>Logo, 1–3 links, optional promo bar</span></div>
+				<div class="mod"><b>Hero</b><span>One message, one CTA, above the fold</span></div>
+				<div class="mod"><b>Single product</b><span>Image, name, price, benefit, buy</span></div>
+				<div class="mod"><b>Product grid</b><span>2–3 across; collections &amp; cross-sell</span></div>
+				<div class="mod"><b>Editorial / story</b><span>Brand narrative, education, launches</span></div>
+				<div class="mod"><b>Social proof / UGC</b><span>Reviews, ratings, customer photos</span></div>
+				<div class="mod"><b>Value props</b><span>3 icons: shipping, returns, guarantee</span></div>
+				<div class="mod"><b>Cross-sell</b><span>"Goes with" / "Complete the look"</span></div>
+				<div class="mod"><b>Footer</b><span>Links, social, address, unsubscribe</span></div>
+			</div>
+
+			<div class="cat">02 · Lifecycle flows <span>trigger → timing → goal</span></div>
+			<div class="block">
+				<table>
+					<tr><th>Flow</th><th>Trigger</th><th>Timing</th><th>Goal</th></tr>
+					<tr><td><b>Welcome</b></td><td>Signup</td><td>0 · +2d · +4d</td><td>Intro &amp; first order</td></tr>
+					<tr><td><b>Browse abandon</b></td><td>Viewed, no cart</td><td>1–4h</td><td>Nudge back</td></tr>
+					<tr><td><b>Cart / checkout</b></td><td>Added, no buy</td><td>1h · 24h · 48h</td><td>Recover sale</td></tr>
+					<tr><td><b>Post-purchase</b></td><td>Order placed</td><td>0 · +5d · +14d</td><td>Confirm, educate, review</td></tr>
+					<tr><td><b>Winback</b></td><td>Lapsed</td><td>30 · 60 · 90d</td><td>Reactivate</td></tr>
+					<tr><td><b>Replenish</b></td><td>Consumable</td><td>~product cycle</td><td>Reorder</td></tr>
+				</table>
+			</div>
+
+			<div class="cat">03 · SMS moments &amp; rules <span>earn the interruption</span></div>
+			<div class="block">
+				<h3>Best for time-sensitive moments</h3>
+				<ul>
+					<li>Product drops, back-in-stock, price drops</li>
+					<li>Order &amp; shipping updates, delivery windows</li>
+					<li>VIP early access, flash offers with a deadline</li>
+					<li>Cart recovery as a second, faster channel</li>
+				</ul>
+			</div>
+			<div class="block">
+				<h3>Rules of the channel</h3>
+				<ul>
+					<li>Get <b>explicit consent</b>; SMS is opt-in only</li>
+					<li>Lead with brand name + the value in the first line</li>
+					<li>One clear CTA link; keep under <b>160 chars</b></li>
+					<li>Send within daytime hours in the recipient's timezone</li>
+					<li>Always include <b>STOP</b> / opt-out</li>
+					<li>Never overlap the same message with email</li>
+				</ul>
+			</div>
+
+			<div class="cat">04 · Design &amp; build specs <span>renders everywhere</span></div>
+			<div class="block">
+				<ul>
+					<li><b>600px</b> width, single column, mobile-first</li>
+					<li>Tap targets ≥ 44px; generous spacing between links</li>
+					<li>Real <b>live text</b> over text-in-images (deliverability + a11y)</li>
+					<li>Alt text on every image; message survives images-off</li>
+					<li>Dark-mode-safe colours &amp; transparent-friendly logos</li>
+					<li>Bulletproof buttons (HTML/CSS, not image buttons)</li>
+					<li>Preview / preheader text written intentionally</li>
+					<li>Plain-text version for every send</li>
+				</ul>
+			</div>
+
+			<div class="cat">05 · Measure <span>per message &amp; per flow</span></div>
+			<div class="block">
+				<ul>
+					<li>Open rate &amp; click-through (CTR)</li>
+					<li>Conversion &amp; <b>revenue per recipient</b></li>
+					<li>Unsubscribe &amp; spam-complaint rate</li>
+					<li>Deliverability / inbox placement</li>
+					<li>Flow-level revenue vs. one-off campaigns</li>
+				</ul>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<span>© 2026 Mariana Ordonez · <a href="https://mordonez.com">mordonez.com</a></span>
+			<span class="cta">Want these flows designed for your store? → mordonez.com/contact</span>
+		</footer>
+	</div>
+</body>
+</html>

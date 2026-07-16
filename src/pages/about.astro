@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { capabilities, experience, site, socialLinks } from "../data/site";
+import { capabilities, site, socialLinks, contactHref } from "../data/site";
 
 const profileSchema = {
 	"@context": "https://schema.org",
@@ -17,7 +17,7 @@ const profileSchema = {
 
 <Layout
 	title="About - Remote Product Designer, US Hours, Colombia"
-	description="Remote product and eCommerce designer in Colombia, working US hours. 6+ years in CRO, UX and AI-assisted design for Amazon, Walmart, Target and Ferrero brands."
+	description="Remote Agentic Product & AI UX Designer in Colombia, working US hours. AI-native workflow in Figma and Claude Code, end-to-end product and design systems, with 6+ years of conversion-driven commerce."
 	path="/about/"
 	type="profile"
 >
@@ -27,12 +27,12 @@ const profileSchema = {
 			<p class="eyebrow"><span class="dot" aria-hidden="true"></span>Remote nearshore product designer</p>
 			<h1 class="page-title">I design things that have to perform.</h1>
 			<p class="page-lede">
-				I am a product, UX and eCommerce designer with 6+ years designing conversion-focused
-				commerce and product experiences. AI is how I work faster. Craft is how the work stays
+				I am an Agentic Product & AI UX Designer with 6+ years designing end-to-end product and
+				conversion-focused commerce experiences. AI-native tooling like Claude Code is how I work fast. Craft is how the work stays
 				worth shipping.
 			</p>
 			<div class="actions">
-				<a class="button" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="button" href="/contact/">Get in touch <span aria-hidden="true">-></span></a>
 				<a class="text-link" href={site.resumeUrl}>Download resume</a>
 			</div>
 		</section>
@@ -50,22 +50,9 @@ const profileSchema = {
 				<div class="demo-screen">
 					<div class="demo-row"><strong>Timezone</strong><span>UTC-5</span></div>
 					<div class="demo-row"><strong>Remote experience</strong><span>Since 2018</span></div>
-					<div class="demo-row"><strong>Focus</strong><span>AI, UX, CRO</span></div>
+					<div class="demo-row"><strong>Focus</strong><span>Agentic, product, CRO</span></div>
 					<div class="demo-row"><strong>Availability</strong><span>US business hours</span></div>
 				</div>
-			</div>
-		</section>
-
-		<section class="container section">
-			<div class="section-head">
-				<div>
-					<p class="kicker">Experience and clients</p>
-					<h2 class="section-title">Six years of work that had to ship.</h2>
-				</div>
-				<a class="text-link" href="/work/">View case studies -></a>
-			</div>
-			<div class="timeline">
-				{experience.map((item) => <div class="timeline-item">{item}</div>)}
 			</div>
 		</section>
 
@@ -99,14 +86,14 @@ const profileSchema = {
 					<p class="kicker">Certification</p>
 					<h2>IBM Generative AI for UX Design.</h2>
 					<p>
-						A credibility marker for AI-assisted research, ideation and product-design workflows.
+						A credibility marker for AI-native, agentic product-design workflows.
 					</p>
 				</article>
 				<article class="card">
 					<p class="kicker">Profiles</p>
 					<h2>One clear identity across platforms.</h2>
 					<p>
-						AI Product & eCommerce Designer stays consistent across LinkedIn, Dribbble,
+						Agentic Product & AI UX Designer stays consistent across LinkedIn, Dribbble,
 						Behance, Instagram, email and resume touchpoints.
 					</p>
 					<div class="tags">
@@ -120,7 +107,7 @@ const profileSchema = {
 			<h2>Let's build something that performs.</h2>
 			<p>I am open to remote product, UX and eCommerce design roles.</p>
 			<div class="actions" style="justify-content: center">
-				<a class="button" href={`mailto:${site.email}`}>Email Mariana <span aria-hidden="true">-></span></a>
+				<a class="button" href={contactHref}>Email Mariana <span aria-hidden="true">-></span></a>
 				<a class="text-link" href={site.resumeUrl}>Download resume</a>
 			</div>
 		</section>

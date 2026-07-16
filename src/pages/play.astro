@@ -1,11 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { playItems, site } from "../data/site";
+import { playGallery, watercolors } from "../data/site";
+
+// The lightbox walks both galleries as one list, in DOM order.
+const lightboxItems = [...watercolors, ...playGallery];
 ---
 
 <Layout
 	title="Play - Illustration & Visual Experiments"
-	description="Illustration, motion, type, AI art experiments and visual side projects by Mariana Ordonez."
+	description="Illustration, type, motion and hand-painted watercolour studies by Mariana Ordonez - the human craft behind the product and commerce work."
 	path="/play/"
 >
 	<main>
@@ -13,33 +16,156 @@ import { playItems, site } from "../data/site";
 			<p class="eyebrow"><span class="dot" aria-hidden="true"></span>Illustration and visual experiments</p>
 			<h1 class="page-title">Where I keep my hands warm.</h1>
 			<p class="page-lede">
-				Illustration, motion, type studies, AI art experiments and side projects. The human
-				craft behind the product and commerce work.
+				Watercolour, illustration, type, motion and side projects. The human craft behind the
+				product and commerce work.
 			</p>
 		</section>
 
 		<section class="container section tight">
-			<div class="play-grid">
+			<div class="section-head">
+				<div>
+					<p class="kicker">Watercolour studies</p>
+					<h2 class="section-title">Painted by hand.</h2>
+					<p class="section-copy">
+						Botanical studies in watercolour on paper. No undo, no layers - the analog end of the
+						same curiosity.
+					</p>
+				</div>
+			</div>
+			<div class="play-gallery">
 				{
-					playItems.map((item) => (
-						<article class="card play-card">
-							<div class="play-visual" aria-hidden="true"></div>
-							<p class="kicker">{item.type}</p>
-							<h2>{item.title}</h2>
-							<p>{item.description}</p>
-						</article>
+					watercolors.map((item, index) => (
+						<button class="play-item" type="button" aria-label={`Open ${item.alt}`}>
+							<span class="play-inner">
+								<span class="play-frame">
+									<img
+										src={`/play/thumbs/${item.slug}.webp`}
+										alt={item.alt}
+										width={item.width}
+										height={item.height}
+										loading={index < 3 ? "eager" : "lazy"}
+										decoding="async"
+									/>
+								</span>
+								<span class="play-cap">{item.title}</span>
+							</span>
+						</button>
+					))
+				}
+			</div>
+		</section>
+
+		<section class="container section tight">
+			<div class="section-head">
+				<div>
+					<p class="kicker">Digital work</p>
+					<h2 class="section-title">Illustration, type and motion.</h2>
+				</div>
+			</div>
+			<div class="play-gallery">
+				{
+					playGallery.map((item) => (
+						<button class="play-item" type="button" aria-label={`Open ${item.alt}`}>
+							<span class="play-inner">
+								<span class="play-frame">
+									<img
+										src={`/play/thumbs/${item.slug}.webp`}
+										alt={item.alt}
+										width={item.width}
+										height={item.height}
+										loading="lazy"
+										decoding="async"
+									/>
+								</span>
+							</span>
+						</button>
 					))
 				}
 			</div>
 		</section>
 
 		<section class="container cta-band">
-			<h2>More of this belongs on Dribbble, Behance and Instagram.</h2>
-			<p>A curated visual trail for illustration, motion and brand experiments beyond case-study work.</p>
+			<h2>Take one home.</h2>
+			<p>Prints, cards and original watercolours - most of what you just scrolled through lives in my shop (in Spanish).</p>
 			<div class="actions" style="justify-content: center">
-				<a class="button" href={`mailto:${site.email}`}>Get in touch <span aria-hidden="true">-></span></a>
+				<a class="button" href="https://tienda.mordonez.com/" target="_blank" rel="noopener">
+					Visit the shop <span aria-hidden="true">-></span>
+				</a>
 				<a class="text-link" href="/work/">See conversion work</a>
 			</div>
 		</section>
+
+		<div class="lightbox" id="lightbox" hidden>
+			<button class="lb-close" type="button" aria-label="Close">&times;</button>
+			<button class="lb-nav lb-prev" type="button" aria-label="Previous">&#8249;</button>
+			<figure class="lb-stage">
+				<img id="lb-img" src="" alt="" />
+			</figure>
+			<button class="lb-nav lb-next" type="button" aria-label="Next">&#8250;</button>
+		</div>
 	</main>
 </Layout>
+
+<script define:vars={{ items: lightboxItems }}>
+	const lb = document.getElementById("lightbox");
+	const img = document.getElementById("lb-img");
+	const triggers = [...document.querySelectorAll(".play-item")];
+	let index = 0;
+	let lastFocused = null;
+
+	// Masonry: size each tile in 6px row units so tiles pack tightly while
+	// still flowing left-to-right in source order.
+	const ROW = 6;
+	const GAP = 18;
+	const layout = () => {
+		for (const el of triggers) {
+			const height = el.querySelector(".play-inner").getBoundingClientRect().height;
+			if (!height) continue;
+			el.style.gridRowEnd = `span ${Math.max(1, Math.ceil((height + GAP) / ROW))}`;
+		}
+	};
+
+	layout();
+	window.addEventListener("resize", layout);
+	for (const el of triggers) {
+		const image = el.querySelector("img");
+		if (!image.complete) image.addEventListener("load", layout, { once: true });
+	}
+
+	const show = (i) => {
+		index = (i + items.length) % items.length;
+		const item = items[index];
+		img.src = `/play/${item.slug}.webp`;
+		img.alt = item.alt;
+	};
+
+	const open = (i) => {
+		lastFocused = document.activeElement;
+		show(i);
+		lb.hidden = false;
+		document.body.style.overflow = "hidden";
+		lb.querySelector(".lb-close").focus();
+	};
+
+	const close = () => {
+		lb.hidden = true;
+		img.src = "";
+		document.body.style.overflow = "";
+		lastFocused?.focus();
+	};
+
+	triggers.forEach((el, i) => el.addEventListener("click", () => open(i)));
+	lb.querySelector(".lb-close").addEventListener("click", close);
+	lb.querySelector(".lb-prev").addEventListener("click", () => show(index - 1));
+	lb.querySelector(".lb-next").addEventListener("click", () => show(index + 1));
+	lb.addEventListener("click", (event) => {
+		if (event.target === lb || event.target.classList.contains("lb-stage")) close();
+	});
+
+	document.addEventListener("keydown", (event) => {
+		if (lb.hidden) return;
+		if (event.key === "Escape") close();
+		if (event.key === "ArrowLeft") show(index - 1);
+		if (event.key === "ArrowRight") show(index + 1);
+	});
+</script>
