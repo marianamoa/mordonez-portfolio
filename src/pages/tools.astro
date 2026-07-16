@@ -1,6 +1,27 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { resources, site, toolStack } from "../data/site";
+
+const badge = (bg: string, fg: string, text: string, size = 11) =>
+	`<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" rx="7" fill="${bg}"/><text x="15" y="15" dy="0.35em" font-family="Arial, Helvetica, sans-serif" font-weight="700" font-size="${size}" fill="${fg}" text-anchor="middle">${text}</text></svg>`;
+
+const toolLogos: Record<string, string> = {
+	Figma: `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" rx="7" fill="#fff"/><g transform="translate(7.8 4.2) scale(0.38)"><path fill="#1abcfe" d="M19 28.5a9.5 9.5 0 1 1 19 0 9.5 9.5 0 0 1-19 0z"/><path fill="#0acf83" d="M0 47.5A9.5 9.5 0 0 1 9.5 38H19v9.5a9.5 9.5 0 1 1-19 0z"/><path fill="#ff7262" d="M19 0v19h9.5a9.5 9.5 0 1 0 0-19H19z"/><path fill="#f24e1e" d="M0 9.5A9.5 9.5 0 0 0 9.5 19H19V0H9.5A9.5 9.5 0 0 0 0 9.5z"/><path fill="#a259ff" d="M0 28.5A9.5 9.5 0 0 0 9.5 38H19V19H9.5A9.5 9.5 0 0 0 0 28.5z"/></g></svg>`,
+	"Claude Code": `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" rx="7" fill="#d97757"/><g stroke="#fff" stroke-width="1.7" stroke-linecap="round"><line x1="15" y1="6.5" x2="15" y2="23.5"/><line x1="6.5" y1="15" x2="23.5" y2="15"/><line x1="9" y1="9" x2="21" y2="21"/><line x1="21" y1="9" x2="9" y2="21"/></g></svg>`,
+	ChatGPT: `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" rx="7" fill="#000"/><g transform="translate(6 6) scale(0.75)"><path fill="#fff" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1686a.071.071 0 0 1 .038.052v5.5826a4.504 4.504 0 0 1-4.4945 4.4944zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1685a.0757.0757 0 0 1-.071 0l-4.8303-2.7865A4.504 4.504 0 0 1 2.3408 7.872zm16.5963 3.8558L13.1038 8.364 15.1192 7.2a.0757.0757 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.407-.667zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.66zM8.3065 12.863l-2.02-1.1638a.0804.0804 0 0 1-.038-.0567V6.0742a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.459a.7948.7948 0 0 0-.3927.6813zm1.0976-2.3654l2.602-1.4998 2.6069 1.4998v2.9994l-2.6069 1.4997-2.602-1.4997z"/></g></svg>`,
+	Gemini: `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="geminiG" x1="3" y1="6" x2="27" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4285f4"/><stop offset="0.5" stop-color="#8b6ff0"/><stop offset="1" stop-color="#e05285"/></linearGradient></defs><rect width="30" height="30" rx="7" fill="#fff"/><path fill="url(#geminiG)" d="M15 4c0 6.075-4.925 11-11 11 6.075 0 11 4.925 11 11 0-6.075 4.925-11 11-11-6.075 0-11-4.925-11-11z"/></svg>`,
+	"Nano Banana": `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" rx="7" fill="#fff"/><path fill="#ffcb2b" stroke="#e0a500" stroke-width="0.6" d="M8.4 7.6a13.5 13.5 0 0 0 13 13 2.4 2.4 0 0 1-1.7 1A11.5 11.5 0 0 1 7.4 9.3a2.4 2.4 0 0 1 1-1.7z"/><circle cx="8.1" cy="7.9" r="1.2" fill="#6b4a2b"/><circle cx="20.6" cy="21.2" r="1.1" fill="#6b4a2b"/></svg>`,
+	Paper: `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" rx="7" fill="#f5f2ea"/><path fill="#fff" stroke="#c9c1af" stroke-width="0.8" d="M9 6.5h8.5L22 11v12.5H9z"/><path fill="none" stroke="#c9c1af" stroke-width="0.8" d="M17.5 6.5V11H22"/><g stroke="#9c8e77" stroke-width="1" stroke-linecap="round"><line x1="11.5" y1="14" x2="19" y2="14"/><line x1="11.5" y1="17" x2="19" y2="17"/><line x1="11.5" y1="20" x2="16" y2="20"/></g></svg>`,
+	Lovable: `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="loveG" x1="7" y1="6" x2="23" y2="23" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a9c"/><stop offset="1" stop-color="#f5385b"/></linearGradient></defs><rect width="30" height="30" rx="7" fill="#fff"/><path fill="url(#loveG)" d="M15 23.5s-8.4-5.2-8.4-10.6a4.9 4.9 0 0 1 9-2.7l.4.6.4-.6a4.9 4.9 0 0 1 9 2.7c0 5.4-8.4 10.6-8.4 10.6z"/></svg>`,
+	Asana: `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect width="30" height="30" rx="7" fill="#fff"/><g fill="#f06a6a"><circle cx="15" cy="10" r="3.9"/><circle cx="9.5" cy="19.6" r="3.9"/><circle cx="20.5" cy="19.6" r="3.9"/></g></svg>`,
+	Photoshop: badge("#001e36", "#31a8ff", "Ps"),
+	Illustrator: badge("#330000", "#ff9a00", "Ai"),
+	"After Effects": badge("#00005b", "#9999ff", "Ae"),
+	Procreate: badge("#a6774b", "#fff", "Pc"),
+	"Shopify-aware UX": badge("#7ab55c", "#fff", "S", 14),
+	Klaviyo: badge("#1a1a1a", "#fff", "K", 14),
+	Notion: `<svg viewBox="0 0 30 30" width="30" height="30" xmlns="http://www.w3.org/2000/svg"><rect x="0.5" y="0.5" width="29" height="29" rx="6.5" fill="#fff" stroke="rgba(0,0,0,0.14)"/><text x="15" y="15" dy="0.35em" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="15" fill="#111" text-anchor="middle">N</text></svg>`,
+};
 ---
 
 <Layout
@@ -32,6 +53,15 @@ import { resources, site, toolStack } from "../data/site";
 							<p class="kicker">{group.items.join(" / ")}</p>
 							<h2>{group.category}</h2>
 							<p>{group.description}</p>
+							{group.items.some((item) => toolLogos[item]) && (
+								<div class="tool-logos">
+									{group.items
+										.filter((item) => toolLogos[item])
+										.map((item) => (
+											<span class="tool-logo" title={item} set:html={toolLogos[item]} />
+										))}
+								</div>
+							)}
 							<div class="tags">
 								{group.items.map((item) => (
 									<span class="tag">{item}</span>
@@ -56,14 +86,24 @@ import { resources, site, toolStack } from "../data/site";
 			</div>
 			<div class="grid-2">
 				{
-					resources.map((resource) => (
-						<a class="card" href={`mailto:${site.email}?subject=${encodeURIComponent(resource.title)}`}>
-							<p class="kicker">Resource</p>
-							<h2>{resource.title}</h2>
-							<p>{resource.description}</p>
-							<p class="metric">Request the file -></p>
-						</a>
-					))
+					resources.map((resource) => {
+						const r = resource as { file?: string; kind?: string; cta?: string };
+						return r.file ? (
+							<a class="card" href={r.file} target="_blank" rel="noopener">
+								<p class="kicker">Resource · {r.kind ?? "Free"}</p>
+								<h2>{resource.title}</h2>
+								<p>{resource.description}</p>
+								<p class="metric">{r.cta ?? "Open the resource"} -></p>
+							</a>
+						) : (
+							<a class="card" href={`mailto:${site.email}?subject=${encodeURIComponent(resource.title)}`}>
+								<p class="kicker">Resource</p>
+								<h2>{resource.title}</h2>
+								<p>{resource.description}</p>
+								<p class="metric">Request the file -></p>
+							</a>
+						);
+					})
 				}
 			</div>
 		</section>

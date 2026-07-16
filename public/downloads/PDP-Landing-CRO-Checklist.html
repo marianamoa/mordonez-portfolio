@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>PDP & Landing-Page CRO Checklist — Mariana Ordonez</title>
+<style>
+	:root {
+		--wine: #832131;
+		--wine-soft: #ead6d6;
+		--paper: #fffdf8;
+		--panel: #f4efe6;
+		--ink: #241f1d;
+		--muted: #6d635c;
+		--line: #e2dacd;
+		--check: #b7ac9c;
+	}
+
+	* { box-sizing: border-box; }
+
+	html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+	body {
+		margin: 0;
+		font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+		color: var(--ink);
+		background: var(--paper);
+		font-size: 10.5px;
+		line-height: 1.5;
+	}
+
+	.page {
+		width: 8.5in;
+		min-height: 11in;
+		margin: 0 auto;
+		padding: 0.7in 0.72in 0.62in;
+		background: var(--paper);
+	}
+
+	h1, h2, h3 {
+		font-family: "Newsreader", Georgia, "Times New Roman", serif;
+		font-weight: 600;
+		margin: 0;
+		color: var(--ink);
+		letter-spacing: -0.01em;
+	}
+
+	/* ---------- Cover header ---------- */
+	.masthead {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		border-bottom: 2px solid var(--wine);
+		padding-bottom: 14px;
+		margin-bottom: 20px;
+	}
+	.eyebrow {
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		font-size: 8px;
+		font-weight: 700;
+		color: var(--wine);
+		margin: 0 0 8px;
+	}
+	h1 {
+		font-size: 27px;
+		line-height: 1.08;
+		max-width: 6.2in;
+	}
+	.lede {
+		margin: 10px 0 0;
+		color: var(--muted);
+		font-size: 11px;
+		max-width: 5.4in;
+	}
+	.brandmark {
+		text-align: right;
+		flex: 0 0 auto;
+		padding-left: 18px;
+	}
+	.brandmark .logo {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 34px;
+		height: 34px;
+		border-radius: 9px;
+		background: var(--wine);
+		color: #fff;
+		font-family: "Newsreader", Georgia, serif;
+		font-size: 20px;
+		font-weight: 600;
+		margin-bottom: 8px;
+	}
+	.brandmark .name {
+		font-family: "Newsreader", Georgia, serif;
+		font-size: 12px;
+		font-weight: 600;
+		display: block;
+	}
+	.brandmark .role {
+		font-size: 8px;
+		color: var(--muted);
+		display: block;
+		margin-top: 2px;
+		max-width: 1.5in;
+	}
+
+	/* ---------- How to use ---------- */
+	.howto {
+		background: var(--panel);
+		border: 1px solid var(--line);
+		border-radius: 10px;
+		padding: 11px 14px;
+		margin-bottom: 18px;
+		font-size: 9.5px;
+		color: var(--muted);
+	}
+	.howto strong { color: var(--ink); }
+
+	/* ---------- Section grid ---------- */
+	.grid {
+		column-count: 2;
+		column-gap: 20px;
+	}
+	.section {
+		break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+		margin-bottom: 15px;
+	}
+	.section-head {
+		display: flex;
+		align-items: baseline;
+		gap: 7px;
+		margin-bottom: 7px;
+	}
+	.num {
+		font-family: "Newsreader", Georgia, serif;
+		font-size: 12px;
+		font-weight: 600;
+		color: var(--wine);
+		min-width: 15px;
+	}
+	h2 { font-size: 12.5px; line-height: 1.15; }
+	.section-note {
+		font-size: 8.5px;
+		color: var(--muted);
+		margin: 2px 0 8px 22px;
+		font-style: italic;
+	}
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0 0 0 22px;
+	}
+	li {
+		position: relative;
+		padding: 3.5px 0 3.5px 17px;
+		font-size: 9.7px;
+		border-bottom: 1px dotted var(--line);
+	}
+	li:last-child { border-bottom: 0; }
+	li::before {
+		content: "";
+		position: absolute;
+		left: 0;
+		top: 4.5px;
+		width: 9px;
+		height: 9px;
+		border: 1.3px solid var(--check);
+		border-radius: 2.5px;
+		background: #fff;
+	}
+	li b { font-weight: 700; }
+
+	/* ---------- Footer ---------- */
+	.footer {
+		margin-top: 6px;
+		padding-top: 12px;
+		border-top: 1px solid var(--line);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 8.5px;
+		color: var(--muted);
+	}
+	.footer .cta { color: var(--wine); font-weight: 700; }
+	.footer a { color: var(--wine); text-decoration: none; }
+
+	.download-fab {
+		position: fixed;
+		top: 20px;
+		right: 20px;
+		z-index: 10;
+		display: inline-flex;
+		align-items: center;
+		gap: 7px;
+		background: var(--wine);
+		color: #fff;
+		text-decoration: none;
+		font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+		font-size: 12px;
+		font-weight: 700;
+		padding: 11px 17px;
+		border-radius: 999px;
+		box-shadow: 0 4px 16px rgba(131, 33, 49, 0.28);
+	}
+	.download-fab:hover { background: #6d1a28; }
+
+	@page {
+		size: Letter;
+		margin: 0;
+	}
+	@media print {
+		.download-fab { display: none !important; }
+	}
+	@media print {
+		body { font-size: 10.5px; }
+		.page { margin: 0; box-shadow: none; }
+	}
+</style>
+</head>
+<body>
+	<a class="download-fab" href="PDP-Landing-CRO-Checklist.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+	<div class="page">
+		<header class="masthead">
+			<div>
+				<p class="eyebrow">Free resource · Conversion audit</p>
+				<h1>PDP &amp; Landing-Page CRO Checklist</h1>
+				<p class="lede">A practical, field-tested audit sheet for product pages, landing pages and mobile commerce funnels. Work top to bottom, tick what holds up, and turn every gap into a test.</p>
+			</div>
+			<div class="brandmark">
+				<span class="logo">M</span>
+				<span class="name">Mariana Ordonez</span>
+				<span class="role">Agentic Product &amp; AI UX Designer</span>
+			</div>
+		</header>
+
+		<div class="howto">
+			<strong>How to use it —</strong> Audit one page at a time. An unchecked box isn't a failure, it's a hypothesis: write the fix as a test with a metric attached. Prioritise items near the top of each section — they touch the most users and the earliest decisions in the funnel.
+		</div>
+
+		<div class="grid">
+			<section class="section">
+				<div class="section-head"><span class="num">01</span><h2>Above the fold &amp; first impression</h2></div>
+				<p class="section-note">The 5-second test — can a first-time visitor tell what this is and why it matters?</p>
+				<ul>
+					<li>What the product is, who it's for, and the core benefit are clear <b>without scrolling</b></li>
+					<li>Hero communicates a single, specific value proposition — not a slogan</li>
+					<li>Primary CTA is visible in the first viewport on mobile and desktop</li>
+					<li>Hero image shows the product in context or in use, not just a stock shot</li>
+					<li>No carousel auto-rotating the main message out of view</li>
+					<li>Page purpose matches the ad / referral source (message match)</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">02</span><h2>Value proposition &amp; offer clarity</h2></div>
+				<p class="section-note">Why this, why now, why you.</p>
+				<ul>
+					<li>Benefits lead, features support — each feature ties to an outcome</li>
+					<li>Differentiation vs. the obvious alternative is stated, not implied</li>
+					<li>Key objections (fit, sizing, compatibility, effort) are pre-answered</li>
+					<li>Offer, bundle or variant logic is easy to understand at a glance</li>
+					<li>Scannable structure: short paragraphs, subheads, bullets over walls of text</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">03</span><h2>Imagery, media &amp; gallery</h2></div>
+				<p class="section-note">Show the thing. Reduce the risk of buying unseen.</p>
+				<ul>
+					<li>Multiple angles, scale reference, and detail / texture shots</li>
+					<li>At least one lifestyle / in-use image and one on clean background</li>
+					<li>Zoom works and stays sharp; images sized for retina without bloat</li>
+					<li>Video or 360° for high-consideration or complex products</li>
+					<li>Alt text present and descriptive for every meaningful image</li>
+					<li>Variant selection updates the gallery to the chosen option</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">04</span><h2>Social proof &amp; trust</h2></div>
+				<p class="section-note">Borrowed confidence beats self-description.</p>
+				<ul>
+					<li>Star rating and review count visible near the title and the CTA</li>
+					<li>Reviews are specific, recent, and include photos where possible</li>
+					<li>Trust signals present: guarantees, returns, secure checkout, badges</li>
+					<li>Real proof: UGC, testimonials, press, or customer counts — not filler</li>
+					<li>Negative / mixed reviews are visible (authenticity raises trust)</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">05</span><h2>Primary CTA &amp; conversion path</h2></div>
+				<p class="section-note">One clear next step, repeated, unmissable.</p>
+				<ul>
+					<li>CTA label is specific and action-led (&ldquo;Add to cart&rdquo; &gt; &ldquo;Submit&rdquo;)</li>
+					<li>One primary action per screen; secondary actions visibly de-emphasised</li>
+					<li>Button has strong contrast and obvious tap affordance</li>
+					<li>CTA repeats after long content and stays reachable on mobile (sticky)</li>
+					<li>Post-click state is instant and clear (added, loading, confirmed)</li>
+					<li>No dead ends — every path leads forward, not to a bounce</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">06</span><h2>Pricing, promotions &amp; urgency</h2></div>
+				<p class="section-note">Honest clarity converts better than manufactured pressure.</p>
+				<ul>
+					<li>Price, shipping cost and delivery estimate shown before checkout</li>
+					<li>Discounts show the anchor and the savings clearly</li>
+					<li>Financing / subscription options surfaced if relevant</li>
+					<li>Scarcity &amp; urgency are truthful (real stock, real deadlines)</li>
+					<li>Free-shipping threshold and progress made visible in cart</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">07</span><h2>Mobile experience</h2></div>
+				<p class="section-note">Most commerce traffic is mobile — audit it first, not last.</p>
+				<ul>
+					<li>Tap targets ≥ 44px; no accidental mis-taps between controls</li>
+					<li>Text readable without zoom; no fixed-width overflow or side-scroll</li>
+					<li>Sticky add-to-cart with price on scroll</li>
+					<li>Forms use correct input types &amp; keyboards; autofill supported</li>
+					<li>Thumb-reachable primary actions; no reliance on hover</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">08</span><h2>Speed &amp; technical health</h2></div>
+				<p class="section-note">Every 100ms of delay taxes conversion.</p>
+				<ul>
+					<li>Largest Contentful Paint &lt; 2.5s on mobile (real-device / field data)</li>
+					<li>Minimal layout shift (CLS) — media has reserved dimensions</li>
+					<li>Images lazy-loaded and served in modern formats (WebP/AVIF)</li>
+					<li>No render-blocking scripts on the critical path</li>
+					<li>Works with flaky connections and if third-party scripts fail</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">09</span><h2>Forms &amp; friction (landing pages)</h2></div>
+				<p class="section-note">Ask for the least, at the latest possible moment.</p>
+				<ul>
+					<li>Only essential fields; every extra field justified by real need</li>
+					<li>Inline validation with clear, human error messages</li>
+					<li>Labels always visible (not placeholder-only)</li>
+					<li>Single-column layout; logical tab order</li>
+					<li>Value of submitting is restated next to the button</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">10</span><h2>Accessibility &amp; inclusivity</h2></div>
+				<p class="section-note">Accessible pages are clearer pages — and convert wider audiences.</p>
+				<ul>
+					<li>Text contrast meets WCAG AA (4.5:1 body, 3:1 large)</li>
+					<li>Fully keyboard-navigable with a visible focus state</li>
+					<li>Meaning never carried by colour alone</li>
+					<li>Semantic headings, landmarks and labelled controls</li>
+					<li>Motion respects reduced-motion preferences</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">11</span><h2>Analytics, testing &amp; iteration</h2></div>
+				<p class="section-note">If it isn't measured, it's an opinion.</p>
+				<ul>
+					<li>Key events tracked: view, add-to-cart, form start, submit, purchase</li>
+					<li>Funnel drop-off points identified before redesigning</li>
+					<li>One primary metric per test; sample size &amp; duration set upfront</li>
+					<li>Changes shipped as A/B tests, not blind swaps, where traffic allows</li>
+					<li>Session recordings / heatmaps reviewed for real friction</li>
+					<li>Wins documented and folded back into the design system</li>
+				</ul>
+			</section>
+
+			<section class="section">
+				<div class="section-head"><span class="num">12</span><h2>Post-conversion &amp; retention</h2></div>
+				<p class="section-note">The conversion is the start of the relationship, not the end.</p>
+				<ul>
+					<li>Confirmation sets clear expectations (what, when, next steps)</li>
+					<li>Thank-you / order page offers a relevant next action</li>
+					<li>Lifecycle email or SMS triggers are wired for the moment</li>
+					<li>Cross-sell / reorder paths are helpful, not pushy</li>
+				</ul>
+			</section>
+		</div>
+
+		<footer class="footer">
+			<span>© 2026 Mariana Ordonez · <a href="https://mordonez.com">mordonez.com</a></span>
+			<span class="cta">Want this run on your funnel? Let's talk → mordonez.com/contact</span>
+		</footer>
+	</div>
+</body>
+</html>

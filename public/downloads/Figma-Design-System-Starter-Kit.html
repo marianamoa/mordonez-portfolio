@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Figma Design-System Starter Kit — Mariana Ordonez</title>
+<style>
+	:root {
+		--wine: #832131;
+		--wine-soft: #ead6d6;
+		--paper: #fffdf8;
+		--panel: #f4efe6;
+		--ink: #241f1d;
+		--muted: #6d635c;
+		--line: #e2dacd;
+	}
+	* { box-sizing: border-box; }
+	html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+	body {
+		margin: 0;
+		font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+		color: var(--ink); background: var(--paper);
+		font-size: 10.5px; line-height: 1.5;
+	}
+	.page { width: 8.5in; min-height: 11in; margin: 0 auto; padding: 0.7in 0.72in 0.62in; background: var(--paper); }
+	h1, h2, h3 { font-family: "Newsreader", Georgia, "Times New Roman", serif; font-weight: 600; margin: 0; color: var(--ink); letter-spacing: -0.01em; }
+
+	.masthead { display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid var(--wine); padding-bottom: 14px; margin-bottom: 20px; }
+	.eyebrow { text-transform: uppercase; letter-spacing: 0.14em; font-size: 8px; font-weight: 700; color: var(--wine); margin: 0 0 8px; }
+	h1 { font-size: 27px; line-height: 1.08; max-width: 6.2in; }
+	.lede { margin: 10px 0 0; color: var(--muted); font-size: 11px; max-width: 5.4in; }
+	.brandmark { text-align: right; flex: 0 0 auto; padding-left: 18px; }
+	.brandmark .logo { display: inline-flex; align-items: center; justify-content: center; width: 34px; height: 34px; border-radius: 9px; background: var(--wine); color: #fff; font-family: "Newsreader", Georgia, serif; font-size: 20px; font-weight: 600; margin-bottom: 8px; }
+	.brandmark .name { font-family: "Newsreader", Georgia, serif; font-size: 12px; font-weight: 600; display: block; }
+	.brandmark .role { font-size: 8px; color: var(--muted); display: block; margin-top: 2px; max-width: 1.5in; }
+
+	.howto { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 11px 14px; margin-bottom: 18px; font-size: 9.5px; color: var(--muted); }
+	.howto strong { color: var(--ink); }
+
+	.grid { column-count: 2; column-gap: 16px; }
+	.cat { break-inside: avoid; font-family: "Newsreader", Georgia, serif; font-size: 13px; font-weight: 600; color: var(--wine); margin: 4px 0 9px; padding-bottom: 4px; border-bottom: 1px solid var(--wine-soft); display: flex; align-items: baseline; gap: 6px; }
+	.cat span { font-size: 9px; color: var(--muted); font-family: inherit; }
+
+	.block { break-inside: avoid; -webkit-column-break-inside: avoid; border: 1px solid var(--line); border-radius: 9px; padding: 10px 11px 11px; margin-bottom: 11px; background: #fffefb; }
+	.block h3 { font-size: 11px; line-height: 1.2; margin-bottom: 6px; }
+
+	table { width: 100%; border-collapse: collapse; }
+	th, td { text-align: left; padding: 3px 5px; border-bottom: 1px solid var(--line); font-size: 8.5px; vertical-align: top; }
+	tr:last-child td { border-bottom: 0; }
+	th { color: var(--wine); text-transform: uppercase; letter-spacing: 0.07em; font-size: 7.4px; font-weight: 700; }
+	code { font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace; font-size: 8px; color: #33302d; }
+
+	ul { list-style: none; margin: 0; padding: 0; }
+	li { position: relative; padding: 3px 0 3px 15px; font-size: 9px; border-bottom: 1px dotted var(--line); }
+	li:last-child { border-bottom: 0; }
+	li::before { content: ""; position: absolute; left: 0; top: 4px; width: 8px; height: 8px; border: 1.3px solid #b7ac9c; border-radius: 2.5px; background: #fff; }
+	li b { font-weight: 700; }
+
+	.tree { font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace; font-size: 8.3px; line-height: 1.55; color: #33302d; background: var(--panel); border-left: 2.5px solid var(--wine); border-radius: 0 5px 5px 0; padding: 8px 10px; margin: 0; white-space: pre; }
+
+	.footer { margin-top: 8px; padding-top: 12px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center; font-size: 8.5px; color: var(--muted); }
+	.footer .cta { color: var(--wine); font-weight: 700; }
+	.footer a { color: var(--wine); text-decoration: none; }
+
+	.download-fab { position: fixed; top: 20px; right: 20px; z-index: 10; display: inline-flex; align-items: center; gap: 7px; background: var(--wine); color: #fff; text-decoration: none; font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 700; padding: 11px 17px; border-radius: 999px; box-shadow: 0 4px 16px rgba(131, 33, 49, 0.28); }
+	.download-fab:hover { background: #6d1a28; }
+
+	@page { size: Letter; margin: 0; }
+	@media print { .download-fab { display: none !important; } }
+</style>
+</head>
+<body>
+	<a class="download-fab" href="Figma-Design-System-Starter-Kit.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+	<div class="page">
+		<header class="masthead">
+			<div>
+				<p class="eyebrow">Free resource · Design systems</p>
+				<h1>Figma Design-System Starter Kit</h1>
+				<p class="lede">A starter structure for tokens, components, variants and handoff. Stand up a system that scales — without a forty-page manual nobody reads.</p>
+			</div>
+			<div class="brandmark">
+				<span class="logo">M</span>
+				<span class="name">Mariana Ordonez</span>
+				<span class="role">Agentic Product &amp; AI UX Designer</span>
+			</div>
+		</header>
+
+		<div class="howto">
+			<strong>How to use it —</strong> Recreate this structure in a fresh Figma file, then swap the sample values for your brand. Start with foundations, add only the components you actually ship, and document as you build. A <b>living</b> system beats a perfect one — bias toward tokens, variants and clear names over volume.
+		</div>
+
+		<div class="grid">
+			<div class="cat">01 · File &amp; page structure <span>where things live</span></div>
+			<div class="block">
+				<h3>Recommended Figma pages</h3>
+<pre class="tree">📄  Cover            name · version · owner
+📐  Foundations      colour · type · space · grid · icons
+🧩  Components        buttons · inputs · cards · nav · feedback
+🧱  Patterns          forms · empty states · tables · modals
+🖼  Templates         PDP · landing · checkout · account
+🗂  Archive           deprecated / WIP
+📝  Changelog         what shipped, when, by whom</pre>
+			</div>
+
+			<div class="cat">02 · Naming conventions <span>findable = usable</span></div>
+			<div class="block">
+				<ul>
+					<li>Tokens: <code>category/role/variant</code> → <code>color/text/muted</code></li>
+					<li>Components: <code>Category / Name</code> → <code>Button / Primary</code></li>
+					<li>Use <b>slashes</b> to group in the Assets panel &amp; instance menus</li>
+					<li>Layers named by intent, never "Rectangle 42"</li>
+					<li>Variants via <b>properties</b> (Type, Size, State), not duplicated frames</li>
+					<li>Icons: <code>icon/name</code>, 24px frame, single stroke weight</li>
+				</ul>
+			</div>
+
+			<div class="cat">03 · Foundations — tokens <span>the source of truth</span></div>
+			<div class="block">
+				<h3>Colour roles</h3>
+				<table>
+					<tr><th>Token</th><th>Role</th></tr>
+					<tr><td><code>color/bg/base</code></td><td>Page background</td></tr>
+					<tr><td><code>color/bg/subtle</code></td><td>Cards, panels</td></tr>
+					<tr><td><code>color/text/strong</code></td><td>Headings, key text</td></tr>
+					<tr><td><code>color/text/muted</code></td><td>Secondary text</td></tr>
+					<tr><td><code>color/border</code></td><td>Dividers, inputs</td></tr>
+					<tr><td><code>color/brand</code></td><td>Primary actions</td></tr>
+					<tr><td><code>color/brand/hover</code></td><td>Hover / pressed</td></tr>
+					<tr><td><code>color/feedback/*</code></td><td>success · warning · danger</td></tr>
+				</table>
+			</div>
+			<div class="block">
+				<h3>Spacing &amp; radius (4px base)</h3>
+				<table>
+					<tr><th>Token</th><th>px</th><th>Token</th><th>px</th></tr>
+					<tr><td><code>space/1</code></td><td>4</td><td><code>space/6</code></td><td>24</td></tr>
+					<tr><td><code>space/2</code></td><td>8</td><td><code>space/8</code></td><td>32</td></tr>
+					<tr><td><code>space/3</code></td><td>12</td><td><code>space/12</code></td><td>48</td></tr>
+					<tr><td><code>space/4</code></td><td>16</td><td><code>radius/md</code></td><td>10</td></tr>
+					<tr><td><code>radius/sm</code></td><td>6</td><td><code>radius/pill</code></td><td>999</td></tr>
+				</table>
+			</div>
+			<div class="block">
+				<h3>Type scale</h3>
+				<table>
+					<tr><th>Token</th><th>Size / line</th><th>Weight</th></tr>
+					<tr><td><code>text/display</code></td><td>40 / 44</td><td>600</td></tr>
+					<tr><td><code>text/h1</code></td><td>30 / 36</td><td>600</td></tr>
+					<tr><td><code>text/h2</code></td><td>22 / 28</td><td>600</td></tr>
+					<tr><td><code>text/h3</code></td><td>17 / 24</td><td>600</td></tr>
+					<tr><td><code>text/body</code></td><td>15 / 24</td><td>400</td></tr>
+					<tr><td><code>text/caption</code></td><td>12 / 16</td><td>500</td></tr>
+				</table>
+			</div>
+			<div class="block">
+				<h3>Breakpoints &amp; elevation</h3>
+				<table>
+					<tr><th>Breakpoint</th><th>px</th><th>Shadow</th><th>Use</th></tr>
+					<tr><td><code>sm</code></td><td>480</td><td><code>e1</code></td><td>Cards</td></tr>
+					<tr><td><code>md</code></td><td>768</td><td><code>e2</code></td><td>Dropdowns</td></tr>
+					<tr><td><code>lg</code></td><td>1024</td><td><code>e3</code></td><td>Modals</td></tr>
+					<tr><td><code>xl</code></td><td>1280</td><td>—</td><td>—</td></tr>
+				</table>
+			</div>
+
+			<div class="cat">04 · Component checklist <span>done means done</span></div>
+			<div class="block">
+				<h3>Every component ships with</h3>
+				<ul>
+					<li>Variant properties: <b>Type, Size</b> where relevant</li>
+					<li>States: default · hover · focus · active · disabled · loading · error</li>
+					<li><b>Tokens only</b> — no hard-coded hex, px or type</li>
+					<li>Auto layout + resizing rules that survive content changes</li>
+					<li>Responsive behaviour defined (min/max, wrap, truncation)</li>
+					<li>Accessible name + focus order + AA contrast</li>
+					<li>Content rules: max length, empty/overflow, placeholder</li>
+					<li>Dev notes / code link in the description field</li>
+				</ul>
+			</div>
+
+			<div class="cat">05 · Handoff documentation <span>per component</span></div>
+			<div class="block">
+				<h3>One-screen spec</h3>
+				<ul>
+					<li><b>Purpose</b> — what it's for, when not to use it</li>
+					<li><b>Anatomy</b> — labelled parts</li>
+					<li><b>Props / variants</b> — table of options &amp; defaults</li>
+					<li><b>States &amp; behaviour</b> — including motion</li>
+					<li><b>Tokens</b> — colour, space, type used</li>
+					<li><b>Do / Don't</b> — two or three of each</li>
+					<li><b>Accessibility</b> — roles, labels, keyboard</li>
+				</ul>
+			</div>
+
+			<div class="cat">06 · Governance <span>keep it alive</span></div>
+			<div class="block">
+				<h3>Contribution &amp; versioning</h3>
+				<ul>
+					<li>One published library = single source of truth</li>
+					<li>Versioned releases with a written changelog</li>
+					<li>Deprecation policy: mark → migrate → remove</li>
+					<li>Lightweight request flow for new components</li>
+					<li>Review by an owner before anything publishes</li>
+				</ul>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<span>© 2026 Mariana Ordonez · <a href="https://mordonez.com">mordonez.com</a></span>
+			<span class="cta">Need a system stood up or rescued? → mordonez.com/contact</span>
+		</footer>
+	</div>
+</body>
+</html>

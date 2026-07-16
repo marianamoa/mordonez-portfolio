@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { capabilities, experience, site, socialLinks, contactHref } from "../data/site";
+import { capabilities, site, socialLinks, contactHref } from "../data/site";
 
 const profileSchema = {
 	"@context": "https://schema.org",
@@ -53,19 +53,6 @@ const profileSchema = {
 					<div class="demo-row"><strong>Focus</strong><span>Agentic, product, CRO</span></div>
 					<div class="demo-row"><strong>Availability</strong><span>US business hours</span></div>
 				</div>
-			</div>
-		</section>
-
-		<section class="container section">
-			<div class="section-head">
-				<div>
-					<p class="kicker">Experience and clients</p>
-					<h2 class="section-title">Six years of work that had to ship.</h2>
-				</div>
-				<a class="text-link" href="/work/">View case studies -></a>
-			</div>
-			<div class="timeline">
-				{experience.map((item) => <div class="timeline-item">{item}</div>)}
 			</div>
 		</section>
 

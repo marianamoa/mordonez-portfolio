@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>AI Design Prompt Pack — Mariana Ordonez</title>
+<style>
+	:root {
+		--wine: #832131;
+		--wine-soft: #ead6d6;
+		--paper: #fffdf8;
+		--panel: #f4efe6;
+		--ink: #241f1d;
+		--muted: #6d635c;
+		--line: #e2dacd;
+	}
+
+	* { box-sizing: border-box; }
+	html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+	body {
+		margin: 0;
+		font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+		color: var(--ink);
+		background: var(--paper);
+		font-size: 10.5px;
+		line-height: 1.5;
+	}
+
+	.page {
+		width: 8.5in;
+		min-height: 11in;
+		margin: 0 auto;
+		padding: 0.7in 0.72in 0.62in;
+		background: var(--paper);
+	}
+
+	h1, h2, h3 {
+		font-family: "Newsreader", Georgia, "Times New Roman", serif;
+		font-weight: 600;
+		margin: 0;
+		color: var(--ink);
+		letter-spacing: -0.01em;
+	}
+
+	/* ---------- Masthead ---------- */
+	.masthead {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		border-bottom: 2px solid var(--wine);
+		padding-bottom: 14px;
+		margin-bottom: 20px;
+	}
+	.eyebrow {
+		text-transform: uppercase;
+		letter-spacing: 0.14em;
+		font-size: 8px;
+		font-weight: 700;
+		color: var(--wine);
+		margin: 0 0 8px;
+	}
+	h1 { font-size: 27px; line-height: 1.08; max-width: 6.2in; }
+	.lede { margin: 10px 0 0; color: var(--muted); font-size: 11px; max-width: 5.4in; }
+	.brandmark { text-align: right; flex: 0 0 auto; padding-left: 18px; }
+	.brandmark .logo {
+		display: inline-flex; align-items: center; justify-content: center;
+		width: 34px; height: 34px; border-radius: 9px;
+		background: var(--wine); color: #fff;
+		font-family: "Newsreader", Georgia, serif; font-size: 20px; font-weight: 600;
+		margin-bottom: 8px;
+	}
+	.brandmark .name { font-family: "Newsreader", Georgia, serif; font-size: 12px; font-weight: 600; display: block; }
+	.brandmark .role { font-size: 8px; color: var(--muted); display: block; margin-top: 2px; max-width: 1.5in; }
+
+	/* ---------- How to use ---------- */
+	.howto {
+		background: var(--panel);
+		border: 1px solid var(--line);
+		border-radius: 10px;
+		padding: 11px 14px;
+		margin-bottom: 18px;
+		font-size: 9.5px;
+		color: var(--muted);
+	}
+	.howto strong { color: var(--ink); }
+
+	/* ---------- Prompt grid ---------- */
+	.grid { column-count: 2; column-gap: 16px; }
+
+	.cat {
+		break-inside: avoid;
+		font-family: "Newsreader", Georgia, serif;
+		font-size: 13px;
+		font-weight: 600;
+		color: var(--wine);
+		margin: 4px 0 9px;
+		padding-bottom: 4px;
+		border-bottom: 1px solid var(--wine-soft);
+		display: flex;
+		align-items: baseline;
+		gap: 6px;
+	}
+	.cat span { font-size: 9px; color: var(--muted); font-family: inherit; }
+
+	.prompt {
+		break-inside: avoid;
+		-webkit-column-break-inside: avoid;
+		border: 1px solid var(--line);
+		border-radius: 9px;
+		padding: 10px 11px 11px;
+		margin-bottom: 11px;
+		background: #fffefb;
+	}
+	.prompt h3 { font-size: 11px; line-height: 1.2; }
+	.prompt .intent { font-size: 8.6px; color: var(--muted); font-style: italic; margin: 3px 0 7px; }
+	.tmpl {
+		font-family: "SFMono-Regular", ui-monospace, Menlo, Consolas, monospace;
+		font-size: 8.4px;
+		line-height: 1.45;
+		color: #33302d;
+		background: var(--panel);
+		border-left: 2.5px solid var(--wine);
+		border-radius: 0 5px 5px 0;
+		padding: 7px 9px;
+		margin: 0 0 7px;
+		white-space: pre-wrap;
+	}
+	.tmpl b { color: var(--wine); font-weight: 700; }
+	.tip { font-size: 8.4px; color: var(--muted); margin: 0; }
+	.tip b { color: var(--ink); font-weight: 700; }
+
+	/* ---------- Footer ---------- */
+	.footer {
+		margin-top: 8px;
+		padding-top: 12px;
+		border-top: 1px solid var(--line);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		font-size: 8.5px;
+		color: var(--muted);
+	}
+	.footer .cta { color: var(--wine); font-weight: 700; }
+	.footer a { color: var(--wine); text-decoration: none; }
+
+	/* ---------- Floating download ---------- */
+	.download-fab {
+		position: fixed;
+		top: 20px; right: 20px; z-index: 10;
+		display: inline-flex; align-items: center; gap: 7px;
+		background: var(--wine); color: #fff; text-decoration: none;
+		font-family: "Hanken Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+		font-size: 12px; font-weight: 700;
+		padding: 11px 17px; border-radius: 999px;
+		box-shadow: 0 4px 16px rgba(131, 33, 49, 0.28);
+	}
+	.download-fab:hover { background: #6d1a28; }
+
+	@page { size: Letter; margin: 0; }
+	@media print { .download-fab { display: none !important; } }
+</style>
+</head>
+<body>
+	<a class="download-fab" href="AI-Design-Prompt-Pack.pdf" download>Download PDF <span aria-hidden="true">↓</span></a>
+	<div class="page">
+		<header class="masthead">
+			<div>
+				<p class="eyebrow">Free resource · AI-native workflow</p>
+				<h1>AI Design Prompt Pack</h1>
+				<p class="lede">Reusable prompt patterns for research synthesis, moodboards, content variants and QA — the ones I actually run to move faster without outsourcing judgment.</p>
+			</div>
+			<div class="brandmark">
+				<span class="logo">M</span>
+				<span class="name">Mariana Ordonez</span>
+				<span class="role">Agentic Product &amp; AI UX Designer</span>
+			</div>
+		</header>
+
+		<div class="howto">
+			<strong>How to use it —</strong> Copy a prompt, replace every <b>[bracket]</b> with your own context, and paste in your material. Treat the output as a fast first draft to interrogate and edit — never a final answer. Keep your voice, your ethics and your design judgment in the loop, and ask the model to cite or flag anything it inferred.
+		</div>
+
+		<div class="grid">
+			<!-- A. Research & synthesis -->
+			<div class="cat">Research &amp; synthesis <span>· make sense of raw input</span></div>
+
+			<div class="prompt">
+				<h3>Cluster interviews into themes</h3>
+				<p class="intent">Turn messy notes into structured insight.</p>
+				<div class="tmpl">You are a UX researcher. Below are <b>[N]</b> raw interview notes/transcripts.
+1) Cluster findings into 5–8 themes.
+2) Per theme: a one-line insight, 2–3 exact verbatim quotes, and how many participants mentioned it.
+3) Flag contradictions and surprises.
+4) End with the top 3 design opportunities.
+Use only what's in the data; mark anything inferred.
+Notes: <b>[paste]</b></div>
+				<p class="tip"><b>Tip —</b> Paste it raw and messy. Pre-summarizing biases the clusters.</p>
+			</div>
+
+			<div class="prompt">
+				<h3>Draft JTBD &amp; lightweight personas</h3>
+				<p class="intent">Convert themes into something designable.</p>
+				<div class="tmpl">From the themes below, write <b>[2–3]</b> jobs-to-be-done as:
+"When [situation], I want to [motivation], so I can [outcome]."
+Then one lightweight persona per job: goals, frustrations, context of use.
+Ground every attribute in a cited theme; label inferences as assumptions.
+Themes: <b>[paste]</b></div>
+				<p class="tip"><b>Tip —</b> The "label assumptions" clause doubles as a validation backlog.</p>
+			</div>
+
+			<!-- B. Problem framing -->
+			<div class="cat">Problem framing <span>· design the right thing</span></div>
+
+			<div class="prompt">
+				<h3>Sharpen the problem statement</h3>
+				<p class="intent">Pressure-test before any solutioning.</p>
+				<div class="tmpl">Act as a skeptical product lead. My problem statement:
+"<b>[draft]</b>"
+1) Restate it as a testable problem.
+2) List the hidden assumptions.
+3) Give 3 sharper reframings at different altitudes (user, business, system).
+4) Name the single metric that proves it's solved.</div>
+				<p class="tip"><b>Tip —</b> Run this first — it stops you from solving the wrong problem beautifully.</p>
+			</div>
+
+			<!-- C. Ideation -->
+			<div class="cat">Ideation <span>· diverge with intent</span></div>
+
+			<div class="prompt">
+				<h3>Diverge on distinct concepts</h3>
+				<p class="intent">Spread, not polish.</p>
+				<div class="tmpl">Give me <b>[8]</b> genuinely different UX concepts for <b>[problem/flow]</b>, ranging safe → bold.
+Per concept: a name, the core idea in one sentence, the main trade-off, and who it's best for.
+Avoid variations on one idea — maximize spread.</div>
+				<p class="tip"><b>Tip —</b> Requiring the trade-off up front lets you kill weak ideas fast.</p>
+			</div>
+
+			<!-- D. Moodboards & visual direction -->
+			<div class="cat">Moodboards &amp; visual direction <span>· set the look</span></div>
+
+			<div class="prompt">
+				<h3>Write a visual-direction brief</h3>
+				<p class="intent">Language before pixels.</p>
+				<div class="tmpl">You are an art director. For a <b>[product type]</b> aimed at <b>[audience]</b> with a
+<b>[3 adjectives]</b> personality, propose 3 distinct visual directions.
+Per direction: mood keywords, colour logic, type-pairing rationale, imagery style, 2 reference brands.
+No hex codes yet — describe intent.</div>
+				<p class="tip"><b>Tip —</b> Keep the direction names; they become your comparison labels downstream.</p>
+			</div>
+
+			<div class="prompt">
+				<h3>Moodboard image generation</h3>
+				<p class="intent">For Nano Banana / Gemini / any image model.</p>
+				<div class="tmpl">Generate a <b>[aspect ratio]</b> moodboard image:
+<b>[subject]</b>, <b>[lighting]</b>, <b>[colour palette]</b>, <b>[texture/material]</b>, <b>[mood]</b>,
+shot on <b>[lens/style]</b>. No text or logos.
+Style reference: <b>[direction name]</b>.</div>
+				<p class="tip"><b>Tip —</b> Change one variable per run to learn what each term actually controls.</p>
+			</div>
+
+			<!-- E. UX writing & content -->
+			<div class="cat">UX writing &amp; content <span>· variants with a voice</span></div>
+
+			<div class="prompt">
+				<h3>Microcopy variants on-voice</h3>
+				<p class="intent">On-brand, not generic SaaS.</p>
+				<div class="tmpl">Voice: <b>[3 traits, e.g. warm, precise, unfussy]</b>.
+Write <b>[5]</b> variants for this <b>[button / empty state / error]</b>: "<b>[context]</b>".
+Constraints: ≤ <b>[N]</b> chars, no jargon, action-led.
+Return a table with a one-line rationale each.</div>
+				<p class="tip"><b>Tip —</b> Feed it your voice chart; without it every option sounds the same.</p>
+			</div>
+
+			<div class="prompt">
+				<h3>Pressure-test copy for clarity</h3>
+				<p class="intent">Find drop-off, not typos.</p>
+				<div class="tmpl">Read this <b>[PDP / landing / onboarding]</b> copy as a distracted first-time mobile user.
+Where do I get confused, doubtful, or bored enough to leave?
+Mark each spot, say why, and rewrite it tighter.
+Copy: <b>[paste]</b></div>
+				<p class="tip"><b>Tip —</b> The "distracted mobile user" role surfaces real friction, not grammar nits.</p>
+			</div>
+
+			<!-- F. Critique & QA -->
+			<div class="cat">Critique &amp; QA <span>· a second set of eyes</span></div>
+
+			<div class="prompt">
+				<h3>Heuristic critique of a screen</h3>
+				<p class="intent">Structured, severity-ranked.</p>
+				<div class="tmpl">Critique this screen against Nielsen's 10 heuristics + WCAG AA basics.
+Per issue: heuristic, severity (1–4), the specific element, a concrete fix.
+Then rank the top 3 to fix first.
+Screen: <b>[attach image / describe]</b></div>
+				<p class="tip"><b>Tip —</b> Attach the real frame — described-only critiques miss layout and contrast.</p>
+			</div>
+
+			<div class="prompt">
+				<h3>Accessibility pass</h3>
+				<p class="intent">Catch it before dev does.</p>
+				<div class="tmpl">Audit this component for accessibility: contrast, focus order, keyboard operation,
+semantics/ARIA, target size, reduced-motion.
+List each violation with its WCAG criterion and a fix.
+Component: <b>[code / describe]</b></div>
+				<p class="tip"><b>Tip —</b> Pair with the accessibility section of my CRO checklist for a full sweep.</p>
+			</div>
+
+			<!-- G. Handoff & agentic build -->
+			<div class="cat">Handoff &amp; agentic build <span>· ship it</span></div>
+
+			<div class="prompt">
+				<h3>Spec a component for handoff</h3>
+				<p class="intent">Developer-ready in one pass.</p>
+				<div class="tmpl">Write a dev-ready spec for this <b>[component]</b>:
+anatomy, variants, states (default/hover/focus/active/disabled/loading),
+tokens used, responsive behaviour, content rules, edge cases.
+Format as a concise table + notes.
+Component: <b>[describe / attach]</b></div>
+				<p class="tip"><b>Tip —</b> Feed the spec straight into Claude Code to scaffold the component.</p>
+			</div>
+
+			<div class="prompt">
+				<h3>Prototype with Claude Code</h3>
+				<p class="intent">From spec to working preview.</p>
+				<div class="tmpl">In this repo, build a working prototype of <b>[flow]</b> using the existing
+design tokens and components. Keep it accessible and responsive.
+Show me the diff and a preview, then wait for feedback before any styling polish.</div>
+				<p class="tip"><b>Tip —</b> Constrain it to existing tokens/components so the prototype matches your system.</p>
+			</div>
+		</div>
+
+		<footer class="footer">
+			<span>© 2026 Mariana Ordonez · <a href="https://mordonez.com">mordonez.com</a></span>
+			<span class="cta">Want an AI-native designer on your team? → mordonez.com/contact</span>
+		</footer>
+	</div>
+</body>
+</html>

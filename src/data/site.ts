@@ -16,7 +16,7 @@ export const contactHref = `mailto:${site.email}?subject=${encodeURIComponent(
 // Web3Forms access key for the /contact form. Create one free at
 // https://web3forms.com (enter your email, copy the key here). It is public
 // by design — it only routes submissions to your inbox.
-export const web3formsAccessKey = "YOUR_WEB3FORMS_ACCESS_KEY";
+export const web3formsAccessKey = "570e5b57-c9c9-48c3-bf96-6561e21b95bc";
 
 export const navItems = [
 	{ label: "Work", href: "/work/" },
@@ -350,7 +350,7 @@ export const toolStack = [
 	},
 	{
 		category: "AI-native tooling",
-		items: ["Claude Code", "AI-assisted prototyping", "research synthesis", "prompt libraries", "asset variants"],
+		items: ["Claude Code", "ChatGPT", "Gemini", "Nano Banana", "Paper", "Lovable", "AI-assisted prototyping", "research synthesis", "prompt libraries", "asset variants"],
 		description:
 			"AI-assisted environments like Claude Code to accelerate design, prototyping and iteration, with human judgment kept at the center.",
 	},
@@ -368,7 +368,7 @@ export const toolStack = [
 	},
 	{
 		category: "Process",
-		items: ["Notion", "analytics review", "handoff docs", "CRO decisions"],
+		items: ["Notion", "Asana", "analytics review", "handoff docs", "CRO decisions"],
 		description:
 			"Clear documentation and measurable decision-making for remote product teams.",
 	},
@@ -378,18 +378,30 @@ export const resources = [
 	{
 		title: "PDP and landing-page CRO checklist",
 		description: "A practical audit sheet for product pages, landing pages and mobile commerce funnels.",
+		file: "/downloads/PDP-Landing-CRO-Checklist.html",
+		kind: "Checklist",
+		cta: "Open the checklist",
 	},
 	{
 		title: "Figma design-system starter kit",
 		description: "A starter structure for tokens, components, variants and handoff documentation.",
+		file: "/downloads/Figma-Design-System-Starter-Kit.html",
+		kind: "Starter kit",
+		cta: "Open the starter kit",
 	},
 	{
 		title: "AI design prompt pack",
 		description: "Prompt patterns for research synthesis, moodboards, content variants and QA.",
+		file: "/downloads/AI-Design-Prompt-Pack.html",
+		kind: "Prompt pack",
+		cta: "Open the prompt pack",
 	},
 	{
 		title: "Email and SMS component template",
 		description: "Lifecycle-design modules for Klaviyo flows, retention emails and SMS moments.",
+		file: "/downloads/Email-SMS-Component-Template.html",
+		kind: "Template",
+		cta: "Open the template",
 	},
 ];
 
@@ -421,9 +433,3 @@ export const playItems = [
 	},
 ];
 
-export const experience = [
-	"Estore Labs - CRO and A/B testing across Amazon, Walmart and Target storefronts.",
-	"Planet of the Vapes - eCommerce and lifecycle design for a remote EST team.",
-	"trades.org - product design, design system and custom CMS/ATS workflows.",
-	"Casabianca Cycling - conversion-focused apparel UX redesign.",
-];

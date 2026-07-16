@@ -554,6 +554,28 @@ a.card:hover {
 	margin-top: 22px;
 }
 
+.tool-logos {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 9px;
+	margin-top: 18px;
+}
+
+.tool-logo {
+	display: inline-flex;
+	width: 30px;
+	height: 30px;
+	border-radius: 7px;
+	box-shadow:
+		0 1px 2px rgba(0, 0, 0, 0.14),
+		0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.tool-logo svg {
+	display: block;
+	border-radius: 7px;
+}
+
 .tag {
 	display: inline-flex;
 	align-items: center;
@@ -566,9 +588,15 @@ a.card:hover {
 	font-weight: 800;
 }
 
+.work-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 24px;
+}
+
 .work-card {
 	display: grid;
-	grid-template-columns: 1.08fr 0.92fr;
+	grid-template-columns: 0.85fr 1.15fr;
 	gap: 0;
 	overflow: hidden;
 	padding: 0;
@@ -590,7 +618,7 @@ a.card:hover {
 
 .work-card .work-art {
 	position: relative;
-	min-height: 188px;
+	min-height: 250px;
 	background:
 		linear-gradient(135deg, rgba(131, 33, 49, 0.12), rgba(47, 157, 115, 0.08)),
 		var(--panel);
@@ -951,18 +979,6 @@ a.card:hover {
 .aside dd {
 	margin: 5px 0 0;
 	color: var(--soft-ink);
-}
-
-.timeline {
-	display: grid;
-	gap: 14px;
-}
-
-.timeline-item {
-	padding: 20px;
-	border-left: 3px solid var(--wine);
-	border-radius: 0 16px 16px 0;
-	background: rgba(255, 253, 248, 0.7);
 }
 
 .play-grid {
