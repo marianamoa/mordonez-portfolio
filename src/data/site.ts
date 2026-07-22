@@ -207,6 +207,7 @@ export const caseStudies = [
 			"Acted as the brand's ongoing eCommerce designer, owning the Shopify storefront end to end - product pages, collections, campaigns and seasonal launches - over four years.",
 			"Improved layout clarity, product-page hierarchy and the checkout flow, applying conversion-focused principles to reduce friction and make the buying decision easier.",
 			"Built and maintained a cohesive visual system across digital and physical touchpoints, keeping the store on-brand as the catalog and campaigns evolved.",
+			"Beyond the store, contributed to the brand's social media content, packaging and apparel product design - carrying one visual language across every touchpoint.",
 		],
 		solution:
 			"A calmer, continuously refined cycling apparel experience with stronger product storytelling, cleaner CTAs and a clearer checkout - kept consistent and on-brand across years of launches.",
