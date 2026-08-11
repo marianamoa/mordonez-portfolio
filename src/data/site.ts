@@ -89,7 +89,7 @@ export const caseStudies = [
 		solution:
 			"A repeatable commerce-design workflow for faster marketplace testing, clearer shopper decisions and consistent brand expression across channels.",
 		impact: "Scaled output across a multi-brand portfolio, on deadline and without losing brand consistency.",
-		role: "CRO, marketplace UX, AI-assisted workflow",
+		role: "Digital Shelf Designer",
 		timeline: "Ongoing retail optimization",
 		period: "Sep 2024 - Present",
 		tools: "Figma, Photoshop, AI-assisted variants",
@@ -142,7 +142,7 @@ export const caseStudies = [
 		solution:
 			"A modular design system across web, email and SMS that kept launches and seasonal campaigns consistent and quick to produce, with clearer product discovery and shopping flows.",
 		impact: "Faster, on-brand launch and lifecycle production with clearer navigation and product discovery.",
-		role: "Web & marketing design, UX/UI, lifecycle",
+		role: "Product & Brand Designer",
 		timeline: "Ongoing DTC design",
 		period: "Jul 2023 - Present",
 		tools: "Figma, email/SMS modules, AI-assisted production",
@@ -177,7 +177,7 @@ export const caseStudies = [
 		solution:
 			"A modular UX and visual system with reusable templates, clearer handoff and a CMS structure that supported faster iteration.",
 		impact: "Faster iteration and reduced funnel drop-off risk through consistent product patterns.",
-		role: "Product design, UI/UX, design systems",
+		role: "UX/UI Product Designer",
 		timeline: "Product foundation",
 		period: "Jul 2022 - Dec 2023",
 		tools: "Figma, prototyping, documentation",
@@ -212,7 +212,7 @@ export const caseStudies = [
 		solution:
 			"A calmer, continuously refined cycling apparel experience with stronger product storytelling, cleaner CTAs and a clearer checkout - kept consistent and on-brand across years of launches.",
 		impact: "A calmer, more premium storefront that stayed consistent and on-brand across four years of product launches and campaigns.",
-		role: "eCommerce design, UI/UX, brand system",
+		role: "eCommerce & Product Designer",
 		timeline: "Ongoing eCommerce design",
 		period: "Sep 2018 - Jun 2022",
 		tools: "Figma, Shopify, brand system",
