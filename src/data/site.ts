@@ -101,7 +101,7 @@ export const caseStudies = [
 				title: "The image carousel that sells",
 				body: "On a marketplace the image carousel is the storefront. I design the sequence - hero, benefits, size, lifestyle and trust - so shoppers get the whole story before they scroll.",
 				linkLabel: "Butterfinger on Walmart",
-				url: "https://www.walmart.com/ip/Butterfinger-Chocolatey-Peanut-Buttery-Individually-Wrapped-Fun-Size-Candy-Bars-10-2-oz/131461511?classType=VARIANT&from=/search",
+				url: "https://www.walmart.com/ip/Butterfinger-Chocolatey-Peanut-Buttery-Full-Size-Candy-Bars-1-9-oz-each/966108792?classType=REGULAR&athbdg=L1200&from=/search",
 			},
 			{
 				title: "A+ content, engineered to convert",
